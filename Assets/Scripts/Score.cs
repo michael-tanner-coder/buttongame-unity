@@ -4,15 +4,20 @@ using UnityEngine;
 
 public class Score : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    [SerializeField]
+    public float points;
 
-    // Update is called once per frame
-    void Update()
+    [SerializeField]
+    public float maxPoints;
+
+    // UI
+    [SerializeField]
+    private Fill scorebar;
+
+
+    void Update() 
     {
-        
+        float percentage = Mathf.InverseLerp(0, maxPoints, points);
+        scorebar.SetPercentage(percentage);
     }
 }
