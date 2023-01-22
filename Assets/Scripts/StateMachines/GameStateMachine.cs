@@ -21,7 +21,7 @@ public class GameStateMachine : StateMachine
     public GameOver gameOverState;
 
     // current game mode
-    public GameEvent eventType;
+    public GameMode gameMode;
 
     private void Awake()
     {

@@ -2,8 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "GameEvent", menuName = "Scriptable Objects/GameEvent", order = 0)]
-public class GameEvent : ScriptableObject 
+[CreateAssetMenu(fileName = "GameMode", menuName = "Scriptable Objects/GameMode", order = 0)]
+public class GameMode : ScriptableObject 
 {
     public string name;
     public float baseDuration;
