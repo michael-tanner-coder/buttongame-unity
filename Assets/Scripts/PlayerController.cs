@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 namespace TarodevController {
     /// <summary>
@@ -45,12 +46,13 @@ namespace TarodevController {
 
 
         #region Gather Input
+        [SerializeField]
+        private PlayerInput _playerInput;
 
         private void GatherInput() {
             Input = new FrameInput {
-                JumpDown = UnityEngine.Input.GetButtonDown("Jump"),
-                JumpUp = UnityEngine.Input.GetButtonUp("Jump"),
-                X = UnityEngine.Input.GetAxisRaw("Horizontal")
+                JumpDown = _playerInput.actions["jump"].triggered,
+                JumpUp = _playerInput.actions["jump"].ReadValue<float>() < .1f,
             };
             if (Input.JumpDown) {
                 _lastJumpPressed = Time.time;

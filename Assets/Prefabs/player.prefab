@@ -11,10 +11,10 @@ GameObject:
   - component: {fileID: 964011201162877753}
   - component: {fileID: 964011201162877702}
   - component: {fileID: 5659474041258891577}
-  - component: {fileID: 5095670864356140499}
   - component: {fileID: 4847594709332366694}
   - component: {fileID: 57516900}
   - component: {fileID: 1580829811}
+  - component: {fileID: 1179644233354622764}
   m_Layer: 0
   m_Name: player
   m_TagString: Untagged
@@ -101,18 +101,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c23b719a11ce0fb4eb8837ca70a563e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &5095670864356140499
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 964011201162877703}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4b7f82d89d2c2714fad3afbd76f8a3e8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!61 &4847594709332366694
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -172,6 +160,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e415b3ce3a917e14d8ab7571ccd1a7a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _playerInput: {fileID: 1179644233354622764}
   _characterBounds:
     m_Center: {x: 0, y: 0, z: 0}
     m_Extent: {x: 0, y: 0, z: 0}
@@ -190,3 +179,37 @@ MonoBehaviour:
   _jumpBuffer: 0.2
   _jumpEndEarlyGravityModifier: 4
   _freeColliderIterations: 10
+--- !u!114 &1179644233354622764
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 964011201162877703}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Actions: {fileID: -944628639613478452, guid: a32b69adc788f4144947f368c7740b8e, type: 3}
+  m_NotificationBehavior: 2
+  m_UIInputModule: {fileID: 0}
+  m_DeviceLostEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_DeviceRegainedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ControlsChangedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ActionEvents:
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 678693a9-b5c5-43b3-86c3-90c800f3f4bd
+    m_ActionName: Player/Jump[/Keyboard/w]
+  m_NeverAutoSwitchControlSchemes: 1
+  m_DefaultControlScheme: Player 1
+  m_DefaultActionMap: Player
+  m_SplitScreenIndex: -1
+  m_Camera: {fileID: 0}
