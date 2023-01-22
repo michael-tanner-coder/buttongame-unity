@@ -108,13 +108,13 @@ BoxCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 964011201162877703}
-  m_Enabled: 0
+  m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: 0.02}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -173,7 +173,7 @@ MonoBehaviour:
   _fallClamp: -4
   _minFallSpeed: 0
   _maxFallSpeed: 4
-  _jumpHeight: 1.5
+  _jumpHeight: 1.7
   _jumpApexThreshold: 8
   _coyoteTimeThreshold: 0.1
   _jumpBuffer: 0.2

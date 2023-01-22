@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    private States.PlayerState state = States.PlayerState.GROUNDED;
     private string prev_type = "basic";
 
     void Start()

@@ -1,8 +1,12 @@
 using UnityEngine;
 
-public class States : MonoBehaviour
+public class StateEnums
 {
-    public enum GameState
+    public new enum States {}
+}
+
+public class GameStates: StateEnums {
+    public new enum Enums
     {
         TUTORIAL,
         NEXT_BOMB,
@@ -12,25 +16,21 @@ public class States : MonoBehaviour
         GAME_OVER,
         TITLE_SCREEN
     }
+}
 
-    public enum PlayerState 
-    {
-        JUMPING,
-        FALLING,
-        GROUNDED,
-        STUNNED
-    }
-
-    public enum ButtonState 
+public class ButtonStates: StateEnums {
+    public new enum Enums
     {
         UNPRESSED,
         PRESSED,
         RELEASED
     }
+}
 
-    public enum DoorState
+public class DoorStates: StateEnums {
+    public new enum Enums
     {
-        OPEN,
-        CLOSED
+      OPEN, 
+      CLOSED
     }
 }
