@@ -1,18 +1,26 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Fill : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    [SerializeField]
+    private float percentage;
+    private Image image;
+
+    void Start() 
     {
-        
+        image = GetComponent<Image>();
     }
 
-    // Update is called once per frame
-    void Update()
+    void Update() 
     {
-        
+        image.fillAmount = percentage;
+    }
+
+    public void SetPercentage(float percent) 
+    {
+        percentage = percent;
     }
 }

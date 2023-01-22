@@ -98,6 +98,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 58c7d975c66b996479867cff69da7dda, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  duration: 0
 --- !u!114 &-4057343497715637703
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -110,3 +111,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd94bc49f6db7944b967a0feda87bdbd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  percentage: 0
