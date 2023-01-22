@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 5095670864356140499}
   - component: {fileID: 4847594709332366694}
   - component: {fileID: 57516900}
+  - component: {fileID: 1580829811}
   m_Layer: 0
   m_Name: player
   m_TagString: Untagged
@@ -119,7 +120,7 @@ BoxCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 964011201162877703}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
@@ -152,10 +153,40 @@ Rigidbody2D:
   m_UseAutoMass: 0
   m_Mass: 1
   m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 0.1
+  m_AngularDrag: 0
+  m_GravityScale: 0
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!114 &1580829811
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 964011201162877703}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e415b3ce3a917e14d8ab7571ccd1a7a5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _characterBounds:
+    m_Center: {x: 0, y: 0, z: 0}
+    m_Extent: {x: 0, y: 0, z: 0}
+  _groundLayer:
+    serializedVersion: 2
+    m_Bits: 8
+  _detectorCount: 3
+  _detectionRayLength: 0.06
+  _rayBuffer: 0.1
+  _fallClamp: -4
+  _minFallSpeed: 0
+  _maxFallSpeed: 4
+  _jumpHeight: 1.5
+  _jumpApexThreshold: 8
+  _coyoteTimeThreshold: 0.1
+  _jumpBuffer: 0.2
+  _jumpEndEarlyGravityModifier: 4
+  _freeColliderIterations: 10
