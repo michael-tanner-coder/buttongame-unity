@@ -9,9 +9,9 @@ public class GameStates: StateEnums {
     public new enum Enums
     {
         TUTORIAL,
-        NEXT_BOMB,
+        GET_EVENT,
         COUNTDOWN,
-        ROUND_START,
+        ROUND,
         ROUND_END,
         GAME_OVER,
         TITLE_SCREEN
