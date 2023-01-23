@@ -22,7 +22,7 @@ public class Score : MonoBehaviour
         float percentage = Mathf.InverseLerp(0, maxPoints, points);
         scorebar.SetPercentage(percentage);
 
-        if (maxPoints === points) {
+        if (maxPoints == points) {
             // invoke game over event
         }
     }
