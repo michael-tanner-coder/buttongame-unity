@@ -7,7 +7,7 @@ public class GameMode : ScriptableObject
 {
     public string name;
     public float baseDuration;
-    public DoorStates.Enums winningState;
+    public DoorState.Enums winningState;
     public bool limitButtonPresses;
     public float gravityModifier = 1f;
 }

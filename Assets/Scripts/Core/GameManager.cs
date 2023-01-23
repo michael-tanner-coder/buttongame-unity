@@ -9,7 +9,7 @@ public class GameManager : MonoBehaviour
     // TODO: create feature toggles to enable/disable certain game elements (event types, obstacles, collectibles)
 
     [SerializeField]
-    private GameStates.Enums state;
+    private GameState.Enums state;
 
     [SerializeField]
     private PlayerData[] playerData;

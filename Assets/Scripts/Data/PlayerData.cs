@@ -7,12 +7,12 @@ using UnityEngine;
 public class PlayerData : ScriptableObject 
 {
     public int score;
-    public DoorStates.Enums doorState;
+    public DoorState.Enums doorState;
 
     void ResetData() 
     { 
         score = 0; 
-        doorState = DoorStates.Enums.OPEN; 
+        doorState = DoorState.Enums.OPEN; 
     }
 }
 

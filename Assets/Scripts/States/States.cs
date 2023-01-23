@@ -5,7 +5,7 @@ public class StateEnums
     public enum States {}
 }
 
-public class GameStates: StateEnums {
+public class GameState: StateEnums {
     public enum Enums
     {
         TUTORIAL,
@@ -18,7 +18,7 @@ public class GameStates: StateEnums {
     }
 }
 
-public class ButtonStates: StateEnums {
+public class ButtonState: StateEnums {
     public enum Enums
     {
         UNPRESSED,
@@ -27,7 +27,7 @@ public class ButtonStates: StateEnums {
     }
 }
 
-public class DoorStates: StateEnums {
+public class DoorState: StateEnums {
     public enum Enums
     {
       OPEN, 
