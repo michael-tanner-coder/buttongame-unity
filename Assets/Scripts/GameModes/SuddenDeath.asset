@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: SuddenDeath
   m_EditorClassIdentifier: 
   name: Sudden Death
-  baseDuration: 6000
+  baseDuration: 10
   winningState: 1
   limitButtonPresses: 1
   gravityModifier: 1

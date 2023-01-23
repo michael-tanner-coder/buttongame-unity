@@ -321,6 +321,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   duration: 4
   timerBar: {fileID: 105184732}
+  gameEvents: {fileID: 11400000, guid: 0f86ff09a287f9c4db03a2100ecdf502, type: 2}
 --- !u!114 &105184734
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1367,4 +1368,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b9266184e1d9ab04ea466bbdc89ef39d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  eventType: {fileID: 11400000, guid: a3fe01c22065a1442957ee58560c33a6, type: 2}
+  gameMode: {fileID: 11400000, guid: a3fe01c22065a1442957ee58560c33a6, type: 2}
+  gameEvents: {fileID: 11400000, guid: 0f86ff09a287f9c4db03a2100ecdf502, type: 2}

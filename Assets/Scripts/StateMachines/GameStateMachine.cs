@@ -23,6 +23,19 @@ public class GameStateMachine : StateMachine
     // current game mode
     public GameMode gameMode;
 
+    // events
+    public GameEvents gameEvents;
+
+    private void Start() 
+    {
+        gameEvents.roundEndEvent?.AddListener(RoundEnd);
+    }
+
+    private void RoundEnd() 
+    {
+        Debug.Log("Manager: Round End");
+    }
+
     private void Awake()
     {
         titleScreenState = new TitleScreen(this);

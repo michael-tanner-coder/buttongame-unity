@@ -14,10 +14,16 @@ public class Score : MonoBehaviour
     [SerializeField]
     private Fill scorebar;
 
+    // Events
+    private GameEvents gameEvents;
 
     void Update() 
     {
         float percentage = Mathf.InverseLerp(0, maxPoints, points);
         scorebar.SetPercentage(percentage);
+
+        if (maxPoints === points) {
+            // invoke game over event
+        }
     }
 }

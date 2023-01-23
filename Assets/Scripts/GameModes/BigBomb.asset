@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: BigBomb
   m_EditorClassIdentifier: 
   name: Big Bomb
-  baseDuration: 6000
+  baseDuration: 10
   winningState: 1
   limitButtonPresses: 0
   gravityModifier: 1
