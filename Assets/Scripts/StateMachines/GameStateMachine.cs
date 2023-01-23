@@ -7,16 +7,22 @@ public class GameStateMachine : StateMachine
     // states
     [HideInInspector]
     public TitleScreen titleScreenState;
+
     [HideInInspector]
     public Tutorial tutorialState;
+
     [HideInInspector]
     public Countdown countdownState;
+
     [HideInInspector]
-    public GetEvent getEventState;
+    public GetEvent getEventState; // change to GetGameMode
+
     [HideInInspector]
     public Round roundState;
+
     [HideInInspector]
     public RoundEnd roundEndState;
+
     [HideInInspector]
     public GameOver gameOverState;
 
@@ -25,16 +31,6 @@ public class GameStateMachine : StateMachine
 
     // events
     public GameEvents gameEvents;
-
-    private void Start() 
-    {
-        gameEvents.roundEndEvent?.AddListener(RoundEnd);
-    }
-
-    private void RoundEnd() 
-    {
-        Debug.Log("Manager: Round End");
-    }
 
     private void Awake()
     {
