@@ -2,11 +2,11 @@ using UnityEngine;
 
 public class StateEnums
 {
-    public new enum States {}
+    public enum States {}
 }
 
 public class GameStates: StateEnums {
-    public new enum Enums
+    public enum Enums
     {
         TUTORIAL,
         GET_EVENT,
@@ -19,7 +19,7 @@ public class GameStates: StateEnums {
 }
 
 public class ButtonStates: StateEnums {
-    public new enum Enums
+    public enum Enums
     {
         UNPRESSED,
         PRESSED,
@@ -28,7 +28,7 @@ public class ButtonStates: StateEnums {
 }
 
 public class DoorStates: StateEnums {
-    public new enum Enums
+    public enum Enums
     {
       OPEN, 
       CLOSED
