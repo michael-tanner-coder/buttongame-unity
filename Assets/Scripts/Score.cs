@@ -15,7 +15,12 @@ public class Score : MonoBehaviour
     private Fill scorebar;
 
     // Events
+    [SerializeField]
     private GameEvents gameEvents;
+
+    // Data
+    [SerializeField]
+    private PlayerData playerData;
 
     void Update() 
     {

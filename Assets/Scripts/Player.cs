@@ -5,6 +5,9 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     private string prev_type = "basic";
+    
+    [SerializeField]
+    private PlayerData data;
 
     void Start()
     {
@@ -16,12 +19,7 @@ public class Player : MonoBehaviour
     {
         if (player == gameObject)
         {
-            // loseAnim.Play();
-            // switchCharacter(this, scene.characters);
-            // if (scene.state != States.GameState.GAME_OVER)
-            // {
-            //     scene.resetRound();
-            // }
+   
         }
     }
 
