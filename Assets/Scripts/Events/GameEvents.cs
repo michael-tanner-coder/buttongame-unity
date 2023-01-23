@@ -8,8 +8,12 @@ public class GameEvents : ScriptableObject
 {
     [System.NonSerialized]
     public UnityEvent roundEndEvent;
+
     [System.NonSerialized]
     public UnityEvent roundStartEvent;
+
+    [System.NonSerialized]
+    public UnityEvent activateDoorEvent = new UnityEvent();
 
     private void OnEnable() 
     {
