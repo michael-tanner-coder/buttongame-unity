@@ -4,15 +4,15 @@ using UnityEngine;
 
 public class Door : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    [SerializeField]
+    private DoorState.Enums _state;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+    void Update() {
+        if (_state == DoorState.Enums.OPEN) {
+            gameObject.GetComponent<SpriteRenderer>().enabled = false;
+        }
+        if (_state == DoorState.Enums.CLOSED) {
+            gameObject.GetComponent<SpriteRenderer>().enabled = true;
+        }
     }
 }
