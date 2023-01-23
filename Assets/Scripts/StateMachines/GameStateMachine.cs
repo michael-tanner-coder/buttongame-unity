@@ -15,7 +15,7 @@ public class GameStateMachine : StateMachine
     public Countdown countdownState;
 
     [HideInInspector]
-    public GetEvent getEventState; // change to GetGameMode
+    public GetGameMode getGameMode;
 
     [HideInInspector]
     public Round roundState;
