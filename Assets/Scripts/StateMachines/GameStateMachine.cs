@@ -37,6 +37,7 @@ public class GameStateMachine : StateMachine
         titleScreenState = new TitleScreen(this);
         tutorialState = new Tutorial(this);
         roundState = new Round(this);
+        roundEndState = new RoundEnd(this);
     }
 
     protected override BaseState GetInitialState()

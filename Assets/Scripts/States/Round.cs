@@ -7,8 +7,10 @@ public class Round : BaseState
 {
     
     private GameStateMachine _sm;
-    public Round(GameStateMachine stateMachine) : base("Round", stateMachine) {
+    public Round(GameStateMachine stateMachine) : base("Round", stateMachine) 
+    {
         _sm = stateMachine;
+        _sm.gameEvents.roundStartEvent.AddListener(() => _sm.ChangeState(this));
     }
 
     public override void Enter()
@@ -19,6 +21,6 @@ public class Round : BaseState
 
     public override void UpdateLogic() 
     {
-
+        
     }
 }

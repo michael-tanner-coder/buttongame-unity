@@ -6,9 +6,11 @@ using UnityEngine;
 public class RoundEnd : BaseState
 {
     private GameStateMachine _sm;
-    public RoundEnd(GameStateMachine stateMachine) : base("RoundEnd", stateMachine) {
+    public RoundEnd(GameStateMachine stateMachine) : base("RoundEnd", stateMachine) 
+    {
         _sm = stateMachine;
-     }
+        _sm.gameEvents.roundEndEvent.AddListener(() => _sm.ChangeState(this));
+    }
 
      public override void Enter()
     {
