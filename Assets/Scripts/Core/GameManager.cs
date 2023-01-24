@@ -9,8 +9,6 @@ public class GameManager : MonoBehaviour
     // TODO: test movement between states for specific actions (timer runs out, animation ends, input is pressed, etc)
     // TODO: create feature toggles to enable/disable certain game elements (event types, obstacles, collectibles)
     // TODO: spawn explosion object on round end
-    // TODO: create SOs for obstacles / collectibles
-    // TODO: spawn and move small bomb
     // TODO: end round on collision with small bomb
 
     // ANIMATION
