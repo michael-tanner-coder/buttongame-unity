@@ -17,10 +17,11 @@ public class Round : BaseState
     {
         base.Enter();
         Debug.Log("Entering Round");
+        _sm.gameEvents.startTimerEvent?.Invoke();
     }
 
     public override void UpdateLogic() 
     {
-        
+
     }
 }

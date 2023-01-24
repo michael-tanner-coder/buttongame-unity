@@ -6,7 +6,6 @@ public class GameManager : MonoBehaviour
 {
 
     // LOGIC
-    // TODO: test movement between states for specific actions (timer runs out, animation ends, input is pressed, etc)
     // TODO: create feature toggles to enable/disable certain game elements (event types, obstacles, collectibles)
     // TODO: spawn explosion object on round end
     // TODO: end round on collision with small bomb

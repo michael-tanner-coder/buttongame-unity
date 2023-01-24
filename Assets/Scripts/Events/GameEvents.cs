@@ -15,6 +15,9 @@ public class GameEvents : ScriptableObject
     [System.NonSerialized]
     public UnityEvent activateDoorEvent;
 
+    [System.NonSerialized]
+    public UnityEvent startTimerEvent = new UnityEvent();
+
     private void OnEnable() 
     {
         if (roundStartEvent == null)
