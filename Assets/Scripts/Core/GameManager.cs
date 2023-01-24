@@ -34,4 +34,23 @@ public class GameManager : MonoBehaviour
 
     [SerializeField]
     private PlayerData[] playerData;
+
+    [SerializeField]
+    private GameEvents _gameEvents;
+
+    void Awake() 
+    {
+        _gameEvents.roundEndEvent.AddListener(CheckForWinner);
+    }
+
+    void CheckForWinner() 
+    {
+        for (int i = 0; i < playerData.Length; i++)
+        {
+            if (playerData[i].doorState == DoorState.Enums.CLOSED) 
+            {
+                Debug.Log("Winner is " + playerData[i].playerName);
+            }
+        }
+    }
 }

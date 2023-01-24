@@ -12,5 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 57b4affa186f95b4d822af57bf05c5b8, type: 3}
   m_Name: Player2Data
   m_EditorClassIdentifier: 
+  playerName: P2
   score: 0
   doorState: 0

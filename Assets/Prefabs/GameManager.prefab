@@ -49,6 +49,7 @@ MonoBehaviour:
   playerData:
   - {fileID: 11400000, guid: 6d10accf23462974f9a60e84b9678dd9, type: 2}
   - {fileID: 11400000, guid: 04530fd7de24c914eaf5423fb81f12cf, type: 2}
+  _gameEvents: {fileID: 11400000, guid: 0f86ff09a287f9c4db03a2100ecdf502, type: 2}
 --- !u!114 &5762082801314829190
 MonoBehaviour:
   m_ObjectHideFlags: 0

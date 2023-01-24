@@ -6,6 +6,7 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "PlayerData", menuName = "Scriptable Objects/PlayerData", order = 0)]
 public class PlayerData : ScriptableObject 
 {
+    public string playerName;
     public int score;
     public DoorState.Enums doorState;
 

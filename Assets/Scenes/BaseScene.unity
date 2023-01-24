@@ -677,6 +677,10 @@ PrefabInstance:
       propertyPath: _state
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8932256890891279810, guid: 74311bc8de2dd5e44a99dc83bd8bcd8b, type: 3}
+      propertyPath: _playerData
+      value: 
+      objectReference: {fileID: 11400000, guid: 04530fd7de24c914eaf5423fb81f12cf, type: 2}
     - target: {fileID: 9146312102360213157, guid: 74311bc8de2dd5e44a99dc83bd8bcd8b, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.871
@@ -999,6 +1003,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8932256890891279810, guid: 74311bc8de2dd5e44a99dc83bd8bcd8b, type: 3}
+      propertyPath: _playerData
+      value: 
+      objectReference: {fileID: 11400000, guid: 6d10accf23462974f9a60e84b9678dd9, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 74311bc8de2dd5e44a99dc83bd8bcd8b, type: 3}
 --- !u!4 &431964019920046904 stripped
