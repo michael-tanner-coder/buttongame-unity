@@ -9,7 +9,7 @@ public class Timer : MonoBehaviour
     private float _currentTime;
     private bool _finished;
     [SerializeField]
-    private bool _paused = false;
+    private bool _paused = true;
     private float _progress;
 
     // UI element 
@@ -20,9 +20,9 @@ public class Timer : MonoBehaviour
     public GameEvents gameEvents;
 
 
-    void Start() 
+    void Awake() 
     {
-        StartTimer();
+        gameEvents.startTimerEvent.AddListener(StartTimer);
     }
     void Update()
     {
@@ -61,6 +61,7 @@ public class Timer : MonoBehaviour
 
     void StartTimer() 
     {
+        Debug.Log("Timer started");
         _finished = false;
         _paused = false;
         _currentTime = _duration;
