@@ -66,17 +66,17 @@ public class Timer : MonoBehaviour
         _currentTime = _duration;
     }
 
-    void Play() 
+    public void Play() 
     {
         _paused = false;
     }
 
-    void Pause() 
+    public void Pause() 
     {
         _paused = true;
     }
 
-    void Reset() 
+    public void Reset() 
     {
         _finished = false;
         _currentTime = _duration;
