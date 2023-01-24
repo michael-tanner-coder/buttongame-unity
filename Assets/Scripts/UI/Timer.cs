@@ -5,10 +5,12 @@ using UnityEngine;
 public class Timer : MonoBehaviour
 {
     [SerializeField]
-    private float duration;
-    private float currentTime;
-    private bool finished;
-    private float progress;
+    private float _duration;
+    private float _currentTime;
+    private bool _finished;
+    [SerializeField]
+    private bool _paused = false;
+    private float _progress;
 
     // UI element 
     [SerializeField]
@@ -22,38 +24,61 @@ public class Timer : MonoBehaviour
     {
         StartTimer();
     }
-
-    void StartTimer() 
-    {
-        finished = false;
-        currentTime = duration;
-    }
-
     void Update()
     {
-        // decrement timer
-        currentTime -= 1f * Time.deltaTime;
-        currentTime = Mathf.Clamp(currentTime, 0f, duration);
-
-        // check if timer is finished and invoke event
-        if (currentTime <= 0f && !finished)
+        // return early if paused
+        if (_paused) 
         {
-            finished = true;   
-            gameEvents.roundEndEvent?.Invoke();         
+            return;
         }
+        
+        // decrement timer
+        _currentTime -= 1f * Time.deltaTime;
+        _currentTime = Mathf.Clamp(_currentTime, 0f, _duration);
 
         // update UI
-        progress = Mathf.InverseLerp(0, duration, currentTime);
-        timerBar.SetPercentage(progress);
+        _progress = Mathf.InverseLerp(0, _duration, _currentTime);
+        timerBar.SetPercentage(_progress);
+
+        // check if timer is _finished and invoke event
+        if (_currentTime <= 0f && !_finished)
+        {
+            _finished = true;   
+            gameEvents.roundEndEvent?.Invoke();
+            OnComplete();
+        }
     }
 
     public float GetProgress() 
     {
-        return progress;
+        return _progress;
     }
 
-    void TimerComplete() 
-    { 
+    void OnComplete() 
+    {
         // Debug.Log("Timer complete");
+    }
+
+    void StartTimer() 
+    {
+        _finished = false;
+        _paused = false;
+        _currentTime = _duration;
+    }
+
+    void Play() 
+    {
+        _paused = false;
+    }
+
+    void Pause() 
+    {
+        _paused = true;
+    }
+
+    void Reset() 
+    {
+        _finished = false;
+        _currentTime = _duration;
     }
 }
