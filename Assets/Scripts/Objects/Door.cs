@@ -17,21 +17,7 @@ public class Door : MonoBehaviour
 
     void Activate() 
     {
-        if (_state == DoorState.Enums.OPEN) 
-        {
-            _state = DoorState.Enums.CLOSED;
-        } else 
-        {
-            _state = DoorState.Enums.OPEN;
-        }
-    }
-
-    void Update() {
-        if (_state == DoorState.Enums.OPEN) {
-            gameObject.GetComponent<SpriteRenderer>().enabled = false;
-        }
-        if (_state == DoorState.Enums.CLOSED) {
-            gameObject.GetComponent<SpriteRenderer>().enabled = true;
-        }
+        _state = _state == DoorState.Enums.CLOSED ? DoorState.Enums.OPEN : DoorState.Enums.CLOSED;
+        gameObject.GetComponent<SpriteRenderer>().enabled = _state == DoorState.Enums.CLOSED;
     }
 }
