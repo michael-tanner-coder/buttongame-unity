@@ -13,7 +13,7 @@ public class GameEvents : ScriptableObject
     public UnityEvent roundStartEvent;
 
     [System.NonSerialized]
-    public UnityEvent activateDoorEvent = new UnityEvent();
+    public UnityEvent activateDoorEvent;
 
     private void OnEnable() 
     {
@@ -22,5 +22,8 @@ public class GameEvents : ScriptableObject
 
         if (roundEndEvent == null)
             roundEndEvent = new UnityEvent();
+
+        if (activateDoorEvent == null)
+            activateDoorEvent = new UnityEvent();
     }
 }
