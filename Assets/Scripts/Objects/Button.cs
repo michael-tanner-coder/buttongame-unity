@@ -9,7 +9,6 @@ public class Button : MonoBehaviour
 
     void ActivateDoor()
     {
-        Debug.Log("Activating door");
         gameEvents.activateDoorEvent?.Invoke();
     }
 
@@ -26,7 +25,6 @@ public class Button : MonoBehaviour
     {
         if (other.gameObject.tag == "trigger") 
         {
-            Debug.Log("Collision exit");
             _state = ButtonState.Enums.RELEASED;
         }
     }
