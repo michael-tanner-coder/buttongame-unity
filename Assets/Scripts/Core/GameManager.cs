@@ -31,6 +31,7 @@ public class GameManager : MonoBehaviour
 
     [SerializeField]
     private GameState.Enums state;
+    private bool roundEnded = false;
 
     [SerializeField]
     private PlayerData[] playerData;
@@ -40,17 +41,50 @@ public class GameManager : MonoBehaviour
 
     void Awake() 
     {
-        _gameEvents.roundEndEvent.AddListener(CheckForWinner);
+        _gameEvents.roundEndEvent.AddListener(EndRound);
+        _gameEvents.gameOverEvent.AddListener(CheckForMatchWinner);
     }
 
-    void CheckForWinner() 
+    void EndRound() 
+    {
+        roundEnded = true;
+    }
+
+    void CheckForRoundWinner() 
     {
         for (int i = 0; i < playerData.Length; i++)
         {
-            if (playerData[i].doorState == DoorState.Enums.CLOSED) 
+            if (playerData[i].doorState == DoorState.Enums.CLOSED)
             {
-                Debug.Log("Winner is " + playerData[i].playerName);
+                // output winner
+                Debug.Log("Round Winner is " + playerData[i].playerName);
+                
+                // break early from loop so that we don't test win conditions for the other player
+                break;
             }
+        }
+
+    }
+
+    void CheckForMatchWinner() 
+    {
+        for (int i = 0; i < playerData.Length; i++)
+        {
+            if (playerData[i].score >= 3) 
+            {
+                Debug.Log("Match Winner is " + playerData[i].playerName);
+                
+                break;
+            }
+        }
+    }
+
+    void Update() 
+    {
+        if (roundEnded) 
+        {
+            CheckForMatchWinner();
+            roundEnded = false;
         }
     }
 }

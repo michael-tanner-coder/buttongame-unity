@@ -5,10 +5,10 @@ using UnityEngine;
 public class Score : MonoBehaviour
 {
     [SerializeField]
-    public float points;
+    public int points;
 
     [SerializeField]
-    public float maxPoints;
+    public int maxPoints;
 
     // UI
     [SerializeField]
@@ -22,13 +22,29 @@ public class Score : MonoBehaviour
     [SerializeField]
     private PlayerData playerData;
 
+    void Awake() 
+    {
+        gameEvents.roundEndEvent.AddListener(CheckForWinner);
+    }
+
+    void CheckForWinner() 
+    {
+        if (playerData.doorState == DoorState.Enums.CLOSED)
+        {
+            points += 1;
+            points = (int) Mathf.Clamp(points, 0, maxPoints);
+            playerData.score = points;
+        }
+    }
+
     void Update() 
     {
         float percentage = Mathf.InverseLerp(0, maxPoints, points);
         scorebar.SetPercentage(percentage);
 
-        if (maxPoints == points) {
-            // invoke game over event
+        if (points >= maxPoints)
+        {
+            gameEvents.gameOverEvent?.Invoke();
         }
     }
 }

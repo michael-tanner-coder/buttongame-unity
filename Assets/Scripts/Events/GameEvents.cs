@@ -15,6 +15,9 @@ public class GameEvents : ScriptableObject
 
     [System.NonSerialized]
     public UnityEvent startTimerEvent = new UnityEvent();
+    
+    [System.NonSerialized]
+    public UnityEvent gameOverEvent = new UnityEvent();
 
     private void OnEnable() 
     {
