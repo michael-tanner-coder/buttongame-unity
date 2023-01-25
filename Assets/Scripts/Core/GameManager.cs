@@ -5,6 +5,14 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
 
+    // ARCHITECTURE (consider if necessary)
+    // TODO: review unity architecture vid
+    // TODO: implement SO event architecture???
+    // TODO: implement SO variables
+    // TODO: address race conditions in event responses
+    // TODO: split up enums into different files / classes
+    // TODO: provider public getters for SO values
+
     // LOGIC
     // TODO: create feature toggles to enable/disable certain game elements (event types, obstacles, collectibles)
     // TODO: spawn explosion object on round end
@@ -35,6 +43,7 @@ public class GameManager : MonoBehaviour
 
     [SerializeField]
     private PlayerData[] playerData;
+    private Score[] scoreData;
 
     [SerializeField]
     private GameEvents _gameEvents;
@@ -81,10 +90,5 @@ public class GameManager : MonoBehaviour
 
     void Update() 
     {
-        if (roundEnded) 
-        {
-            CheckForMatchWinner();
-            roundEnded = false;
-        }
     }
 }
