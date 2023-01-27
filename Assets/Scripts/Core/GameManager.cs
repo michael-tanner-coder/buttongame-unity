@@ -49,6 +49,9 @@ public class GameManager : MonoBehaviour
     [SerializeField]
     private GameEvents _gameEvents;
 
+    [SerializeField]
+    private ScriptableObjectArchitecture.IntVariable _maxScore;
+
     void Awake() 
     {
         _gameEvents.roundEndEvent.AddListener(CheckForWinner);
@@ -123,6 +126,6 @@ public class GameManager : MonoBehaviour
     }
     bool isMatchWinner(PlayerData player) 
     {
-        return player.score.Value >= 3;
+        return player.score.Value >= _maxScore.Value;
     }
 }

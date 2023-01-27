@@ -1388,6 +1388,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3892463983990011886, guid: c240588d0dd5e37479eecbfbd9b07ea1, type: 3}
+      propertyPath: _maxScore
+      value: 
+      objectReference: {fileID: 11400000, guid: 269bbb203a1123e46b2873be7a2b6e99, type: 2}
+    - target: {fileID: 3892463983990011886, guid: c240588d0dd5e37479eecbfbd9b07ea1, type: 3}
       propertyPath: _state._variable
       value: 
       objectReference: {fileID: 11400000, guid: e85e54c2ab6a790478c1beaf1d9086c7, type: 2}
