@@ -37,6 +37,13 @@ public class GameManager : MonoBehaviour
     // TODO: switch music tempo based on player scores
     // TODO: pair sounds with actions (jumping, landing, button press, tick, explode, etc)
 
+    // DESIGN:
+    // --- closing the game loop ---
+    // TODO: get winning player at the end of each round
+    // TODO: give 1 point to winning player
+    // TODO: at round end, if a player has 3 points, show winner name on UI
+    // TODO: reset game with each player at 0 points
+
     [SerializeField]
     private GameState.Enums state;
     private bool roundEnded = false;
