@@ -37,13 +37,6 @@ public class GameManager : MonoBehaviour
     // TODO: switch music tempo based on player scores
     // TODO: pair sounds with actions (jumping, landing, button press, tick, explode, etc)
 
-    // DESIGN:
-    // --- closing the game loop ---
-    // TODO: get winning player at the end of each round
-    // TODO: give 1 point to winning player
-    // TODO: at round end, if a player has 3 points, show winner name on UI
-    // TODO: reset game with each player at 0 points
-
     [SerializeField]
     private GameState.Enums state;
     private bool roundEnded = false;
@@ -57,45 +50,86 @@ public class GameManager : MonoBehaviour
 
     void Awake() 
     {
-        _gameEvents.roundEndEvent.AddListener(EndRound);
-        _gameEvents.gameOverEvent.AddListener(CheckForMatchWinner);
+        _gameEvents.roundEndEvent.AddListener(CheckForWinner);
+        ResetPlayerData();
     }
 
-    void EndRound() 
+    void ResetPlayerData()
     {
-        roundEnded = true;
+        for(int i = 0; i < playerData.Length; i++)
+        {
+            playerData[i].ResetData();
+        }
     }
 
-    void CheckForRoundWinner() 
+    bool CheckForRoundWinner() 
     {
+        bool winner = false;
         for (int i = 0; i < playerData.Length; i++)
         {
             if (playerData[i].doorState == DoorState.Enums.CLOSED)
             {
-                // output winner
+                // output round winner
                 Debug.Log("Round Winner is " + playerData[i].playerName);
-                
+
+                playerData[i].score += 1;
+                winner = true;
+
                 // break early from loop so that we don't test win conditions for the other player
                 break;
             }
         }
 
+        return winner;
     }
+
 
     void CheckForMatchWinner() 
     {
+        bool matchWinner = false;
         for (int i = 0; i < playerData.Length; i++)
         {
-            if (playerData[i].score >= 3) 
+            // if a player's score exceeds the max score, the game is over
+            if (isMatchWinner(playerData[i]))
             {
+                // move to game over event
+                _gameEvents.gameOverEvent?.Invoke();
+                ResetPlayerData();
+
+                // output match winner
                 Debug.Log("Match Winner is " + playerData[i].playerName);
-                
+
+                matchWinner = true;
+
+                // break early from loop so that we don't test win conditions for the other player
                 break;
             }
+
+        }
+    
+        if (!matchWinner)
+        {
+            _gameEvents.roundStartEvent?.Invoke();
         }
     }
 
-    void Update() 
+
+    void CheckForWinner() 
     {
+        // if a player won the round, check if the also won the whole match
+        if (CheckForRoundWinner())
+        {
+            CheckForMatchWinner();
+        }
+        else 
+        {
+            // otherwise, do another round
+            _gameEvents.roundStartEvent?.Invoke();
+        }
+        
+    }
+    bool isMatchWinner(PlayerData player) 
+    {
+        return player.score >= 3;
     }
 }

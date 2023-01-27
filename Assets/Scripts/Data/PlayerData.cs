@@ -10,7 +10,7 @@ public class PlayerData : ScriptableObject
     public int score;
     public DoorState.Enums doorState;
 
-    void ResetData() 
+    public void ResetData() 
     { 
         score = 0; 
         doorState = DoorState.Enums.OPEN; 

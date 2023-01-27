@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class GameStateMachine : StateMachine
 {
@@ -32,6 +33,11 @@ public class GameStateMachine : StateMachine
     // events
     public GameEvents gameEvents;
 
+    // input
+    PlayerInput input;
+    public PlayerInput Input => input;
+
+
     private void Awake()
     {
         titleScreenState = new TitleScreen(this);
@@ -39,6 +45,7 @@ public class GameStateMachine : StateMachine
         roundState = new Round(this);
         roundEndState = new RoundEnd(this);
         gameOverState = new GameOver(this);
+        input = GetComponent<PlayerInput>();
     }
 
     protected override BaseState GetInitialState()

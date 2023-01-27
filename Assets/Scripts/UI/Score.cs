@@ -24,7 +24,7 @@ public class Score : MonoBehaviour
 
     void Awake() 
     {
-        gameEvents.roundEndEvent.AddListener(CheckForWinner);
+        // gameEvents.roundEndEvent.AddListener(CheckForWinner);
     }
 
     void CheckForWinner() 
@@ -42,9 +42,7 @@ public class Score : MonoBehaviour
         float percentage = Mathf.InverseLerp(0, maxPoints, points);
         scorebar.SetPercentage(percentage);
 
-        if (points >= maxPoints)
-        {
-            gameEvents.gameOverEvent?.Invoke();
-        }
+        points = playerData.score;
+        points = (int) Mathf.Clamp(points, 0, maxPoints);
     }
 }
