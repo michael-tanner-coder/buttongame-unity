@@ -45,7 +45,6 @@ public class GameManager : MonoBehaviour
 
     [SerializeField]
     private List<PlayerData> players;
-    private Score[] scoreData;
 
     [SerializeField]
     private GameEvents _gameEvents;
@@ -75,7 +74,7 @@ public class GameManager : MonoBehaviour
                 Debug.Log("Round Winner is " + player.playerName);
 
                 // update score
-                player.score += 1;
+                player.score.Value += 1;
                 winner = player;
             }
         });
@@ -124,6 +123,6 @@ public class GameManager : MonoBehaviour
     }
     bool isMatchWinner(PlayerData player) 
     {
-        return player.score >= 3;
+        return player.score.Value >= 3;
     }
 }

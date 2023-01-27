@@ -3,16 +3,12 @@ using UnityEngine;
 public class Timer : MonoBehaviour
 {
     [SerializeField]
-    private float _duration;
-    private float _currentTime;
+    private ScriptableObjectArchitecture.FloatReference _duration;
+    [SerializeField]
+    private ScriptableObjectArchitecture.FloatReference _maxDuration;
     private bool _finished;
     [SerializeField]
     private bool _paused = true;
-    private float _progress;
-
-    // UI element 
-    [SerializeField]
-    private Fill timerBar;
 
     // Events
     public GameEvents gameEvents;
@@ -31,30 +27,14 @@ public class Timer : MonoBehaviour
         }
         
         // decrement timer
-        _currentTime -= 1f * Time.deltaTime;
-        _currentTime = Mathf.Clamp(_currentTime, 0f, _duration);
-
-        // update UI
-        _progress = Mathf.InverseLerp(0, _duration, _currentTime);
-        timerBar.SetPercentage(_progress);
+        _duration.Value -= 1f * Time.deltaTime;
 
         // check if timer is _finished and invoke event
-        if (_currentTime <= 0f && !_finished)
+        if (_duration.Value <= 0f && !_finished)
         {
             _finished = true;   
             gameEvents.roundEndEvent?.Invoke();
-            OnComplete();
         }
-    }
-
-    public float GetProgress() 
-    {
-        return _progress;
-    }
-
-    void OnComplete() 
-    {
-        // Debug.Log("Timer complete");
     }
 
     void StartTimer() 
@@ -62,7 +42,7 @@ public class Timer : MonoBehaviour
         Debug.Log("Timer started");
         _finished = false;
         _paused = false;
-        _currentTime = _duration;
+        _duration.Value = _maxDuration.Value;
     }
 
     public void Play() 
@@ -78,6 +58,6 @@ public class Timer : MonoBehaviour
     public void Reset() 
     {
         _finished = false;
-        _currentTime = _duration;
+        _duration.Value = _maxDuration.Value;
     }
 }

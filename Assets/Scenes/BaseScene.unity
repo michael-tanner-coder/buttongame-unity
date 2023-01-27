@@ -134,6 +134,10 @@ PrefabInstance:
       propertyPath: playerData
       value: 
       objectReference: {fileID: 11400000, guid: 04530fd7de24c914eaf5423fb81f12cf, type: 2}
+    - target: {fileID: 1270683132078658029, guid: aa8ce57077d348f4997252ba059f2cb5, type: 3}
+      propertyPath: currentInt._variable
+      value: 
+      objectReference: {fileID: 11400000, guid: 4f2a5fa950226cb47b3ee92d4e509904, type: 2}
     - target: {fileID: 1270683132078658030, guid: aa8ce57077d348f4997252ba059f2cb5, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -1313,6 +1317,22 @@ PrefabInstance:
     - target: {fileID: 2246685421025219158, guid: 3500de4753a386e4284370d7202f6a2a, type: 3}
       propertyPath: _duration
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2246685421025219158, guid: 3500de4753a386e4284370d7202f6a2a, type: 3}
+      propertyPath: _duration._variable
+      value: 
+      objectReference: {fileID: 11400000, guid: f06929baf2e31154fa41be9b38c7c694, type: 2}
+    - target: {fileID: 2246685421025219158, guid: 3500de4753a386e4284370d7202f6a2a, type: 3}
+      propertyPath: _duration._useConstant
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2246685421025219158, guid: 3500de4753a386e4284370d7202f6a2a, type: 3}
+      propertyPath: _maxDuration._variable
+      value: 
+      objectReference: {fileID: 11400000, guid: 8ce32b26e41b4fd4b9f1dea2782ff28a, type: 2}
+    - target: {fileID: 2246685421025219158, guid: 3500de4753a386e4284370d7202f6a2a, type: 3}
+      propertyPath: _duration._constantValue
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3500de4753a386e4284370d7202f6a2a, type: 3}

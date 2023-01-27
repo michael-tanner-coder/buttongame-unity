@@ -13,5 +13,8 @@ MonoBehaviour:
   m_Name: Player1Data 1
   m_EditorClassIdentifier: 
   playerName: P1
-  score: 0
+  score:
+    _useConstant: 0
+    _constantValue: 0
+    _variable: {fileID: 11400000, guid: c76dca6e1e8021745916b483dfb0da3b, type: 2}
   doorState: 0

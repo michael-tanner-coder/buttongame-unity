@@ -9,12 +9,20 @@ public class Fill : MonoBehaviour
 
     [SerializeField]
     private bool lerp;
+    [SerializeField]
+    private bool useInt;
 
     [SerializeField]
-    private ScriptableObjectArchitecture.FloatReference current;
+    private ScriptableObjectArchitecture.FloatReference currentFloat;
 
     [SerializeField]
-    private ScriptableObjectArchitecture.FloatReference maximum;
+    private ScriptableObjectArchitecture.FloatReference maximumFloat;
+    
+    [SerializeField]
+    private ScriptableObjectArchitecture.IntReference currentInt;
+
+    [SerializeField]
+    private ScriptableObjectArchitecture.IntReference maximumInt;
 
     void Start() 
     {
@@ -23,16 +31,9 @@ public class Fill : MonoBehaviour
 
     void Update() 
     {
-        // float perc = Mathf.InverseLerp(0, maximum.Value, current.Value);
-        
-        if (!lerp)
-        {
-            image.fillAmount = percentage;
-        }
-        else 
-        {
-            image.fillAmount = Mathf.Lerp(image.fillAmount, percentage, Time.deltaTime);
-        }
+        float perc = useInt ? Mathf.InverseLerp(0, maximumInt.Value, currentInt.Value) : Mathf.InverseLerp(0, maximumFloat.Value, currentFloat.Value);
+
+        image.fillAmount = lerp ? Mathf.Lerp(image.fillAmount, perc, Time.deltaTime) : perc;
     }
 
     public void SetPercentage(float percent) 

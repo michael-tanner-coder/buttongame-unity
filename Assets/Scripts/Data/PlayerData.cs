@@ -7,12 +7,12 @@ using UnityEngine;
 public class PlayerData : ScriptableObject 
 {
     public string playerName;
-    public int score;
+    public ScriptableObjectArchitecture.IntReference score;
     public DoorState doorState;
 
     public void ResetData() 
     { 
-        score = 0; 
+        score.Value = 0; 
         doorState = DoorState.OPEN; 
     }
 }
