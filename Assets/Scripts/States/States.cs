@@ -3,7 +3,7 @@ public class StateEnums
     public enum States {}
 }
 
-public class GameState: StateEnums {
+public class States: StateEnums {
     public enum Enums
     {
         TUTORIAL,

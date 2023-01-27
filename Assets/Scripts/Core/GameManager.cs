@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour
@@ -38,7 +36,7 @@ public class GameManager : MonoBehaviour
     // TODO: pair sounds with actions (jumping, landing, button press, tick, explode, etc)
 
     [SerializeField]
-    private GameState.Enums state;
+    private ScriptableObjectArchitecture.StateReference _state;
     private bool roundEnded = false;
 
     [SerializeField]
