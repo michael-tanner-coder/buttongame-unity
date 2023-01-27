@@ -8,12 +8,12 @@ public class PlayerData : ScriptableObject
 {
     public string playerName;
     public int score;
-    public DoorState.Enums doorState;
+    public DoorState doorState;
 
     public void ResetData() 
     { 
         score = 0; 
-        doorState = DoorState.Enums.OPEN; 
+        doorState = DoorState.OPEN; 
     }
 }
 

@@ -1,5 +1,3 @@
-using UnityEngine;
-
 public class StateEnums
 {
     public enum States {}
@@ -18,19 +16,16 @@ public class GameState: StateEnums {
     }
 }
 
-public class ButtonState: StateEnums {
-    public enum Enums
-    {
-        UNPRESSED,
-        PRESSED,
-        RELEASED
-    }
+
+public enum ButtonState
+{
+    UNPRESSED,
+    PRESSED,
+    RELEASED
 }
 
-public class DoorState: StateEnums {
-    public enum Enums
-    {
-      OPEN, 
-      CLOSED
-    }
+public enum DoorState 
+{
+    OPEN, 
+    CLOSED
 }

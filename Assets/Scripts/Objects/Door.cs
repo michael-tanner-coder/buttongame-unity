@@ -5,7 +5,7 @@ using UnityEngine;
 public class Door : MonoBehaviour
 {
     [SerializeField]
-    private DoorState.Enums _state;
+    private DoorState _state;
 
     [SerializeField]
     private GameEvents _events;
@@ -20,8 +20,8 @@ public class Door : MonoBehaviour
 
     void Activate() 
     {
-        _state = _state == DoorState.Enums.CLOSED ? DoorState.Enums.OPEN : DoorState.Enums.CLOSED;
-        gameObject.GetComponent<SpriteRenderer>().enabled = _state == DoorState.Enums.CLOSED;
+        _state = _state == DoorState.CLOSED ? DoorState.OPEN : DoorState.CLOSED;
+        gameObject.GetComponent<SpriteRenderer>().enabled = _state == DoorState.CLOSED;
         _playerData.doorState = _state;
     }
 }

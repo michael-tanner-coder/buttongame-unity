@@ -29,7 +29,7 @@ public class Score : MonoBehaviour
 
     void CheckForWinner() 
     {
-        if (playerData.doorState == DoorState.Enums.CLOSED)
+        if (playerData.doorState == DoorState.CLOSED)
         {
             points += 1;
             points = (int) Mathf.Clamp(points, 0, maxPoints);

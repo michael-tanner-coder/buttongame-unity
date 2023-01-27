@@ -67,7 +67,7 @@ public class GameManager : MonoBehaviour
         bool winner = false;
         for (int i = 0; i < playerData.Length; i++)
         {
-            if (playerData[i].doorState == DoorState.Enums.CLOSED)
+            if (playerData[i].doorState == DoorState.CLOSED)
             {
                 // output round winner
                 Debug.Log("Round Winner is " + playerData[i].playerName);
