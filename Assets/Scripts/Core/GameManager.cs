@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour
@@ -41,6 +42,9 @@ public class GameManager : MonoBehaviour
 
     [SerializeField]
     private PlayerData[] playerData;
+
+    [SerializeField]
+    private List<PlayerData> players;
     private Score[] scoreData;
 
     [SerializeField]
@@ -54,58 +58,51 @@ public class GameManager : MonoBehaviour
 
     void ResetPlayerData()
     {
-        for(int i = 0; i < playerData.Length; i++)
-        {
-            playerData[i].ResetData();
-        }
+        players.ForEach((PlayerData player) => {
+            player.ResetData();
+        });
     }
 
-    bool CheckForRoundWinner() 
+    PlayerData GetRoundWinner() 
     {
-        bool winner = false;
-        for (int i = 0; i < playerData.Length; i++)
+        // PlayerData winner;
+        PlayerData winner = null;
+        players.ForEach((PlayerData player) =>
         {
-            if (playerData[i].doorState == DoorState.CLOSED)
+            if (player.doorState == DoorState.CLOSED)
             {
-                // output round winner
-                Debug.Log("Round Winner is " + playerData[i].playerName);
+                // output winner
+                Debug.Log("Round Winner is " + player.playerName);
 
-                playerData[i].score += 1;
-                winner = true;
-
-                // break early from loop so that we don't test win conditions for the other player
-                break;
+                // update score
+                player.score += 1;
+                winner = player;
             }
-        }
+        });
 
         return winner;
     }
 
 
-    void CheckForMatchWinner() 
+    void CheckForMatchWinner(PlayerData winningPlayer) 
     {
-        bool matchWinner = false;
-        for (int i = 0; i < playerData.Length; i++)
+        PlayerData matchWinner = null;
+
+        // if a player's score exceeds the max score, the game is over
+        if (isMatchWinner(winningPlayer))
         {
-            // if a player's score exceeds the max score, the game is over
-            if (isMatchWinner(playerData[i]))
-            {
-                // move to game over event
-                _gameEvents.gameOverEvent?.Invoke();
-                ResetPlayerData();
+            // move to game over state
+            _gameEvents.gameOverEvent?.Invoke();
+            ResetPlayerData();
 
-                // output match winner
-                Debug.Log("Match Winner is " + playerData[i].playerName);
+            // output match winner
+            Debug.Log("Match Winner is " + winningPlayer.playerName);
 
-                matchWinner = true;
-
-                // break early from loop so that we don't test win conditions for the other player
-                break;
-            }
-
+            matchWinner = winningPlayer;
         }
     
-        if (!matchWinner)
+        // if no one won the match, go back to round start state
+        if (matchWinner == null)
         {
             _gameEvents.roundStartEvent?.Invoke();
         }
@@ -114,17 +111,16 @@ public class GameManager : MonoBehaviour
 
     void CheckForWinner() 
     {
-        // if a player won the round, check if the also won the whole match
-        if (CheckForRoundWinner())
+        // if a player won the round, check if they also won the whole match
+        PlayerData roundWinner = GetRoundWinner();
+        if (roundWinner != null)
         {
-            CheckForMatchWinner();
+            CheckForMatchWinner(roundWinner);
+            return;
         }
-        else 
-        {
-            // otherwise, do another round
-            _gameEvents.roundStartEvent?.Invoke();
-        }
-        
+    
+        // otherwise, do another round
+        _gameEvents.roundStartEvent?.Invoke();
     }
     bool isMatchWinner(PlayerData player) 
     {
