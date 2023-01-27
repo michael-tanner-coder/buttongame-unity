@@ -105,6 +105,6 @@ MonoBehaviour:
     _constantValue: 0
     _variable: {fileID: 11400000, guid: c76dca6e1e8021745916b483dfb0da3b, type: 2}
   maximumInt:
-    _useConstant: 1
+    _useConstant: 0
     _constantValue: 3
-    _variable: {fileID: 0}
+    _variable: {fileID: 11400000, guid: 269bbb203a1123e46b2873be7a2b6e99, type: 2}
