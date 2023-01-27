@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -9,6 +7,15 @@ public class Fill : MonoBehaviour
     private float percentage;
     private Image image;
 
+    [SerializeField]
+    private bool lerp;
+
+    [SerializeField]
+    private ScriptableObjectArchitecture.FloatReference current;
+
+    [SerializeField]
+    private ScriptableObjectArchitecture.FloatReference maximum;
+
     void Start() 
     {
         image = GetComponent<Image>();
@@ -16,7 +23,16 @@ public class Fill : MonoBehaviour
 
     void Update() 
     {
-        image.fillAmount = percentage;
+        // float perc = Mathf.InverseLerp(0, maximum.Value, current.Value);
+        
+        if (!lerp)
+        {
+            image.fillAmount = percentage;
+        }
+        else 
+        {
+            image.fillAmount = Mathf.Lerp(image.fillAmount, percentage, Time.deltaTime);
+        }
     }
 
     public void SetPercentage(float percent) 
