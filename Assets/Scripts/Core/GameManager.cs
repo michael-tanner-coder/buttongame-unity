@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using UnityEngine;
+using ScriptableObjectArchitecture;
 
 public class GameManager : MonoBehaviour
 {
@@ -9,7 +10,6 @@ public class GameManager : MonoBehaviour
     // TODO: implement SO event architecture???
     // TODO: implement SO variables
     // TODO: address race conditions in event responses
-    // TODO: split up enums into different files / classes
     // TODO: provider public getters for SO values
 
     // LOGIC
@@ -41,13 +41,16 @@ public class GameManager : MonoBehaviour
     private bool roundEnded = false;
 
     [SerializeField]
-    private PlayerData[] playerData;
+    private GameObjectCollection _playerPrefabs = default(GameObjectCollection);
 
     [SerializeField]
     private List<PlayerData> players;
 
     [SerializeField]
     private GameEvents _gameEvents;
+
+    [SerializeField]
+    private ScriptableObjectArchitecture.GameEvent testEvent;
 
     [SerializeField]
     private ScriptableObjectArchitecture.IntVariable _maxScore;
@@ -110,6 +113,10 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    public void TestEvent()
+    {
+        Debug.Log("Test Event Raised");
+    }
 
     void CheckForWinner() 
     {
