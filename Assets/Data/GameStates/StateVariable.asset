@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 94c0698328d48394d838278a4fec3103, type: 3}
   m_Name: StateVariable
   m_EditorClassIdentifier: 
-  _value: {fileID: 11400000, guid: b453a848c4a30ef49a5fe6a48c3c7ecf, type: 2}
+  _value: {fileID: 11400000, guid: d5537cb79ac1e8d40bd494add5b4a64f, type: 2}
   _readOnly: 0
   _raiseWarning: 1
   _isClamped: 0
@@ -20,16 +20,4 @@ MonoBehaviour:
   _maxClampedValue: {fileID: 0}
   _event:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 964011201162877703, guid: dae9562bddabb794da574d3392673208, type: 3}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []

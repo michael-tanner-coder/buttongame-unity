@@ -12,6 +12,5 @@ public class GameState : ScriptableObject
     private State _type;
 
     public State Type => _type;
-
 }
 

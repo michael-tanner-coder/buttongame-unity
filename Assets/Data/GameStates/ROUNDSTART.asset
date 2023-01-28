@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: ROUNDSTART
   m_EditorClassIdentifier: 
   name: Round Start
-  _type: 0
+  _type: 3
