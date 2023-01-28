@@ -11,14 +11,12 @@ public class Timer : MonoBehaviour
     private bool _paused = true;
 
     // Events
-    public GameEvents gameEvents;
     [SerializeField]
     private ScriptableObjectArchitecture.GameEvent onRoundEnd;
 
 
     void Awake() 
     {
-        gameEvents.startTimerEvent.AddListener(StartTimer);
         _duration.Value = _maxDuration.Value;
     }
     void Update()
