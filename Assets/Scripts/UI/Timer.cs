@@ -12,11 +12,14 @@ public class Timer : MonoBehaviour
 
     // Events
     public GameEvents gameEvents;
+    [SerializeField]
+    private ScriptableObjectArchitecture.GameEvent onRoundEnd;
 
 
     void Awake() 
     {
         gameEvents.startTimerEvent.AddListener(StartTimer);
+        _duration.Value = _maxDuration.Value;
     }
     void Update()
     {
@@ -33,16 +36,21 @@ public class Timer : MonoBehaviour
         if (_duration.Value <= 0f && !_finished)
         {
             _finished = true;   
-            gameEvents.roundEndEvent?.Invoke();
+            onRoundEnd.Raise();
         }
     }
 
     public void StartTimer() 
     {
         Debug.Log("Timer started");
-        _finished = false;
-        _paused = false;
-        _duration.Value = _maxDuration.Value;
+        Reset();
+        Play();
+    }
+    public void StopTimer() 
+    {
+        Debug.Log("Timer stopped");
+        Reset();
+        Pause();
     }
 
     public void Play() 
