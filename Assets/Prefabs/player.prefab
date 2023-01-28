@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 1179644233354622764}
   - component: {fileID: -2693727024655145130}
   - component: {fileID: 7557735272061554972}
+  - component: {fileID: -5995221738367962983}
   m_Layer: 6
   m_Name: player
   m_TagString: Untagged
@@ -197,6 +198,10 @@ MonoBehaviour:
       m_Calls: []
     m_ActionId: 678693a9-b5c5-43b3-86c3-90c800f3f4bd
     m_ActionName: Player/Jump[/Keyboard/w]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 732e1d52-94da-4c55-908a-38c1220036fe
+    m_ActionName: Player/Confirm[/Keyboard/enter]
   m_NeverAutoSwitchControlSchemes: 1
   m_DefaultControlScheme: Player 1
   m_DefaultActionMap: Player
@@ -228,3 +233,35 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _targetCollection: {fileID: 11400000, guid: 6ac2418129dfa7246b646b9fd7b1236c, type: 2}
+--- !u!114 &-5995221738367962983
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 964011201162877703}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5758ca93461aeeb4589456a052b07d74, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _showDebugFields: 0
+  _enableGizmoDebugging: 1
+  _debugColor: {r: 0, g: 1, b: 1, a: 1}
+  _previouslyRegisteredEvent: {fileID: 0}
+  _event: {fileID: 11400000, guid: 0d6508e10728633448f5aa71c04a0e51, type: 2}
+  _response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: -2693727024655145130}
+        m_TargetAssemblyTypeName: Player, Assembly-CSharp
+        m_MethodName: CheckIfWinner
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2

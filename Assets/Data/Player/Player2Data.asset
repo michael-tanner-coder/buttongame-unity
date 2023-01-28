@@ -17,4 +17,8 @@ MonoBehaviour:
     _useConstant: 0
     _constantValue: 0
     _variable: {fileID: 11400000, guid: 4f2a5fa950226cb47b3ee92d4e509904, type: 2}
+  maxScore:
+    _useConstant: 0
+    _constantValue: 0
+    _variable: {fileID: 11400000, guid: 269bbb203a1123e46b2873be7a2b6e99, type: 2}
   doorState: 0

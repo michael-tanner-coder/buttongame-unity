@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 
@@ -8,7 +6,9 @@ public class PlayerData : ScriptableObject
 {
     public string playerName;
     public ScriptableObjectArchitecture.IntReference score;
+    public ScriptableObjectArchitecture.IntReference maxScore;
     public DoorState doorState;
+    
 
     public void ResetData() 
     { 
