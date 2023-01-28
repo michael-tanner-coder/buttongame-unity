@@ -70,7 +70,6 @@ public class GameManager : MonoBehaviour
 
     PlayerData GetRoundWinner() 
     {
-        // PlayerData winner;
         PlayerData winner = null;
         players.ForEach((PlayerData player) =>
         {

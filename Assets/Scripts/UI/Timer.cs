@@ -37,7 +37,7 @@ public class Timer : MonoBehaviour
         }
     }
 
-    void StartTimer() 
+    public void StartTimer() 
     {
         Debug.Log("Timer started");
         _finished = false;
