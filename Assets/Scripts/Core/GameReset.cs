@@ -5,10 +5,6 @@ using ScriptableObjectArchitecture;
 public class GameManager : MonoBehaviour
 {
 
-    // ARCHITECTURE (consider if necessary)
-    // TODO: review unity architecture vid
-    // TODO: provider public getters for SO values
-
     // LOGIC
     // TODO: create feature toggles to enable/disable certain game elements (event types, obstacles, collectibles)
     // TODO: spawn explosion object on round end
