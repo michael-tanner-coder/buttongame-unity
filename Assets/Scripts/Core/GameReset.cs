@@ -2,7 +2,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using ScriptableObjectArchitecture;
 
-public class GameManager : MonoBehaviour
+public class GameReset : MonoBehaviour
 {
 
     // LOGIC
