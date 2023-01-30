@@ -80,3 +80,5 @@ MonoBehaviour:
   players:
   - {fileID: 11400000, guid: 6d10accf23462974f9a60e84b9678dd9, type: 2}
   - {fileID: 11400000, guid: 04530fd7de24c914eaf5423fb81f12cf, type: 2}
+  startRound: {fileID: 11400000, guid: 6b618d57693946c4b9f06a6404be4f48, type: 2}
+  endMatch: {fileID: 11400000, guid: e6fc836541f18c14aa18ce1c85e9ee10, type: 2}
