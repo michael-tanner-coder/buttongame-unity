@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 3892463983990011886}
   - component: {fileID: 5762082801314829190}
   m_Layer: 0
-  m_Name: GameManager
+  m_Name: GameReset
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -45,11 +45,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11f76955d15396a47b411a95bd8d6b20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  state: 0
-  playerData:
-  - {fileID: 11400000, guid: 6d10accf23462974f9a60e84b9678dd9, type: 2}
-  - {fileID: 11400000, guid: 04530fd7de24c914eaf5423fb81f12cf, type: 2}
-  _gameEvents: {fileID: 11400000, guid: 0f86ff09a287f9c4db03a2100ecdf502, type: 2}
+  _playerPrefabs: {fileID: 0}
+  players: []
 --- !u!114 &5762082801314829190
 MonoBehaviour:
   m_ObjectHideFlags: 0
