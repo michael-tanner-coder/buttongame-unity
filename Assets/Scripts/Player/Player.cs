@@ -7,26 +7,15 @@ public class Player : MonoBehaviour
     [SerializeField]
     private PlayerData data;
 
-    void Start()
+    public void CheckIfWinner() 
     {
-
-     
-    }
-
-    void OnPlayerLose(GameObject player)
-    {
-        if (player == gameObject)
+        if (data.score.Value >= data.maxScore.Value)
         {
-   
+            Debug.Log("Winner!");
         }
-    }
-
-    void Update() {
-
-    }
-
-    private void Awake() 
-    {
-        
+        else
+        {
+            Debug.Log("Not Winner!");
+        }
     }
 }

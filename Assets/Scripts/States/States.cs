@@ -1,36 +1,24 @@
-using UnityEngine;
-
-public class StateEnums
+public enum State
 {
-    public enum States {}
+    TUTORIAL,
+    GET_EVENT,
+    COUNTDOWN,
+    ROUND_START,
+    ROUND_END,
+    GAME_OVER,
+    TITLE_SCREEN
 }
 
-public class GameState: StateEnums {
-    public enum Enums
-    {
-        TUTORIAL,
-        GET_EVENT,
-        COUNTDOWN,
-        ROUND,
-        ROUND_END,
-        GAME_OVER,
-        TITLE_SCREEN
-    }
+
+public enum ButtonState
+{
+    UNPRESSED,
+    PRESSED,
+    RELEASED
 }
 
-public class ButtonState: StateEnums {
-    public enum Enums
-    {
-        UNPRESSED,
-        PRESSED,
-        RELEASED
-    }
-}
-
-public class DoorState: StateEnums {
-    public enum Enums
-    {
-      OPEN, 
-      CLOSED
-    }
+public enum DoorState 
+{
+    OPEN, 
+    CLOSED
 }

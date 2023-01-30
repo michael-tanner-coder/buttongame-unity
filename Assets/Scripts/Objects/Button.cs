@@ -5,7 +5,7 @@ using UnityEngine;
 public class Button : MonoBehaviour
 {
     public GameEvents gameEvents;
-    private ButtonState.Enums _state;
+    private ButtonState _state;
 
     void ActivateDoor()
     {
@@ -17,7 +17,7 @@ public class Button : MonoBehaviour
         if (other.gameObject.tag == "trigger") 
         {
             ActivateDoor();
-            _state = ButtonState.Enums.PRESSED;
+            _state = ButtonState.PRESSED;
         }
     }
 
@@ -25,7 +25,7 @@ public class Button : MonoBehaviour
     {
         if (other.gameObject.tag == "trigger") 
         {
-            _state = ButtonState.Enums.RELEASED;
+            _state = ButtonState.RELEASED;
         }
     }
 }

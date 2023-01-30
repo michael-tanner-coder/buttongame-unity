@@ -107,3 +107,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   percentage: 1
+  lerp: 0
+  useInt: 0
+  currentFloat:
+    _useConstant: 0
+    _constantValue: 0
+    _variable: {fileID: 11400000, guid: f06929baf2e31154fa41be9b38c7c694, type: 2}
+  maximumFloat:
+    _useConstant: 1
+    _constantValue: 5
+    _variable: {fileID: 0}
+  currentInt:
+    _useConstant: 0
+    _constantValue: 0
+    _variable: {fileID: 0}
+  maximumInt:
+    _useConstant: 0
+    _constantValue: 0
+    _variable: {fileID: 0}

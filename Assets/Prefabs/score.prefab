@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 1270683132078658030}
   - component: {fileID: 1270683132078658026}
   - component: {fileID: 1270683132078658027}
-  - component: {fileID: 1270683132078658028}
   - component: {fileID: 1270683132078658029}
   m_Layer: 5
   m_Name: score
@@ -73,28 +72,11 @@ MonoBehaviour:
   m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 0
-  m_FillAmount: 1
+  m_FillAmount: 0
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &1270683132078658028
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1270683132078658031}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 725b4b640643cfe41ace8bc5b3212a80, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  points: 0
-  maxPoints: 3
-  scorebar: {fileID: 1270683132078658029}
-  gameEvents: {fileID: 11400000, guid: 0f86ff09a287f9c4db03a2100ecdf502, type: 2}
-  playerData: {fileID: 11400000, guid: 6d10accf23462974f9a60e84b9678dd9, type: 2}
 --- !u!114 &1270683132078658029
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -108,3 +90,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   percentage: 1
+  lerp: 1
+  useInt: 1
+  currentFloat:
+    _useConstant: 0
+    _constantValue: 0
+    _variable: {fileID: 0}
+  maximumFloat:
+    _useConstant: 0
+    _constantValue: 0
+    _variable: {fileID: 0}
+  currentInt:
+    _useConstant: 0
+    _constantValue: 0
+    _variable: {fileID: 11400000, guid: c76dca6e1e8021745916b483dfb0da3b, type: 2}
+  maximumInt:
+    _useConstant: 0
+    _constantValue: 3
+    _variable: {fileID: 11400000, guid: 269bbb203a1123e46b2873be7a2b6e99, type: 2}
