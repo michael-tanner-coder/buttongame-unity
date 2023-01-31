@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 94c0698328d48394d838278a4fec3103, type: 3}
-  m_Name: StateVariable
+  m_Name: GameStateVariable
   m_EditorClassIdentifier: 
-  _value: {fileID: 11400000, guid: d5537cb79ac1e8d40bd494add5b4a64f, type: 2}
+  _value: {fileID: 11400000, guid: b453a848c4a30ef49a5fe6a48c3c7ecf, type: 2}
   _readOnly: 0
   _raiseWarning: 1
   _isClamped: 0
