@@ -397,6 +397,7 @@ GameObject:
   - component: {fileID: 431964020759989220}
   - component: {fileID: 431964020759989221}
   - component: {fileID: 431964020759989222}
+  - component: {fileID: 4499780770475632107}
   m_Layer: 7
   m_Name: buttontrigger
   m_TagString: trigger
@@ -518,6 +519,19 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &4499780770475632107
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 431964020759989223}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1e58c123a9f8b8418deb29f883e6e1a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _targetCollection: {fileID: 11400000, guid: 46b03401aa2667a448aca8433693db3a, type: 2}
 --- !u!1 &3121700522555676858
 GameObject:
   m_ObjectHideFlags: 0

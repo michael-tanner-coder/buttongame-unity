@@ -148,6 +148,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameEvents: {fileID: 11400000, guid: 0f86ff09a287f9c4db03a2100ecdf502, type: 2}
+  _triggers: {fileID: 11400000, guid: 46b03401aa2667a448aca8433693db3a, type: 2}
 --- !u!114 &1654611391182350174
 MonoBehaviour:
   m_ObjectHideFlags: 0
