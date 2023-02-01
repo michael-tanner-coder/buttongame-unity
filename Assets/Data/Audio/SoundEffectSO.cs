@@ -19,10 +19,9 @@ namespace ScriptableObjects
         //Pitch / Semitones
         public bool useSemitones;
         
-        private int minSemiTones = -10;
-        private int maxSemiTones = 10;
         [Range(-10, 10)]
         public int semitones;
+        private int minSemiTones = -10;
 
         [Range(-3f, 3f)]
         public float pitch = 1f;
@@ -83,7 +82,7 @@ namespace ScriptableObjects
             source.clip = GetAudioClip();
             source.volume = volume;
             source.pitch = useSemitones
-                ? Mathf.Pow(SEMITONES_TO_PITCH_CONVERSION_UNIT, semitones)
+                ? Mathf.Pow(SEMITONES_TO_PITCH_CONVERSION_UNIT, Random.Range(minSemiTones, semitones))
                 : pitch;
 
             source.Play();
