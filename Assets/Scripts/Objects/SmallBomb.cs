@@ -4,14 +4,20 @@ using ScriptableObjectArchitecture;
 public class SmallBomb : MonoBehaviour
 {
     [SerializeField]
-    private FloatReference _speed;
-    
+    private FloatReference _speedReference;
+    private float _speed;
+
     [SerializeField]
     private GameObjectCollection _doors;
 
+    void Awake()
+    {
+        _speed = _speedReference.Value;
+    }
+    
     void Update() 
     {
-        float newX = transform.position.x + _speed.Value * Time.deltaTime;
+        float newX = transform.position.x + _speed * Time.deltaTime;
         transform.position = new Vector3(newX, transform.position.y, transform.position.z);
     }
 
@@ -19,7 +25,7 @@ public class SmallBomb : MonoBehaviour
     {
         if (_doors.Contains(other.gameObject)) 
         {
-            _speed.Value *= -1;
+            _speed *= -1;
         }
     }
 }
