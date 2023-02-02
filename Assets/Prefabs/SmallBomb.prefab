@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4610462594838826382}
   - component: {fileID: 4610462594838826381}
+  - component: {fileID: 8599397180072749315}
   - component: {fileID: 4610462594838826380}
   - component: {fileID: 4610462594838826368}
   - component: {fileID: 4610462594838826383}
@@ -52,6 +53,20 @@ MonoBehaviour:
     _constantValue: 0
     _variable: {fileID: 11400000, guid: 5696453dc4c132641bcf2aa4259c8fd2, type: 2}
   _doors: {fileID: 11400000, guid: 2d96479c4a5b77c448431e3ecf69a20c, type: 2}
+  _spawnPoints: {fileID: 11400000, guid: 14f42d020e0556640a18700a27bba3b6, type: 2}
+--- !u!114 &8599397180072749315
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4610462594838826379}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02c69752d825bb3499d869904d426b9b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  advancedWrapping: 0
 --- !u!212 &4610462594838826380
 SpriteRenderer:
   m_ObjectHideFlags: 0
