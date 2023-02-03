@@ -3,8 +3,11 @@ using UnityEngine;
 public class ScreenWrap : MonoBehaviour
 {	
 	Renderer[] renderers;
-	
-	bool isWrappingX = false;
+
+    public bool canWrapX = true;
+    public bool canWrapY = true;
+
+    bool isWrappingX = false;
 	bool isWrappingY = false;
 	
 	float screenWidth;
@@ -86,7 +89,7 @@ public class ScreenWrap : MonoBehaviour
 		
 		
 		// Wrap it is off screen along the x-axis and is not being wrapped already
-		if (!isWrappingX && (viewportPosition.x > 1 || viewportPosition.x < 0))
+		if (!isWrappingX && (viewportPosition.x > 1 || viewportPosition.x < 0) && canWrapX)
 		{
 			// The scene is laid out like a mirror:
 			// Center of the screen is position the camera's position - (0, 0),
@@ -107,7 +110,7 @@ public class ScreenWrap : MonoBehaviour
 		}
 		
 		// Wrap it is off screen along the y-axis and is not being wrapped already
-		if (!isWrappingY && (viewportPosition.y > 1 || viewportPosition.y < 0))
+		if (!isWrappingY && (viewportPosition.y > 1 || viewportPosition.y < 0) && canWrapY)
 		{
 			newPosition.y = -newPosition.y;
 			

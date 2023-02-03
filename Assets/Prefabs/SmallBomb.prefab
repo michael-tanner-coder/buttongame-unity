@@ -67,6 +67,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 02c69752d825bb3499d869904d426b9b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  canWrapX: 1
+  canWrapY: 0
 --- !u!114 &5328068527817467119
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -82,22 +84,6 @@ MonoBehaviour:
   _players: {fileID: 11400000, guid: 6ac2418129dfa7246b646b9fd7b1236c, type: 2}
   _events:
   - {fileID: 11400000, guid: d96994404ebe7574e8d8cb33ec3eed04, type: 2}
-  _onPlayerLose:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 11400000, guid: d96994404ebe7574e8d8cb33ec3eed04, type: 2}
-        m_TargetAssemblyTypeName: ScriptableObjectArchitecture.GameEventBase`1[[UnityEngine.GameObject,
-          UnityEngine
-        m_MethodName: Raise
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!212 &4610462594838826380
 SpriteRenderer:
   m_ObjectHideFlags: 0
