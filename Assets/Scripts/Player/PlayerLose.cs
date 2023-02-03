@@ -1,9 +1,19 @@
 using UnityEngine;
+using ScriptableObjectArchitecture;
 
 public class PlayerLose : MonoBehaviour
 {
-    public void StartLoseAnimation()
+    [SerializeField]
+    GameObjectGameEvent _onPlayerLose;
+
+    public void Awake() 
     {
-        Debug.Log("Starting lose animation");
+        _onPlayerLose.AddListener(StartLoseAnimation);
+    }
+
+    public void StartLoseAnimation(GameObject losingPlayer)
+    {
+        if (losingPlayer != gameObject) return;
+        Debug.Log(losingPlayer.name);
     }
 }

@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.Events;
 using System.Collections.Generic;
 using ScriptableObjectArchitecture;
 
@@ -17,6 +18,7 @@ public class KillPlayer : MonoBehaviour
             if (_players.Contains(other.gameObject))
             {
                 e.Raise(other.gameObject);
+                
             }
         }
     }
