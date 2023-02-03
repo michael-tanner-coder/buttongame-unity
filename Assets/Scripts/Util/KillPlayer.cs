@@ -1,4 +1,5 @@
 using UnityEngine;
+using System.Collections.Generic;
 using ScriptableObjectArchitecture;
 
 public class KillPlayer : MonoBehaviour
@@ -7,13 +8,16 @@ public class KillPlayer : MonoBehaviour
     private GameObjectCollection _players;
     
     [SerializeField]
-    private GameObjectGameEvent _onPlayerLose;
+    private List<GameObjectGameEvent> _events = new List<GameObjectGameEvent>();
 
     void OnCollisionEnter2D(Collision2D other) 
     {
-        if (_players.Contains(other.gameObject))
+        foreach(GameObjectGameEvent e in _events)
         {
-            _onPlayerLose.Raise(other.gameObject);
+            if (_players.Contains(other.gameObject))
+            {
+                e.Raise(other.gameObject);
+            }
         }
     }
 }

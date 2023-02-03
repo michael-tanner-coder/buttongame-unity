@@ -11,10 +11,10 @@ GameObject:
   - component: {fileID: 4610462594838826382}
   - component: {fileID: 4610462594838826381}
   - component: {fileID: 8599397180072749315}
+  - component: {fileID: 5328068527817467119}
   - component: {fileID: 4610462594838826380}
   - component: {fileID: 4610462594838826368}
   - component: {fileID: 4610462594838826383}
-  - component: {fileID: 5328068527817467119}
   m_Layer: 0
   m_Name: SmallBomb
   m_TagString: Untagged
@@ -66,6 +66,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 02c69752d825bb3499d869904d426b9b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &5328068527817467119
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4610462594838826379}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4132786889b8e6c4e8aae5989310648f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _players: {fileID: 11400000, guid: 6ac2418129dfa7246b646b9fd7b1236c, type: 2}
+  _events:
+  - {fileID: 11400000, guid: d96994404ebe7574e8d8cb33ec3eed04, type: 2}
 --- !u!212 &4610462594838826380
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -165,17 +180,3 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &5328068527817467119
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4610462594838826379}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4132786889b8e6c4e8aae5989310648f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _players: {fileID: 11400000, guid: 6ac2418129dfa7246b646b9fd7b1236c, type: 2}
-  _onPlayerLose: {fileID: 11400000, guid: d96994404ebe7574e8d8cb33ec3eed04, type: 2}
