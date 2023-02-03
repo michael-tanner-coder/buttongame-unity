@@ -4,7 +4,6 @@ using ScriptableObjectArchitecture;
 
 public class GameReset : MonoBehaviour
 {
-
     // LOGIC
     // TODO: create feature toggles to enable/disable certain game elements (event types, obstacles, collectibles)
     // TODO: spawn explosion object on round end
@@ -13,6 +12,7 @@ public class GameReset : MonoBehaviour
     // ANIMATION
     // TODO: create countdown animation
     // TODO: create bomb tween animation
+    // TODO: create small bomb roll animation
     // TODO: create player lose animation
     // TODO: create door animation
     // TODO: create explosion animation
