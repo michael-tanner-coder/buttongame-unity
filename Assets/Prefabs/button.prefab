@@ -147,7 +147,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b2a7ceed61a4b740bb0d2ecbc592e3c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameEvents: {fileID: 11400000, guid: 0f86ff09a287f9c4db03a2100ecdf502, type: 2}
+  _onButtonPress: {fileID: 11400000, guid: a8e236aadec8cb440b97da7c8761e79d, type: 2}
   _triggers: {fileID: 11400000, guid: 46b03401aa2667a448aca8433693db3a, type: 2}
 --- !u!114 &1654611391182350174
 MonoBehaviour:

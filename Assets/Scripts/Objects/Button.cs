@@ -3,7 +3,8 @@ using UnityEngine;
 
 public class Button : MonoBehaviour
 {
-    public GameEvents gameEvents;
+    [SerializeField]
+    private GameEvent _onButtonPress;
     private ButtonState _state;
 
     [SerializeField]
@@ -11,7 +12,7 @@ public class Button : MonoBehaviour
 
     void ActivateDoor()
     {
-        gameEvents.activateDoorEvent?.Invoke();
+        _onButtonPress?.Raise();
     }
 
     void OnCollisionEnter2D(Collision2D other) 

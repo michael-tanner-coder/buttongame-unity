@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Door : MonoBehaviour
@@ -7,9 +5,6 @@ public class Door : MonoBehaviour
     [SerializeField]
     private DoorState _state;
 
-    [SerializeField]
-    private GameEvents _events;
-    
     [SerializeField]
     private PlayerData _playerData;
 
@@ -22,12 +17,7 @@ public class Door : MonoBehaviour
         _collider = GetComponent<BoxCollider2D>();
     }
 
-    void Start() 
-    {
-        _events.activateDoorEvent.AddListener(Activate);
-    }
-
-    void Activate() 
+    public void Activate() 
     {
         _state = _state == DoorState.CLOSED ? DoorState.OPEN : DoorState.CLOSED;
         // _spriteRenderer.enabled = _state == DoorState.CLOSED;
