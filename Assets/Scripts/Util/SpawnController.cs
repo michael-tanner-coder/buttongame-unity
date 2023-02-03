@@ -7,6 +7,17 @@ public class SpawnController : MonoBehaviour
     private List<GameObject> _prefab;
     private List<GameObject> _spawnedObjects = new List<GameObject>();
 
+    [SerializeField]
+    private bool addSelfToList = false;
+
+    void Awake()
+    {
+        if (addSelfToList)
+        {
+            _spawnedObjects.Add(gameObject);
+        }
+    }
+    
     public void SpawnObjects() 
     {
         foreach(GameObject obj in _prefab)
