@@ -1193,7 +1193,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1897461569}
   - component: {fileID: 1897461568}
-  - component: {fileID: 1897461567}
   - component: {fileID: 1897461566}
   m_Layer: 0
   m_Name: PauseListener
@@ -1235,34 +1234,11 @@ MonoBehaviour:
       m_Calls: []
     m_ActionId: 732e1d52-94da-4c55-908a-38c1220036fe
     m_ActionName: Player/Confirm[/Keyboard/enter]
-  m_NeverAutoSwitchControlSchemes: 0
-  m_DefaultControlScheme: 
-  m_DefaultActionMap: Player
-  m_SplitScreenIndex: -1
-  m_Camera: {fileID: 0}
---- !u!114 &1897461567
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1897461565}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5758ca93461aeeb4589456a052b07d74, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _showDebugFields: 0
-  _enableGizmoDebugging: 1
-  _debugColor: {r: 0, g: 1, b: 1, a: 1}
-  _previouslyRegisteredEvent: {fileID: 11400000, guid: b4a5dcc6e1e2bb543a9eea3e58185cc6, type: 2}
-  _event: {fileID: 11400000, guid: b4a5dcc6e1e2bb543a9eea3e58185cc6, type: 2}
-  _response:
-    m_PersistentCalls:
+  - m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1897461568}
         m_TargetAssemblyTypeName: PauseGame, Assembly-CSharp
-        m_MethodName: Pause
+        m_MethodName: TogglePause
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1272,6 +1248,13 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+    m_ActionId: 749b655f-4f4b-43de-9d41-fc33ba96c831
+    m_ActionName: Player/Pause[/Keyboard/p]
+  m_NeverAutoSwitchControlSchemes: 0
+  m_DefaultControlScheme: 
+  m_DefaultActionMap: Player
+  m_SplitScreenIndex: -1
+  m_Camera: {fileID: 519420031}
 --- !u!114 &1897461568
 MonoBehaviour:
   m_ObjectHideFlags: 0
