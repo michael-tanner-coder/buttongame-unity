@@ -3,9 +3,15 @@ using UnityEngine;
 public class Todo : MonoBehaviour
 {
     // LOGIC
-    // TODO: create feature toggles to enable/disable certain game elements (event types, obstacles, collectibles)
-    // TODO: spawn explosion object on round end
+    // TODO: start match with enter key
+    // TODO: spawn bomb object on round start
+    // TODO: spawn explosion object on round end (despawn bomb)
     // TODO: end round on collision with small bomb
+    // TODO: respawn missing players on round start
+    // TODO: add countdown sequence/event (emit on roundstart when done)
+    // TODO: create feature toggles to enable/disable certain game elements (event types, obstacles, collectibles)
+    // TODO: display winner
+    // TODO: restart match with enter key
 
     // ANIMATION
     // TODO: create countdown animation
