@@ -924,7 +924,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6780070610562315923, guid: adc84ede5ed1b254faf129404b6d6094, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.68705606
+      value: 3.3008235
       objectReference: {fileID: 0}
     - target: {fileID: 6780070610562315923, guid: adc84ede5ed1b254faf129404b6d6094, type: 3}
       propertyPath: m_LocalScale.y
@@ -932,7 +932,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6780070610562315923, guid: adc84ede5ed1b254faf129404b6d6094, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.710625
+      value: -1.4231
       objectReference: {fileID: 0}
     - target: {fileID: 6780070610562315923, guid: adc84ede5ed1b254faf129404b6d6094, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1011,7 +1011,19 @@ MonoBehaviour:
         m_CallState: 2
   _exitResponse:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1776755788010515130}
+        m_TargetAssemblyTypeName: VisibilityController, Assembly-CSharp
+        m_MethodName: SetVisibility
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!4 &930185186 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6780070610562315923, guid: adc84ede5ed1b254faf129404b6d6094, type: 3}
@@ -1052,7 +1064,19 @@ MonoBehaviour:
         m_CallState: 2
   _exitResponse:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1499946649}
+        m_TargetAssemblyTypeName: VisibilityController, Assembly-CSharp
+        m_MethodName: SetVisibility
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!4 &1026157346 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6780070610562315923, guid: adc84ede5ed1b254faf129404b6d6094, type: 3}
@@ -1684,7 +1708,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6780070610562315923, guid: adc84ede5ed1b254faf129404b6d6094, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.56629664
+      value: 3.2127707
       objectReference: {fileID: 0}
     - target: {fileID: 6780070610562315923, guid: adc84ede5ed1b254faf129404b6d6094, type: 3}
       propertyPath: m_LocalScale.y
@@ -1692,7 +1716,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6780070610562315923, guid: adc84ede5ed1b254faf129404b6d6094, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.211475
+      value: 0.9204
       objectReference: {fileID: 0}
     - target: {fileID: 6780070610562315923, guid: adc84ede5ed1b254faf129404b6d6094, type: 3}
       propertyPath: m_LocalPosition.y
