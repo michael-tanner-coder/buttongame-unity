@@ -7,9 +7,9 @@ public class Todo : MonoBehaviour
     // TODO: spawn explosion object on round end (despawn bomb)
     // TODO: end round on collision with small bomb
     // TODO: respawn missing players on round start
-    // TODO: create feature toggles to enable/disable certain game elements (event types, obstacles, collectibles)
     // TODO: display winner
     // TODO: restart match with enter key
+    // TODO: create feature toggles to enable/disable certain game elements (event types, obstacles, collectibles)
 
     // ANIMATION
     // TODO: create bomb tween animation
