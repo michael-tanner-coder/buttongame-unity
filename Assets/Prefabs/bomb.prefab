@@ -11,8 +11,11 @@ GameObject:
   - component: {fileID: 6196583963574468478}
   - component: {fileID: 6196583963574468477}
   - component: {fileID: 4645184845691492964}
+  - component: {fileID: -6110375774033889587}
+  - component: {fileID: -1365591324118589353}
   - component: {fileID: 7383261070838587426}
   - component: {fileID: -4080557498122226821}
+  - component: {fileID: 6014211657929180715}
   m_Layer: 0
   m_Name: bomb
   m_TagString: Untagged
@@ -99,6 +102,35 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bb99430b09254654fb6e83f9b852dc4b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &-6110375774033889587
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6196583963574468476}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 50310ff315b0abe449387f974f0742da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _prefab: []
+  addSelfToList: 1
+--- !u!114 &-1365591324118589353
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6196583963574468476}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 50310ff315b0abe449387f974f0742da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _prefab:
+  - {fileID: 5787677120821471083, guid: 93dd8857c166270488d7c28dc33c28fc, type: 3}
+  addSelfToList: 0
 --- !u!50 &7383261070838587426
 Rigidbody2D:
   serializedVersion: 4
@@ -146,3 +178,47 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.45, y: 0.46}
   m_EdgeRadius: 0
+--- !u!114 &6014211657929180715
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6196583963574468476}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5758ca93461aeeb4589456a052b07d74, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _showDebugFields: 0
+  _enableGizmoDebugging: 1
+  _debugColor: {r: 0, g: 1, b: 1, a: 1}
+  _previouslyRegisteredEvent: {fileID: 0}
+  _event: {fileID: 11400000, guid: 0d6508e10728633448f5aa71c04a0e51, type: 2}
+  _response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: -1365591324118589353}
+        m_TargetAssemblyTypeName: SpawnController, Assembly-CSharp
+        m_MethodName: SpawnObjects
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: -6110375774033889587}
+        m_TargetAssemblyTypeName: SpawnController, Assembly-CSharp
+        m_MethodName: DestroyObjects
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
