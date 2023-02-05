@@ -12,7 +12,6 @@ public class Todo : MonoBehaviour
     // TODO: restart match with enter key
 
     // ANIMATION
-    // TODO: create countdown animation
     // TODO: create bomb tween animation
     // TODO: create small bomb roll animation
     // TODO: create player lose animation
