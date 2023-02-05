@@ -3,7 +3,6 @@ using UnityEngine;
 public class Todo : MonoBehaviour
 {
     // LOGIC
-    // TODO: spawn bomb object on round start
     // TODO: spawn explosion object on round end (despawn bomb)
     // TODO: end round on collision with small bomb
     // TODO: respawn missing players on round start
