@@ -6,7 +6,9 @@ public enum State
     ROUND_START,
     ROUND_END,
     GAME_OVER,
-    TITLE_SCREEN
+    TITLE_SCREEN,
+    MATCH_END,
+    MATCH_START,
 }
 
 
