@@ -1645,9 +1645,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1978504242}
-  - component: {fileID: 1978504241}
   - component: {fileID: 1978504243}
   - component: {fileID: 1978504244}
+  - component: {fileID: 1978504245}
+  - component: {fileID: 1978504241}
   m_Layer: 0
   m_Name: ModePicker
   m_TagString: Untagged
@@ -1687,9 +1688,21 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1978504244}
-        m_TargetAssemblyTypeName: EventList, Assembly-CSharp
-        m_MethodName: RaiseAll
+      - m_Target: {fileID: 6141151990696357190}
+        m_TargetAssemblyTypeName: SpawnController, Assembly-CSharp
+        m_MethodName: SpawnObjects
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1978504245}
+        m_TargetAssemblyTypeName: Wait, Assembly-CSharp
+        m_MethodName: StartWait
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1740,7 +1753,36 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8916f8b088b3e9c4a89f0786c90feca0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _events: []
+  _events:
+  - {fileID: 11400000, guid: 3eede6b1e9ea1e84b99fb956a10bdbbe, type: 2}
+--- !u!114 &1978504245
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1978504240}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d591dcd047d96fc4fa032e03a33677bf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1978504244}
+        m_TargetAssemblyTypeName: EventList, Assembly-CSharp
+        m_MethodName: RaiseAll
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  _waitTime: 3
 --- !u!1001 &2000675850
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2253,7 +2295,7 @@ PrefabInstance:
     - target: {fileID: 7497726718076385760, guid: 4c6969e3cd9944f45ba0757ab12aa5f8, type: 3}
       propertyPath: startRound
       value: 
-      objectReference: {fileID: 11400000, guid: 3eede6b1e9ea1e84b99fb956a10bdbbe, type: 2}
+      objectReference: {fileID: 11400000, guid: 239d85d35e93d2b4181e0ff52056c52f, type: 2}
     - target: {fileID: 7497726718076385760, guid: 4c6969e3cd9944f45ba0757ab12aa5f8, type: 3}
       propertyPath: _winner._variable
       value: 
@@ -2611,7 +2653,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5227019069519431833}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5758ca93461aeeb4589456a052b07d74, type: 3}
   m_Name: 
@@ -2825,6 +2867,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2790967417277594952, guid: f352d5386d6be14419089ae6261e464f, type: 3}
+      propertyPath: _event
+      value: 
+      objectReference: {fileID: 11400000, guid: 6b618d57693946c4b9f06a6404be4f48, type: 2}
+    - target: {fileID: 2790967417277594952, guid: f352d5386d6be14419089ae6261e464f, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2790967417277594952, guid: f352d5386d6be14419089ae6261e464f, type: 3}
       propertyPath: _previouslyRegisteredEvent
       value: 
@@ -3046,10 +3096,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1466098715}
     m_Modifications:
-    - target: {fileID: 7360279784835525652, guid: 20d879958611a9541adac0193da0be73, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 7360279784835525653, guid: 20d879958611a9541adac0193da0be73, type: 3}
       propertyPath: m_Camera
       value: 
@@ -3057,10 +3103,6 @@ PrefabInstance:
     - target: {fileID: 7360279784835525654, guid: 20d879958611a9541adac0193da0be73, type: 3}
       propertyPath: m_Name
       value: TitleUI
-      objectReference: {fileID: 0}
-    - target: {fileID: 7360279784835525654, guid: 20d879958611a9541adac0193da0be73, type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7360279784835525655, guid: 20d879958611a9541adac0193da0be73, type: 3}
       propertyPath: m_RootOrder

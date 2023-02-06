@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 7360279784835525655}
   - component: {fileID: 7360279784835525652}
   - component: {fileID: 7360279784835525658}
+  - component: {fileID: 2099834381}
   - component: {fileID: 7360279784835525653}
   - component: {fileID: 7360279784835525659}
   m_Layer: 0
@@ -27,7 +28,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7360279784835525654}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.101, y: 0.135, z: 0.597623}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -101,6 +102,34 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _events:
   - {fileID: 11400000, guid: aa1745f6441485c489b8d7c00328d430, type: 2}
+  - {fileID: 11400000, guid: 239d85d35e93d2b4181e0ff52056c52f, type: 2}
+--- !u!114 &2099834381
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7360279784835525654}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c21a3972591457b46a2235ef01251e82, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 7360279784835525658}
+        m_TargetAssemblyTypeName: EventList, Assembly-CSharp
+        m_MethodName: RaiseAll
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &7360279784835525653
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -132,10 +161,10 @@ MonoBehaviour:
     m_ActionName: Player/Jump[/Keyboard/w,/Keyboard/upArrow]
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 7360279784835525658}
-        m_TargetAssemblyTypeName: EventList, Assembly-CSharp
-        m_MethodName: RaiseAll
-        m_Mode: 1
+      - m_Target: {fileID: 2099834381}
+        m_TargetAssemblyTypeName: ProcessInput, Assembly-CSharp
+        m_MethodName: Press
+        m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
