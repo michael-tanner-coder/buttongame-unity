@@ -16,12 +16,12 @@
                 },
                 {
                     "name": "Confirm",
-                    "type": "Button",
+                    "type": "Value",
                     "id": "732e1d52-94da-4c55-908a-38c1220036fe",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
-                    "initialStateCheck": false
+                    "initialStateCheck": true
                 },
                 {
                     "name": "Pause",
