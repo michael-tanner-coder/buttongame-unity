@@ -1,3 +1,4 @@
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 public class GetWinner : MonoBehaviour
@@ -12,6 +13,14 @@ public class GetWinner : MonoBehaviour
     [SerializeField]
     private ScriptableObjectArchitecture.GameEvent endMatch;
 
+    [SerializeField]
+    private float _delayBetweenRounds = 1f;
+
+    IEnumerator DelayRoundChange() 
+    {
+        yield return new WaitForSeconds(_delayBetweenRounds);
+        startRound.Raise();
+    }
     public void OnRoundEnd()
     {
         bool foundMatchWinner = false;
@@ -32,7 +41,8 @@ public class GetWinner : MonoBehaviour
 
         if (!foundMatchWinner)
         {
-            startRound.Raise();
+
+            StartCoroutine(DelayRoundChange());
         }
     }
 
