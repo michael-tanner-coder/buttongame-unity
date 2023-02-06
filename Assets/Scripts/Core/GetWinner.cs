@@ -1,11 +1,16 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using ScriptableObjectArchitecture;
+
 public class GetWinner : MonoBehaviour
 {
 
     [SerializeField]
     private List<PlayerData> players;
+
+    [SerializeField]
+    private PlayerDataVariable _winner;
 
     [SerializeField]
     private ScriptableObjectArchitecture.GameEvent startRound;
@@ -15,6 +20,7 @@ public class GetWinner : MonoBehaviour
 
     [SerializeField]
     private float _delayBetweenRounds = 1f;
+
 
     IEnumerator DelayRoundChange() 
     {
@@ -34,6 +40,7 @@ public class GetWinner : MonoBehaviour
                 Debug.Log("Winner!");
                 Debug.Log(player.playerName);
                 foundMatchWinner = true;
+                _winner.Value = player;
                 endMatch.Raise();
             }
         });
@@ -41,14 +48,12 @@ public class GetWinner : MonoBehaviour
 
         if (!foundMatchWinner)
         {
-
             StartCoroutine(DelayRoundChange());
         }
     }
 
     void UpdateScores() 
     {
-        PlayerData winner = null;
         players.ForEach((PlayerData player) =>
         {
             if (player.doorState == DoorState.CLOSED)
@@ -58,7 +63,6 @@ public class GetWinner : MonoBehaviour
 
                 // update score
                 player.score.Value += 1;
-                winner = player;
             }
         });
     }

@@ -9,10 +9,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d74bacc6470d5f64cbb226a9325213db, type: 3}
+  m_Script: {fileID: 11500000, guid: 50c592585fbb5004a8562305a2774358, type: 3}
   m_Name: Winner
   m_EditorClassIdentifier: 
-  _value: {fileID: 0}
+  _value: {fileID: 11400000, guid: 6d10accf23462974f9a60e84b9678dd9, type: 2}
   _readOnly: 0
   _raiseWarning: 1
   _isClamped: 0
@@ -20,16 +20,4 @@ MonoBehaviour:
   _maxClampedValue: {fileID: 0}
   _event:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
