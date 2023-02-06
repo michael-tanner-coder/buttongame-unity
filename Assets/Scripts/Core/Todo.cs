@@ -3,10 +3,9 @@ using UnityEngine;
 public class Todo : MonoBehaviour
 {
     // LOGIC
+    // TODO: restart match with enter key
     // TODO: end round on collision with small bomb
     // TODO: respawn missing players on round start
-    // TODO: display winner
-    // TODO: restart match with enter key
     // TODO: create feature toggles to enable/disable certain game elements (event types, obstacles, collectibles)
 
     // ANIMATION
