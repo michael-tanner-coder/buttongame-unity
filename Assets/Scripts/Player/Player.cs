@@ -2,8 +2,6 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    private string prev_type = "basic";
-    
     [SerializeField]
     private PlayerData data;
 
