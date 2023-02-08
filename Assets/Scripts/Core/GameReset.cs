@@ -5,10 +5,14 @@ using ScriptableObjectArchitecture;
 public class GameReset : MonoBehaviour
 {
     [SerializeField]
-    private GameObjectCollection _playerPrefabs = default(GameObjectCollection);
+    private List<PlayerData> players;
 
     [SerializeField]
-    private List<PlayerData> players;
+    private StateVariable _gameState;
+
+
+    [SerializeField]
+    private GameEvent _matchStart;
 
     void Awake()
     {
@@ -21,6 +25,17 @@ public class GameReset : MonoBehaviour
         {
             player.ResetData();
         });
+    }
+
+    public void ResetGame()
+    {
+        Debug.Log("TRYING RESET GAME");
+        if (_gameState.Value.Type == State.MATCH_END)
+        {
+            Debug.Log("RESETING GAME");
+            ResetPlayerData();
+            _matchStart?.Raise();
+        }
     }
 }
 
