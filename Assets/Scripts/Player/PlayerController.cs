@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using ScriptableObjectArchitecture;
 
 namespace TarodevController {
     /// <summary>
@@ -150,6 +151,7 @@ namespace TarodevController {
         [SerializeField] private float _minFallSpeed = 80f;
         [SerializeField] private float _maxFallSpeed = 120f;
         private float _fallSpeed;
+        [SerializeField] private FloatVariable _gravityModifier;
 
         private void CalculateGravity() {
             if (_colDown) {
@@ -161,7 +163,7 @@ namespace TarodevController {
                 var fallSpeed = _endedJumpEarly && _currentVerticalSpeed > 0 ? _fallSpeed * _jumpEndEarlyGravityModifier : _fallSpeed;
 
                 // Fall
-                _currentVerticalSpeed -= fallSpeed * Time.deltaTime;
+                _currentVerticalSpeed -= fallSpeed * _gravityModifier.Value * Time.deltaTime;
 
                 // Clamp
                 if (_currentVerticalSpeed < _fallClamp) _currentVerticalSpeed = _fallClamp;
@@ -188,7 +190,7 @@ namespace TarodevController {
             if (!_colDown) {
                 // Gets stronger the closer to the top of the jump
                 _apexPoint = Mathf.InverseLerp(_jumpApexThreshold, 0, Mathf.Abs(Velocity.y));
-                _fallSpeed = Mathf.Lerp(_minFallSpeed, _maxFallSpeed, _apexPoint);
+                _fallSpeed = Mathf.Lerp(_minFallSpeed, _maxFallSpeed, _apexPoint) * _gravityModifier.Value;
             }
             else {
                 _apexPoint = 0;

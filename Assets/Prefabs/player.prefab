@@ -166,6 +166,7 @@ MonoBehaviour:
   _fallClamp: -4
   _minFallSpeed: 0
   _maxFallSpeed: 4
+  _gravityModifier: {fileID: 11400000, guid: a887e2d93e6615f45b4880ced2fa948f, type: 2}
   _jumpHeight: 1.7
   _jumpApexThreshold: 8
   _coyoteTimeThreshold: 0.1
