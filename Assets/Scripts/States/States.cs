@@ -9,6 +9,7 @@ public enum State
     TITLE_SCREEN,
     MATCH_END,
     MATCH_START,
+    PICK_MODE,
 }
 
 
