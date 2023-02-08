@@ -2,7 +2,7 @@ using System.Collections.Generic;
 using ScriptableObjectArchitecture;
 using UnityEngine;
 
-public class Event : MonoBehaviour
+public class RaiseEvents : MonoBehaviour
 {
     private List<GameEventBase> _events = new List<GameEventBase>();
 
@@ -12,6 +12,11 @@ public class Event : MonoBehaviour
         {
             e.Raise();
         }
+    }
+
+    public void RaiseOne(GameEventBase e) 
+    {
+        e?.Raise();
     }
 
 }
