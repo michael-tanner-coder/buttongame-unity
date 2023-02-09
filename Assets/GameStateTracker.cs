@@ -11,4 +11,14 @@ public class GameStateTracker : MonoBehaviour
     {
         _state.Value = gameState;
     }
+
+    public GameState GetStateValue()
+    {
+        return _state.Value;
+    }
+
+    public bool CheckState(GameState gameState)
+    {
+        return _state.Value == gameState;
+    }
 }

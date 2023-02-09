@@ -8,11 +8,7 @@ public class GameReset : MonoBehaviour
     private List<PlayerData> players;
 
     [SerializeField]
-    private StateVariable _gameState;
-
-
-    [SerializeField]
-    private GameEvent _matchStart;
+    private PlayerDataVariable _winner;
 
     void Awake()
     {
@@ -29,13 +25,8 @@ public class GameReset : MonoBehaviour
 
     public void ResetGame()
     {
-        Debug.Log("TRYING RESET GAME");
-        if (_gameState.Value.Type == State.MATCH_END)
-        {
-            Debug.Log("RESETING GAME");
-            ResetPlayerData();
-            _matchStart?.Raise();
-        }
+        ResetPlayerData();
+        _winner = null;
     }
 }
 

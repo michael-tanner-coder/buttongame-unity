@@ -21,9 +21,9 @@ AnimationClip:
   - curve:
     - time: 0.033333335
       value: {fileID: 1562566939, guid: 8c5940abb8f94354f9350e68436e3b62, type: 3}
-    - time: 1.2333333
+    - time: 0.65
       value: {fileID: -457362965, guid: 8c5940abb8f94354f9350e68436e3b62, type: 3}
-    - time: 2.5666666
+    - time: 1.3333334
       value: {fileID: -1648333831, guid: 8c5940abb8f94354f9350e68436e3b62, type: 3}
     attribute: m_Sprite
     path: 
@@ -52,7 +52,7 @@ AnimationClip:
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 3
+    m_StopTime: 1.5
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0
@@ -72,14 +72,14 @@ AnimationClip:
   m_HasGenericRootTransform: 0
   m_HasMotionFloatCurves: 0
   m_Events:
-  - time: 3
+  - time: 1.5
     functionName: ToggleVisibility
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
-  - time: 3
+  - time: 1.5
     functionName: RaiseAll
     data: 
     objectReferenceParameter: {fileID: 0}
