@@ -15,6 +15,8 @@ public class ItemSO : ScriptableObject {
     public float massModifier;
     public float spriteModifier;
     public float durationModifier;
+    public float tickRateModifier;
+    public float timeScaleModifier;
     public float bombSpeedModifier;
     public float buttonHeightModifier;
     public bool swapCharacters;
