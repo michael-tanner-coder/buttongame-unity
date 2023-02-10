@@ -53,7 +53,6 @@ public class Item : MonoBehaviour
 
     public void ActivateEffect() 
     {
-        Debug.Log("Activating effect...");
         _activated = true;
     }
 }
