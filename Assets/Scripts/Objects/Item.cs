@@ -15,19 +15,32 @@ public class Item : MonoBehaviour
     [SerializeField]
     private GameObjectCollection _doors;
 
-    public void PickItemType() 
-    {
-        int index = Random.Range(0, _availableItems.Value.Count);
-        _itemData = _availableItems.Value[index];
-    }
+    [SerializeField]
+    private GameRules _rules;
+
+    private float _effectDuration;
+    private bool _activated = false;
 
     void Start() 
     {
-        // randomly pick an item to be on start
-        PickItemType();
         SpriteRenderer renderer = GetComponent<SpriteRenderer>();
         renderer.sprite = _itemData.sprite;
         gameObject.name = _itemData.name;
+        _effectDuration = _itemData.effectDuration;
+    }
+
+    void Update() 
+    {
+        if (_activated)
+        {
+            _effectDuration -= Time.deltaTime;
+        }
+
+        if (_effectDuration <= 0)
+        {
+            Destroy(gameObject);
+            _rules.ResetToDefaults();
+        }
     }
 
     void OnCollisionEnter2D(Collision2D other) 
@@ -36,5 +49,11 @@ public class Item : MonoBehaviour
         {
             _speed *= -1;
         }
+    }
+
+    public void ActivateEffect() 
+    {
+        Debug.Log("Activating effect...");
+        _activated = true;
     }
 }
