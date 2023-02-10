@@ -4,8 +4,12 @@ public class Timer : MonoBehaviour
 {
     [SerializeField]
     private ScriptableObjectArchitecture.FloatReference _duration;
+    
     [SerializeField]
     private ScriptableObjectArchitecture.FloatReference _maxDuration;
+    
+    [SerializeField]
+    private ScriptableObjectArchitecture.FloatReference _tickRateModifier;
     private bool _finished;
     [SerializeField]
     private bool _paused = true;
@@ -28,7 +32,7 @@ public class Timer : MonoBehaviour
         }
         
         // decrement timer
-        _duration.Value -= 1f * Time.deltaTime;
+        _duration.Value -= 1f * Time.deltaTime * _tickRateModifier.Value;
 
         // check if timer is _finished and invoke event
         if (_duration.Value <= 0f && !_finished)
