@@ -17,8 +17,6 @@ public class ItemSO : ScriptableObject {
     public float buttonHeightModifier;
     public bool swapCharacters;
     public bool giveDoubleJump;
-
-    // Time before effect stops
     public float effectDuration;
 }
 
