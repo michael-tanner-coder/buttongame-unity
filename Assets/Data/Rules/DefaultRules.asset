@@ -30,3 +30,12 @@ MonoBehaviour:
     _constantValue: 1
     _variable: {fileID: 11400000, guid: d7fce2334b6544b4ea6dee445a41ec2c, type: 2}
   _currentTickRateModifier: 1
+  _roundDuration:
+    _useConstant: 0
+    _constantValue: 1
+    _variable: {fileID: 11400000, guid: f06929baf2e31154fa41be9b38c7c694, type: 2}
+  _defaultRoundDuration:
+    _useConstant: 1
+    _constantValue: 5
+    _variable: {fileID: 11400000, guid: f06929baf2e31154fa41be9b38c7c694, type: 2}
+  _currentRoundDuration: 5

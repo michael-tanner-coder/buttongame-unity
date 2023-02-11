@@ -15,10 +15,17 @@ public class RuleSet : ScriptableObject {
     [SerializeField] private float _currentTickRateModifier;
     public FloatReference TickRateModifier => _tickRateModifier;
 
+    [Header("Round Duration")]
+    [SerializeField] private FloatReference _roundDuration;
+    [SerializeField] private FloatReference _defaultRoundDuration;
+    [SerializeField] private float _currentRoundDuration;
+    public FloatReference RoundDuration => _roundDuration;
+
     void OnValidate() 
     {
         _tickRateModifier.Value = _currentTickRateModifier;
         _gravityModifier.Value = _currentGravityModifier;
+        _roundDuration.Value = _currentRoundDuration;
     }
 
     public void ResetToDefaults()
@@ -26,6 +33,7 @@ public class RuleSet : ScriptableObject {
         
         _gravityModifier.Value = _defaultGravity.Value;
         _tickRateModifier.Value = _defaultTickRate.Value;
+        _roundDuration.Value = _defaultRoundDuration.Value;
     }
 
     public void ChangeRulesViaItem(ItemSO item) 
@@ -38,6 +46,11 @@ public class RuleSet : ScriptableObject {
         if (item.tickRateModifier != 0f) 
         {
             _tickRateModifier.Value = item.tickRateModifier;
+        }
+
+        if (item.durationModifier != 0f) 
+        {
+            _roundDuration.Value = item.durationModifier;
         }
     }
 }
