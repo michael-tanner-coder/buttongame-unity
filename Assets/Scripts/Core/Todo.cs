@@ -14,9 +14,6 @@ public class Todo : MonoBehaviour
     // TODO: create door animation
     // TODO: create explosion animation
 
-    // GRAPHICS/UI
-    // TODO: get pixel-perfect unity display
-
     // SOUND
     // TODO: use SOs to act as a sound manager
     // TODO: load sound assets into SO
