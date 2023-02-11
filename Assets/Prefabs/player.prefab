@@ -21,6 +21,7 @@ GameObject:
   - component: {fileID: -5995221738367962983}
   - component: {fileID: 6109337961053839347}
   - component: {fileID: 1353419013492135565}
+  - component: {fileID: 2751595281582741405}
   m_Layer: 6
   m_Name: player
   m_TagString: Untagged
@@ -376,6 +377,38 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 11400000, guid: 0b86bf5ef22a52a44879987b364ce585, type: 2}
           m_ObjectArgumentAssemblyTypeName: PlayerType, Assembly-CSharp
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &2751595281582741405
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 964011201162877703}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5758ca93461aeeb4589456a052b07d74, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _showDebugFields: 0
+  _enableGizmoDebugging: 1
+  _debugColor: {r: 0, g: 1, b: 1, a: 1}
+  _previouslyRegisteredEvent: {fileID: 0}
+  _event: {fileID: 11400000, guid: 60e7a484f0e428c498f9cf430f6d887c, type: 2}
+  _response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: -2693727024655145130}
+        m_TargetAssemblyTypeName: Player, Assembly-CSharp
+        m_MethodName: UpdatePlayerData
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
