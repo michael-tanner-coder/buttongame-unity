@@ -1363,6 +1363,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1912351980}
     - target: {fileID: 1436344975, guid: 927a77f871b197b4c820e2f8bdc58364, type: 3}
+      propertyPath: _ruleSet
+      value: 
+      objectReference: {fileID: 11400000, guid: e29ba1e1169508943b33e94972bb39ec, type: 2}
+    - target: {fileID: 1436344975, guid: 927a77f871b197b4c820e2f8bdc58364, type: 3}
       propertyPath: _tickRateModifier
       value: 
       objectReference: {fileID: 11400000, guid: d7fce2334b6544b4ea6dee445a41ec2c, type: 2}
@@ -1958,8 +1962,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac8b77ef7a6950846b5a4e0efe746809, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _gravityModifier: {fileID: 11400000, guid: a887e2d93e6615f45b4880ced2fa948f, type: 2}
-  _tickRateModifier: {fileID: 11400000, guid: d7fce2334b6544b4ea6dee445a41ec2c, type: 2}
+  _ruleSet: {fileID: 11400000, guid: e29ba1e1169508943b33e94972bb39ec, type: 2}
 --- !u!1 &2117293105
 GameObject:
   m_ObjectHideFlags: 0
