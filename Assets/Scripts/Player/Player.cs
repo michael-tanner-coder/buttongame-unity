@@ -2,18 +2,24 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    [SerializeField]
-    private PlayerData data;
+    [SerializeField] private PlayerData _data;
 
-    public void CheckIfWinner() 
+    public void Start() 
     {
-        if (data.score.Value >= data.maxScore.Value)
-        {
-            Debug.Log("Winner!");
-        }
-        else
-        {
-            Debug.Log("Not Winner!");
-        }
+        SetPlayerData(_data);
+    }
+
+    public void SetPlayerType(PlayerType type) 
+    {
+        _data.SetType(type);
+        SetPlayerData(_data);
+    }
+
+    public void SetPlayerData(PlayerData data)
+    {
+        _data = data;
+        PlayerType type = _data.Type;
+        SpriteRenderer spr = GetComponent<SpriteRenderer>();
+        spr.sprite = type.PlayerSprite;
     }
 }
