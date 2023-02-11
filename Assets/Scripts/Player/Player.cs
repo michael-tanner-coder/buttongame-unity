@@ -18,6 +18,11 @@ public class Player : MonoBehaviour
     public void SetPlayerData(PlayerData data)
     {
         _data = data;
+        UpdatePlayerData();
+    }
+
+    public void UpdatePlayerData()
+    {
         PlayerType type = _data.Type;
         SpriteRenderer spr = GetComponent<SpriteRenderer>();
         spr.sprite = type.PlayerSprite;
