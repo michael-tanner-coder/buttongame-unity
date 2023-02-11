@@ -5,6 +5,7 @@ public class Item : MonoBehaviour
 {
     [SerializeField]
     private ItemSO _itemData;
+    public ItemSO Data => _itemData;
 
     [SerializeField]
     private ItemList _availableItems;

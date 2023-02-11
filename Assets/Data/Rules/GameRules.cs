@@ -16,8 +16,8 @@ public class GameRules : MonoBehaviour
         _ruleSet.ResetToDefaults();
     }
 
-    public void ChangeRulesViaItem(ItemSO item) 
+    public void ChangeRulesViaItem(Item item) 
     {
-        _ruleSet.ChangeRulesViaItem(item);
+        _ruleSet.ChangeRulesViaItem(item.Data);
     }
 }

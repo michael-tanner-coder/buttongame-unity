@@ -124,7 +124,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1958690815721071005}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 58780c616a4411f4699be4c7d52a589e, type: 3}
   m_Name: 
@@ -159,7 +159,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac8b77ef7a6950846b5a4e0efe746809, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _gravityModifier: {fileID: 11400000, guid: a887e2d93e6615f45b4880ced2fa948f, type: 2}
+  _ruleSet: {fileID: 11400000, guid: e29ba1e1169508943b33e94972bb39ec, type: 2}
 --- !u!114 &-516218581262875423
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -186,7 +186,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 37c5e93a5e0d2384584643e987d8e937, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _itemData: {fileID: 11400000, guid: 53b27c9496a01134fa51ffbbae6d2460, type: 2}
+  _itemData: {fileID: 11400000, guid: 8ef7a16626a36344f8b0daa9850e8076, type: 2}
   _availableItems: {fileID: 11400000, guid: 52989a21d7824594f947b8a26961910d, type: 2}
   _speed: 0
   _doors: {fileID: 11400000, guid: 2d96479c4a5b77c448431e3ecf69a20c, type: 2}
@@ -224,8 +224,8 @@ MonoBehaviour:
         m_MethodName: ChangeRulesViaItem
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 11400000, guid: 53b27c9496a01134fa51ffbbae6d2460, type: 2}
-          m_ObjectArgumentAssemblyTypeName: ItemSO, Assembly-CSharp
+          m_ObjectArgument: {fileID: 1958690815721070977}
+          m_ObjectArgumentAssemblyTypeName: Item, Assembly-CSharp
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 

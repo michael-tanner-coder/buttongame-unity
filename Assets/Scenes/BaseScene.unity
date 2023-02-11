@@ -1354,22 +1354,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1436344965, guid: 927a77f871b197b4c820e2f8bdc58364, type: 3}
-      propertyPath: _enterResponse.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgument
-      value: 
-      objectReference: {fileID: 11400000, guid: 8ef7a16626a36344f8b0daa9850e8076, type: 2}
     - target: {fileID: 1436344974, guid: 927a77f871b197b4c820e2f8bdc58364, type: 3}
       propertyPath: _targetTransform
       value: 
       objectReference: {fileID: 1912351980}
-    - target: {fileID: 1436344975, guid: 927a77f871b197b4c820e2f8bdc58364, type: 3}
-      propertyPath: _ruleSet
-      value: 
-      objectReference: {fileID: 11400000, guid: e29ba1e1169508943b33e94972bb39ec, type: 2}
-    - target: {fileID: 1436344975, guid: 927a77f871b197b4c820e2f8bdc58364, type: 3}
-      propertyPath: _tickRateModifier
-      value: 
-      objectReference: {fileID: 11400000, guid: d7fce2334b6544b4ea6dee445a41ec2c, type: 2}
     - target: {fileID: 1958690815721070976, guid: 927a77f871b197b4c820e2f8bdc58364, type: 3}
       propertyPath: m_RootOrder
       value: 10
@@ -1414,17 +1402,9 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1958690815721070977, guid: 927a77f871b197b4c820e2f8bdc58364, type: 3}
-      propertyPath: _itemData
-      value: 
-      objectReference: {fileID: 11400000, guid: 8ef7a16626a36344f8b0daa9850e8076, type: 2}
     - target: {fileID: 1958690815721071005, guid: 927a77f871b197b4c820e2f8bdc58364, type: 3}
       propertyPath: m_Name
       value: Item
-      objectReference: {fileID: 0}
-    - target: {fileID: 4202586277967952548, guid: 927a77f871b197b4c820e2f8bdc58364, type: 3}
-      propertyPath: m_Enabled
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 927a77f871b197b4c820e2f8bdc58364, type: 3}
