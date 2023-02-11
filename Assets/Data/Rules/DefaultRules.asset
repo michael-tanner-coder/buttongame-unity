@@ -12,19 +12,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 675b560a19040b045bcdb8e61ea1ebc8, type: 3}
   m_Name: DefaultRules
   m_EditorClassIdentifier: 
-  _gravityModifierDefault:
-    _useConstant: 1
-    _constantValue: 1
-    _variable: {fileID: 11400000, guid: a887e2d93e6615f45b4880ced2fa948f, type: 2}
   _gravityModifier:
     _useConstant: 0
-    _constantValue: 0
+    _constantValue: 1
     _variable: {fileID: 11400000, guid: a887e2d93e6615f45b4880ced2fa948f, type: 2}
-  _tickRateModifierDefault:
+  _defaultGravity:
     _useConstant: 1
     _constantValue: 1
-    _variable: {fileID: 11400000, guid: d7fce2334b6544b4ea6dee445a41ec2c, type: 2}
+    _variable: {fileID: 11400000, guid: a887e2d93e6615f45b4880ced2fa948f, type: 2}
+  _currentGravityModifier: 1
   _tickRateModifier:
     _useConstant: 0
     _constantValue: 0
     _variable: {fileID: 11400000, guid: d7fce2334b6544b4ea6dee445a41ec2c, type: 2}
+  _defaultTickRate:
+    _useConstant: 1
+    _constantValue: 1
+    _variable: {fileID: 11400000, guid: d7fce2334b6544b4ea6dee445a41ec2c, type: 2}
+  _currentTickRateModifier: 1
