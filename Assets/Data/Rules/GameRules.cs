@@ -1,15 +1,15 @@
 using UnityEngine;
+using ScriptableObjectArchitecture;
 
 public class GameRules : MonoBehaviour
 {
-    [SerializeField]
-    private RuleSet _ruleSet;
+    [SerializeField] private RuleSet _ruleSet;
+    [SerializeField] private GameEvent _swapCharacters;
 
     void Awake() 
     {
         ResetToDefaults();
     }
-
 
     public void ResetToDefaults()
     {
@@ -19,5 +19,10 @@ public class GameRules : MonoBehaviour
     public void ChangeRulesViaItem(Item item) 
     {
         _ruleSet.ChangeRulesViaItem(item.Data);
+
+        if (item.Data.swapCharacters)
+        {
+            _swapCharacters.Raise();
+        }
     }
 }
