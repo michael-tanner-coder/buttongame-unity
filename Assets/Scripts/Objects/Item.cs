@@ -37,7 +37,7 @@ public class Item : MonoBehaviour
             _effectDuration -= Time.deltaTime;
         }
 
-        if (_effectDuration <= 0)
+        if (_activated && _effectDuration <= 0)
         {
             Destroy(gameObject);
             _rules.ResetToDefaults();
