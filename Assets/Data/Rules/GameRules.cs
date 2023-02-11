@@ -1,13 +1,9 @@
 using UnityEngine;
-using ScriptableObjectArchitecture;
 
 public class GameRules : MonoBehaviour
 {
     [SerializeField]
-    private FloatVariable _gravityModifier;
-    
-    [SerializeField]
-    private FloatVariable _tickRateModifier;
+    private RuleSet _ruleSet;
 
     void Awake() 
     {
@@ -17,20 +13,11 @@ public class GameRules : MonoBehaviour
 
     public void ResetToDefaults()
     {
-        _gravityModifier.Value = 1f;
-        _tickRateModifier.Value = 1f;
+        _ruleSet.ResetToDefaults();
     }
 
     public void ChangeRulesViaItem(ItemSO item) 
     {
-        if (item.gravityModifier != 0f)
-        {
-            _gravityModifier.Value = item.gravityModifier;
-        }
-
-        if (item.tickRateModifier != 0f) 
-        {
-            _tickRateModifier.Value = item.tickRateModifier;
-        }
+        _ruleSet.ChangeRulesViaItem(item);
     }
 }
