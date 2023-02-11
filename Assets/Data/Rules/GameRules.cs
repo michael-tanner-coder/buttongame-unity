@@ -5,6 +5,7 @@ public class GameRules : MonoBehaviour
 {
     [SerializeField] private RuleSet _ruleSet;
     [SerializeField] private GameEvent _swapCharacters;
+    [SerializeField] private PlayerCharacterSwap _characterSwapper;
 
     void Awake() 
     {
@@ -22,6 +23,7 @@ public class GameRules : MonoBehaviour
 
         if (item.Data.swapCharacters)
         {
+            _characterSwapper.Swap();
             _swapCharacters.Raise();
         }
     }
