@@ -8,12 +8,19 @@ public class PlayerData : ScriptableObject
     public ScriptableObjectArchitecture.IntReference score;
     public ScriptableObjectArchitecture.IntReference maxScore;
     public DoorState doorState;
-    
+
+    [SerializeField] private PlayerType _type;
+    public PlayerType Type => _type;
 
     public void ResetData() 
     { 
         score.Value = 0; 
         doorState = DoorState.OPEN; 
+    }
+
+    public void SetType(PlayerType type)
+    {
+        _type = type;
     }
 }
 

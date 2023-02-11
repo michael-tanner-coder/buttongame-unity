@@ -22,3 +22,4 @@ MonoBehaviour:
     _constantValue: 0
     _variable: {fileID: 11400000, guid: 269bbb203a1123e46b2873be7a2b6e99, type: 2}
   doorState: 0
+  _type: {fileID: 11400000, guid: 1cb39125fa410624396254776fc52a26, type: 2}
