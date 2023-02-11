@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 675b560a19040b045bcdb8e61ea1ebc8, type: 3}
+  m_Name: DefaultRules
+  m_EditorClassIdentifier: 
+  _gravityModifierDefault:
+    _useConstant: 1
+    _constantValue: 1
+    _variable: {fileID: 11400000, guid: a887e2d93e6615f45b4880ced2fa948f, type: 2}
+  _gravityModifier:
+    _useConstant: 0
+    _constantValue: 0
+    _variable: {fileID: 11400000, guid: a887e2d93e6615f45b4880ced2fa948f, type: 2}
+  _tickRateModifierDefault:
+    _useConstant: 1
+    _constantValue: 1
+    _variable: {fileID: 11400000, guid: d7fce2334b6544b4ea6dee445a41ec2c, type: 2}
+  _tickRateModifier:
+    _useConstant: 0
+    _constantValue: 0
+    _variable: {fileID: 11400000, guid: d7fce2334b6544b4ea6dee445a41ec2c, type: 2}
