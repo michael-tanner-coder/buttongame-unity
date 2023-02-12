@@ -146,12 +146,12 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0
-  m_GravityScale: 0.1
-  m_Material: {fileID: 0}
+  m_GravityScale: 0.4
+  m_Material: {fileID: 6200000, guid: d801d688e047254438189edcc77ff2b9, type: 2}
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!61 &-4080557498122226821
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -193,7 +193,7 @@ MonoBehaviour:
   _showDebugFields: 0
   _enableGizmoDebugging: 1
   _debugColor: {r: 0, g: 1, b: 1, a: 1}
-  _previouslyRegisteredEvent: {fileID: 0}
+  _previouslyRegisteredEvent: {fileID: 11400000, guid: 0d6508e10728633448f5aa71c04a0e51, type: 2}
   _event: {fileID: 11400000, guid: 0d6508e10728633448f5aa71c04a0e51, type: 2}
   _response:
     m_PersistentCalls:
