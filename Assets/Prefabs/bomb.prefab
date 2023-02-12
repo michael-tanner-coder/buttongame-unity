@@ -16,6 +16,8 @@ GameObject:
   - component: {fileID: 7383261070838587426}
   - component: {fileID: -4080557498122226821}
   - component: {fileID: 6014211657929180715}
+  - component: {fileID: 2734465378451471262}
+  - component: {fileID: 8022811159613518127}
   m_Layer: 0
   m_Name: bomb
   m_TagString: Untagged
@@ -222,3 +224,47 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &2734465378451471262
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6196583963574468476}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 65d95ad6a5b37404cb11975b7dbf91b3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _trauma: {fileID: 11400000, guid: 26dc7a592784faa45915afd143098026, type: 2}
+--- !u!114 &8022811159613518127
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6196583963574468476}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3c5c0b4d14993b147a3f1629f4cd0135, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _collidableObjects: {fileID: 11400000, guid: 570ef018a5ffc27449e90ab8a3bb05d3, type: 2}
+  _enterResponse:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2734465378451471262}
+        m_TargetAssemblyTypeName: CameraTrauma, Assembly-CSharp
+        m_MethodName: Add
+        m_Mode: 4
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0.4
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  _exitResponse:
+    m_PersistentCalls:
+      m_Calls: []

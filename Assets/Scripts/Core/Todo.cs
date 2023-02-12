@@ -8,7 +8,6 @@ public class Todo : MonoBehaviour
     // TODO: respawn missing players on round start
 
     // ANIMATION
-    // TODO: create bomb tween animation
     // TODO: create small bomb roll animation
     // TODO: create player lose animation
     // TODO: create door animation
