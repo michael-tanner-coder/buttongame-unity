@@ -3,21 +3,23 @@ using ScriptableObjectArchitecture;
 
 public class SmallBomb : MonoBehaviour
 {
-    [SerializeField]
-    private FloatReference _speedReference;
+    
+    [Header("Movement")]
+    [SerializeField] private FloatReference _baseSpeed;
+    [SerializeField] private FloatReference _speedModifier;
     private float _speed;
 
-    [SerializeField]
-    private GameObjectCollection _doors;
+    [Header("Collision")]
+    [SerializeField] private GameObjectCollection _doors;
 
     void Awake()
     {
-        _speed = _speedReference.Value;
+        _speed = _baseSpeed.Value;
     }
     
     void Update() 
     {
-        float newX = transform.position.x + _speed * Time.deltaTime;
+        float newX = transform.position.x + _speed * _speedModifier.Value * Time.deltaTime;
         transform.position = new Vector3(newX, transform.position.y, transform.position.z);
     }
 
