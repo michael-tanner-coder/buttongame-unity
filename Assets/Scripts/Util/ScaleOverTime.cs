@@ -1,19 +1,15 @@
 using UnityEngine;
+using ScriptableObjectArchitecture;
 
 public class ScaleOverTime : MonoBehaviour
 {
-    [SerializeField]
-    private float _scaleRate = 1f;
-    private Vector3 _currentScale;
-    
-    [SerializeField]
+    [SerializeField] private AnimationCurveVariable _scaleCurve;
+    [SerializeField]private float _scaleRate;
+    [SerializeField] private bool _startScaling = false;
+    [SerializeField] private bool _useMaxScale = false;
     private float _maxScale = 1f;
-
-    [SerializeField]
-    private bool _startScaling = false;
-    
-    [SerializeField]
-    private bool _useMaxScale = false;
+    private float _scaleTime = 0f;
+    private Vector3 _currentScale;
 
     void Awake()
     {
@@ -24,10 +20,14 @@ public class ScaleOverTime : MonoBehaviour
         // don't scale if we have this bool turned off
         if (!_startScaling) return;
 
+        // Evaluate animation curve
+        _scaleTime += Time.deltaTime * _scaleRate;
+        float scaleCurve = _scaleCurve.Value.Evaluate(_scaleTime);
+
         // get numbers for next scale update
-        float x =  _currentScale.x + _scaleRate * Time.deltaTime;
-        float y =  _currentScale.y + _scaleRate * Time.deltaTime;
-        float z =  _currentScale.z + _scaleRate * Time.deltaTime;
+        float x =  _currentScale.x + scaleCurve;
+        float y =  _currentScale.y + scaleCurve;
+        float z =  _currentScale.z + scaleCurve;
 
         // limit to max scale value
         if (_useMaxScale)
