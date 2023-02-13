@@ -21,11 +21,18 @@ public class RuleSet : ScriptableObject {
     [SerializeField] private float _currentRoundDuration;
     public FloatReference RoundDuration => _roundDuration;
 
+    [Header("Small Bomb")]
+    [SerializeField] private FloatReference _bombSpeed;
+    [SerializeField] private FloatReference _defaultBombSpeed;
+    [SerializeField] private float _currentBombSpeed;
+    public FloatReference BomeSpeed => _bombSpeed;
+
     void OnValidate() 
     {
         _tickRateModifier.Value = _currentTickRateModifier;
         _gravityModifier.Value = _currentGravityModifier;
         _roundDuration.Value = _currentRoundDuration;
+        _bombSpeed.Value = _currentBombSpeed;
     }
 
     public void ResetToDefaults()
@@ -34,6 +41,7 @@ public class RuleSet : ScriptableObject {
         _gravityModifier.Value = _defaultGravity.Value;
         _tickRateModifier.Value = _defaultTickRate.Value;
         _roundDuration.Value = _defaultRoundDuration.Value;
+        _bombSpeed.Value = _defaultBombSpeed.Value;
     }
 
     public void ChangeRulesViaItem(ItemSO item) 
@@ -51,6 +59,11 @@ public class RuleSet : ScriptableObject {
         if (item.durationModifier != 0f) 
         {
             _roundDuration.Value = item.durationModifier;
+        }
+
+        if (item.bombSpeedModifier != 0f) 
+        {
+            _bombSpeed.Value = item.bombSpeedModifier;
         }
     }
 }
