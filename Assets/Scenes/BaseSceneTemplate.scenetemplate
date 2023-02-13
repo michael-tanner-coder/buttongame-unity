@@ -17,6 +17,8 @@ MonoBehaviour:
   description: Basic setup for all scenes in the game
   preview: {fileID: 2800000, guid: 447ee8b2bce93c34b8f40601de6c7292, type: 3}
   dependencies:
+  - dependency: {fileID: 2800000, guid: 90a6a74456e4a2d43a54b14515ea4e93, type: 3}
+    instantiationMode: 0
   - dependency: {fileID: 3121700522555676858, guid: 74311bc8de2dd5e44a99dc83bd8bcd8b, type: 3}
     instantiationMode: 0
   - dependency: {fileID: 2800000, guid: f1106d58a7b4b064bb8c048453281e27, type: 3}
@@ -76,6 +78,8 @@ MonoBehaviour:
   - dependency: {fileID: 7400000, guid: 0337b627ab3688349b8b1afc3d01cea7, type: 2}
     instantiationMode: 0
   - dependency: {fileID: 11400000, guid: b356f4607c3d20946923fa9d735269d1, type: 2}
+    instantiationMode: 1
+  - dependency: {fileID: 11400000, guid: b3d92fc50c1f54241aa99904933d9fb2, type: 2}
     instantiationMode: 1
   - dependency: {fileID: 11400000, guid: 0cab8d103490bb545b6541a6b100d587, type: 2}
     instantiationMode: 1
