@@ -3,11 +3,8 @@ using UnityEngine;
 
 public class Button : MonoBehaviour
 {
-    [SerializeField]
-    private GameEvent _onButtonPress;
-
-    [SerializeField]
-    private GameObjectCollection _triggers;
+    [SerializeField] private GameEvent _onButtonPress;
+    [SerializeField] private GameObjectCollection _triggers;
 
     void ActivateDoor()
     {

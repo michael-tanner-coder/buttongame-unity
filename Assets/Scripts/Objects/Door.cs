@@ -2,12 +2,9 @@ using UnityEngine;
 
 public class Door : MonoBehaviour
 {
-    [SerializeField]
-    private DoorState _state;
-
-    [SerializeField]
-    private PlayerData _playerData;
-
+    
+    [SerializeField] private DoorState _state;
+    [SerializeField] private PlayerData _playerData;
     private SpriteRenderer _spriteRenderer;
     private BoxCollider2D _collider;
 
