@@ -3,9 +3,9 @@ using UnityEngine;
 public class Todo : MonoBehaviour
 {
     // BUGS
-    // TODO: buttons are not sticking out enough
     // TODO: player win text is always P2
     // TODO: scores ignore max score, only uses 1 as the limit
+    // TODO: buttons are not sticking out enough (need to re-scale game)
     
     // LOGIC
     // TODO: end round on collision with small bomb
