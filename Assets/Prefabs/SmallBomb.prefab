@@ -51,7 +51,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d27398bcee7cabc449a166dd0db623f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _speedReference:
+  _baseSpeed:
+    _useConstant: 1
+    _constantValue: 1
+    _variable: {fileID: 0}
+  _speedModifier:
     _useConstant: 0
     _constantValue: 0
     _variable: {fileID: 11400000, guid: 5696453dc4c132641bcf2aa4259c8fd2, type: 2}

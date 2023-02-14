@@ -17,6 +17,7 @@ GameObject:
   - component: {fileID: -516218581262875423}
   - component: {fileID: 1958690815721070977}
   - component: {fileID: 1436344965}
+  - component: {fileID: 1583028441}
   m_Layer: 0
   m_Name: Item
   m_TagString: Untagged
@@ -160,6 +161,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _ruleSet: {fileID: 11400000, guid: e29ba1e1169508943b33e94972bb39ec, type: 2}
+  _swapCharacters: {fileID: 11400000, guid: 60e7a484f0e428c498f9cf430f6d887c, type: 2}
+  _characterSwapper: {fileID: 1583028441}
 --- !u!114 &-516218581262875423
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -186,7 +189,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 37c5e93a5e0d2384584643e987d8e937, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _itemData: {fileID: 11400000, guid: 8ef7a16626a36344f8b0daa9850e8076, type: 2}
+  _itemData: {fileID: 11400000, guid: e65d38066411a474a805cdb0662b4f99, type: 2}
   _availableItems: {fileID: 11400000, guid: 52989a21d7824594f947b8a26961910d, type: 2}
   _speed: 0
   _doors: {fileID: 11400000, guid: 2d96479c4a5b77c448431e3ecf69a20c, type: 2}
@@ -258,3 +261,17 @@ MonoBehaviour:
   _exitResponse:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &1583028441
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1958690815721071005}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: df5725c1c1858b44fbd7b017062d5ef4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _player1: {fileID: 11400000, guid: 6d10accf23462974f9a60e84b9678dd9, type: 2}
+  _player2: {fileID: 11400000, guid: 04530fd7de24c914eaf5423fb81f12cf, type: 2}
