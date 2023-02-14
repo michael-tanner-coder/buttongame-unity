@@ -3,7 +3,6 @@ using UnityEngine;
 public class Todo : MonoBehaviour
 {
     // BUGS
-    // TODO: countdown animation frames are unevenly spaced in time
     // TODO: buttons are not sticking out enough
     // TODO: player win text is always P2
     // TODO: scores ignore max score, only uses 1 as the limit
