@@ -4,15 +4,13 @@ using ScriptableObjectArchitecture;
 
 public class GameReset : MonoBehaviour
 {
-    [SerializeField]
-    private List<PlayerData> players;
-
-    [SerializeField]
-    private PlayerDataVariable _winner;
+    [SerializeField] private List<PlayerData> players;
+    [SerializeField] private PlayerDataVariable _winner;
+    [SerializeField] private PlayerData _defaultWinnerValue;
 
     void Awake()
     {
-        ResetPlayerData();
+        ResetGame();
     }
 
     void ResetPlayerData()
@@ -26,7 +24,7 @@ public class GameReset : MonoBehaviour
     public void ResetGame()
     {
         ResetPlayerData();
-        _winner = null;
+        _winner.Value = _defaultWinnerValue;
     }
 }
 

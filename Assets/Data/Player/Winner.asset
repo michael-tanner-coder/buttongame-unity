@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 50c592585fbb5004a8562305a2774358, type: 3}
   m_Name: Winner
   m_EditorClassIdentifier: 
-  _value: {fileID: 11400000, guid: 04530fd7de24c914eaf5423fb81f12cf, type: 2}
+  _value: {fileID: 11400000, guid: 6d10accf23462974f9a60e84b9678dd9, type: 2}
   _readOnly: 0
   _raiseWarning: 1
   _isClamped: 0

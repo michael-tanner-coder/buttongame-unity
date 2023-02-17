@@ -1000,13 +1000,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 892380137}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.017484888, y: -0.417, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.082515106, y: -0.297, z: -0.32999998}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_Father: {fileID: 1466098715}
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &930185179
 PrefabInstance:
@@ -1513,6 +1513,7 @@ Transform:
   - {fileID: 4439934000744363466}
   - {fileID: 1499946644}
   - {fileID: 1389776178}
+  - {fileID: 892380139}
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2937,6 +2938,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: DataResetter
       objectReference: {fileID: 0}
+    - target: {fileID: 6773989460848072394, guid: c240588d0dd5e37479eecbfbd9b07ea1, type: 3}
+      propertyPath: _defaultWinnerValue
+      value: 
+      objectReference: {fileID: 11400000, guid: aac96a66d1fb98145aa6e47874180bcb, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c240588d0dd5e37479eecbfbd9b07ea1, type: 3}
 --- !u!1001 &5982607646140238374
