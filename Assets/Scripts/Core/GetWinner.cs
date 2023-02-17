@@ -4,12 +4,8 @@ using ScriptableObjectArchitecture;
 
 public class GetWinner : MonoBehaviour
 {
-
-    [SerializeField]
-    private List<PlayerData> players;
-
-    [SerializeField]
-    private PlayerDataVariable _winner;
+    [SerializeField] private List<PlayerData> players;
+    [SerializeField] private PlayerDataVariable _winner;
 
     public void CheckForWinner()
     {
