@@ -1006,7 +1006,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1466098715}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &930185179
 PrefabInstance:
@@ -1510,7 +1510,6 @@ Transform:
   - {fileID: 735193215}
   - {fileID: 2117293109}
   - {fileID: 1497448005}
-  - {fileID: 4439934000744363466}
   - {fileID: 1499946644}
   - {fileID: 1389776178}
   - {fileID: 892380139}
@@ -1535,7 +1534,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2793233505606952809, guid: ad60a070e5bafc94cb11aefbab199125, type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 2793233505606952809, guid: ad60a070e5bafc94cb11aefbab199125, type: 3}
       propertyPath: m_LocalScale.x
@@ -2765,120 +2764,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2ccd9e250a8267549995168245c136c0, type: 3}
---- !u!4 &4439934000744363466 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 4007974895398267813, guid: 6b2a3cef4747abe488a2dc27d4d951d1, type: 3}
-  m_PrefabInstance: {fileID: 6780998804280317210}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &5227019069519431833 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4794334398156134134, guid: 6b2a3cef4747abe488a2dc27d4d951d1, type: 3}
-  m_PrefabInstance: {fileID: 6780998804280317210}
-  m_PrefabAsset: {fileID: 0}
---- !u!95 &5227019069519431834 stripped
-Animator:
-  m_CorrespondingSourceObject: {fileID: 5227019069519431834, guid: 6b2a3cef4747abe488a2dc27d4d951d1, type: 3}
-  m_PrefabInstance: {fileID: 6780998804280317210}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &5227019069519431836 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 5227019069519431836, guid: 6b2a3cef4747abe488a2dc27d4d951d1, type: 3}
-  m_PrefabInstance: {fileID: 6780998804280317210}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5227019069519431833}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 01226342c2776b14295dd193268454b3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &5227019069519431837
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5227019069519431833}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5758ca93461aeeb4589456a052b07d74, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _showDebugFields: 0
-  _enableGizmoDebugging: 1
-  _debugColor: {r: 0, g: 1, b: 1, a: 1}
-  _previouslyRegisteredEvent: {fileID: 11400000, guid: aa1745f6441485c489b8d7c00328d430, type: 2}
-  _event: {fileID: 11400000, guid: aa1745f6441485c489b8d7c00328d430, type: 2}
-  _response:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 5227019069519431836}
-        m_TargetAssemblyTypeName: VisibilityController, Assembly-CSharp
-        m_MethodName: SetVisibility
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
-      - m_Target: {fileID: 5227019069519431834}
-        m_TargetAssemblyTypeName: UnityEngine.Animator, UnityEngine
-        m_MethodName: SetTrigger
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: Start Countdown
-          m_BoolArgument: 0
-        m_CallState: 2
---- !u!114 &5227019069519431840
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5227019069519431833}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5758ca93461aeeb4589456a052b07d74, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _showDebugFields: 0
-  _enableGizmoDebugging: 1
-  _debugColor: {r: 0, g: 1, b: 1, a: 1}
-  _previouslyRegisteredEvent: {fileID: 11400000, guid: 3eede6b1e9ea1e84b99fb956a10bdbbe, type: 2}
-  _event: {fileID: 11400000, guid: 3eede6b1e9ea1e84b99fb956a10bdbbe, type: 2}
-  _response:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 5227019069519431836}
-        m_TargetAssemblyTypeName: VisibilityController, Assembly-CSharp
-        m_MethodName: SetVisibility
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
-      - m_Target: {fileID: 5227019069519431834}
-        m_TargetAssemblyTypeName: UnityEngine.Animator, UnityEngine
-        m_MethodName: SetTrigger
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: Start Countdown
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!1001 &5762082801314829188
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2953,7 +2838,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 5982607644759672596, guid: a2098460413b4d441b585f24b80be123, type: 3}
       propertyPath: m_RootOrder
-      value: 6
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 5982607644759672596, guid: a2098460413b4d441b585f24b80be123, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3205,71 +3090,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!1001 &6780998804280317210
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 1466098715}
-    m_Modifications:
-    - target: {fileID: 2433394877965859479, guid: 6b2a3cef4747abe488a2dc27d4d951d1, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 1562566939, guid: 8c5940abb8f94354f9350e68436e3b62, type: 3}
-    - target: {fileID: 2433394877965859479, guid: 6b2a3cef4747abe488a2dc27d4d951d1, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4007974895398267813, guid: 6b2a3cef4747abe488a2dc27d4d951d1, type: 3}
-      propertyPath: m_RootOrder
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 4007974895398267813, guid: 6b2a3cef4747abe488a2dc27d4d951d1, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -0.10071522
-      objectReference: {fileID: 0}
-    - target: {fileID: 4007974895398267813, guid: 6b2a3cef4747abe488a2dc27d4d951d1, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.12057452
-      objectReference: {fileID: 0}
-    - target: {fileID: 4007974895398267813, guid: 6b2a3cef4747abe488a2dc27d4d951d1, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -0.33417007
-      objectReference: {fileID: 0}
-    - target: {fileID: 4007974895398267813, guid: 6b2a3cef4747abe488a2dc27d4d951d1, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4007974895398267813, guid: 6b2a3cef4747abe488a2dc27d4d951d1, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4007974895398267813, guid: 6b2a3cef4747abe488a2dc27d4d951d1, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4007974895398267813, guid: 6b2a3cef4747abe488a2dc27d4d951d1, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4007974895398267813, guid: 6b2a3cef4747abe488a2dc27d4d951d1, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4007974895398267813, guid: 6b2a3cef4747abe488a2dc27d4d951d1, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4007974895398267813, guid: 6b2a3cef4747abe488a2dc27d4d951d1, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4794334398156134134, guid: 6b2a3cef4747abe488a2dc27d4d951d1, type: 3}
-      propertyPath: m_Name
-      value: CountdownUI
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 6b2a3cef4747abe488a2dc27d4d951d1, type: 3}
 --- !u!1001 &7360279784185467474
 PrefabInstance:
   m_ObjectHideFlags: 0
