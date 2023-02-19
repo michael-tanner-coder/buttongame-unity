@@ -9,16 +9,16 @@ public class MoveScrollContent : MonoBehaviour
 
     void Update()
     {
-        // float currentX = transform.position.x;
-        // float newX = currentX + _scrollSpeed * Time.deltaTime;
+        float currentX = _contentRect.anchoredPosition.x;
+        float newX = currentX + _scrollSpeed * Time.deltaTime;
         // transform.position = new Vector3(newX, transform.position.y, transform.position.z);
+        // _contentRect.rect.Set(newX, _contentRect.rect.y, _contentRect.rect.width, _contentRect.rect.height);
+        _contentRect.anchoredPosition = new Vector2(newX, _contentRect.anchoredPosition.y);
 
         if (_loop) {
-            Rect newRect = RectTransformToScreenSpace(_contentRect);
-            Vector2 point = new Vector2(_contentRect.position.x, _contentRect.position.y) - new Vector2(Screen.width/2, Screen.height/2);
-            if (RectTransformUtility.RectangleContainsScreenPoint(_viewPortRect, new Vector2(transform.position.x, transform.position.y), _camera))
-            {
-                Debug.Log("Inside viewport!");
+            if (newX >= _viewPortRect.anchoredPosition.x + _viewPortRect.rect.width) {
+                float leftBoundary = _viewPortRect.anchoredPosition.x - _contentRect.rect.width/2;
+                _contentRect.anchoredPosition = new Vector2(leftBoundary, _contentRect.anchoredPosition.y);
             }
         }
     }
