@@ -7,7 +7,6 @@ public class DynamicScrollView : MonoBehaviour
 {
     [SerializeField] private Transform scrollViewContent;
     [SerializeField] private GameObject prefab;
-
     [SerializeField] private List<Sprite> items;
 
     private void Start() 
