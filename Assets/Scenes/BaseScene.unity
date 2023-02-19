@@ -763,7 +763,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3199989416732683493, guid: 74311bc8de2dd5e44a99dc83bd8bcd8b, type: 3}
       propertyPath: m_DrawMode
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3579929275462088383, guid: 74311bc8de2dd5e44a99dc83bd8bcd8b, type: 3}
       propertyPath: m_RootOrder
@@ -823,15 +823,15 @@ PrefabInstance:
       objectReference: {fileID: 11400000, guid: 6d10accf23462974f9a60e84b9678dd9, type: 2}
     - target: {fileID: 9038307045598319612, guid: 74311bc8de2dd5e44a99dc83bd8bcd8b, type: 3}
       propertyPath: m_SpriteTilingProperty.drawMode
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9146312102360213157, guid: 74311bc8de2dd5e44a99dc83bd8bcd8b, type: 3}
       propertyPath: m_LocalScale.x
-      value: 1
+      value: 6.25
       objectReference: {fileID: 0}
     - target: {fileID: 9146312102360213157, guid: 74311bc8de2dd5e44a99dc83bd8bcd8b, type: 3}
       propertyPath: m_LocalScale.y
-      value: 1
+      value: 6.25
       objectReference: {fileID: 0}
     - target: {fileID: 9146312102360213157, guid: 74311bc8de2dd5e44a99dc83bd8bcd8b, type: 3}
       propertyPath: m_LocalPosition.x
