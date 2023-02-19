@@ -12,13 +12,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f18936892638a814c8a3806034991136, type: 3}
   m_Name: SmallBomb
   m_EditorClassIdentifier: 
-  itemName: Test Item
+  id: 
+  itemName: Small Bomb
   sprite: {fileID: 21300000, guid: cc3d6e109e99e2642945e4fc9ac2632a, type: 3}
+  rarity: 0
+  quantity: 0
   timeModifier: 0
   gravityModifier: 0
   massModifier: 0
   spriteModifier: 0
   durationModifier: 0
+  tickRateModifier: 0
+  timeScaleModifier: 0
   bombSpeedModifier: 0
   buttonHeightModifier: 0
   swapCharacters: 0
