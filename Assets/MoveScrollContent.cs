@@ -1,7 +1,8 @@
 using UnityEngine;
+using ScriptableObjectArchitecture;
 public class MoveScrollContent : MonoBehaviour
 {
-    [SerializeField] private float _scrollSpeed = 1f;
+    [SerializeField] private FloatVariable _scrollSpeed;
     [SerializeField] private bool _loop;
     [SerializeField] private RectTransform _viewPortRect;
     [SerializeField] private RectTransform _contentRect;
@@ -9,7 +10,7 @@ public class MoveScrollContent : MonoBehaviour
     void Update()
     {
         float currentX = _contentRect.anchoredPosition.x;
-        float newX = currentX + _scrollSpeed * Time.deltaTime;
+        float newX = currentX + _scrollSpeed.Value * Time.deltaTime;
         _contentRect.anchoredPosition = new Vector2(newX, _contentRect.anchoredPosition.y);
 
         if (_loop) {
