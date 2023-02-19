@@ -148,7 +148,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0
-  m_GravityScale: 0.4
+  m_GravityScale: 1.2
   m_Material: {fileID: 6200000, guid: d801d688e047254438189edcc77ff2b9, type: 2}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -167,18 +167,18 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.05, y: -0.11}
+  m_Offset: {x: -0.35363877, y: -0.5888146}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.73, y: 0.69}
+    oldSize: {x: 4.5625, y: 4.3125}
     newSize: {x: 0.73, y: 0.69}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.45, y: 0.46}
+  m_Size: {x: 2.9958932, y: 2.9825366}
   m_EdgeRadius: 0
 --- !u!114 &6014211657929180715
 MonoBehaviour:
@@ -261,7 +261,7 @@ MonoBehaviour:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
-          m_FloatArgument: 0.4
+          m_FloatArgument: 0.75
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
