@@ -3,7 +3,6 @@ using UnityEngine;
 public class Todo : MonoBehaviour
 {
     // BUGS
-    // TODO: buttons are not sticking out enough (need to re-scale game)
     // TODO: sometimes players don't spawn on game start
     
     // LOGIC
