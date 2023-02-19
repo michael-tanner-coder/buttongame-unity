@@ -1,9 +1,16 @@
 using UnityEngine;
-[CreateAssetMenu(fileName = "ItemSO", menuName = "Scriptable Objects/Item", order = 0)]
+[CreateAssetMenu(fileName = "ItemSO", menuName = "Scriptable Objects/Item Data", order = 0)]
 public class ItemSO : ScriptableObject {
+
+    public string id;
+
     // Display
     public string itemName;
     public Sprite sprite;
+
+    // Stats
+    public float rarity;
+    public int quantity;
 
     // Modifiers
     public float timeModifier;
