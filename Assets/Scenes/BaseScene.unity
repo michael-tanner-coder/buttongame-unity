@@ -642,7 +642,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 964011201162877753, guid: dae9562bddabb794da574d3392673208, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.3470625
+      value: 0.120000005
       objectReference: {fileID: 0}
     - target: {fileID: 964011201162877753, guid: dae9562bddabb794da574d3392673208, type: 3}
       propertyPath: m_LocalPosition.z
@@ -675,6 +675,22 @@ PrefabInstance:
     - target: {fileID: 964011201162877753, guid: dae9562bddabb794da574d3392673208, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1179644233354622764, guid: dae9562bddabb794da574d3392673208, type: 3}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 519420031}
+    - target: {fileID: 1179644233354622764, guid: dae9562bddabb794da574d3392673208, type: 3}
+      propertyPath: m_ActionEvents.Array.data[0].m_PersistentCalls.m_Calls.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1179644233354622764, guid: dae9562bddabb794da574d3392673208, type: 3}
+      propertyPath: m_ActionEvents.Array.data[0].m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1179644233354622764, guid: dae9562bddabb794da574d3392673208, type: 3}
+      propertyPath: m_ActionEvents.Array.data[0].m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dae9562bddabb794da574d3392673208, type: 3}
