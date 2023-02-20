@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class InventoryGrid : MonoBehaviour
 {
-    [SerializeField] private InventorySystem _inventorySystem;
+    [SerializeField] private Inventory _inventorySystem;
     [SerializeField] private GameObject _slotPrefab;
     
     public void BuildGrid()

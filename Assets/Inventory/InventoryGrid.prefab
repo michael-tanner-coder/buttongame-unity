@@ -53,7 +53,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e3d7aad72f1b33246b46abf8269771ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _inventorySystem: {fileID: -9118801662864830016}
+  _inventorySystem: {fileID: 11400000, guid: d6678c25373717d4185a389dba8e8ef4, type: 2}
   _slotPrefab: {fileID: 2178957208176565512, guid: b4d80dd6fdf44d0448b72cd40ed88cda, type: 3}
 --- !u!114 &2808441382146839797
 MonoBehaviour:
