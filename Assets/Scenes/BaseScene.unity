@@ -1318,7 +1318,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _ruleSet: {fileID: 11400000, guid: e29ba1e1169508943b33e94972bb39ec, type: 2}
   _swapCharacters: {fileID: 0}
-  _characterSwapper: {fileID: 0}
 --- !u!1001 &404443537298078896
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1523,9 +1522,13 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: 6cb20379dd9debb4491cf360ea15dc65, type: 2}
     - target: {fileID: -106067436666795873, guid: 9c72daedaa30367428e693804bfc4906, type: 3}
+      propertyPath: _rules
+      value: 
+      objectReference: {fileID: 11400000, guid: e29ba1e1169508943b33e94972bb39ec, type: 2}
+    - target: {fileID: -106067436666795873, guid: 9c72daedaa30367428e693804bfc4906, type: 3}
       propertyPath: _inventory
       value: 
-      objectReference: {fileID: 11400000, guid: b261218ff78fd0947bc31bc41c391a26, type: 2}
+      objectReference: {fileID: 11400000, guid: d6678c25373717d4185a389dba8e8ef4, type: 2}
     - target: {fileID: -106067436666795873, guid: 9c72daedaa30367428e693804bfc4906, type: 3}
       propertyPath: _selectedItems
       value: 

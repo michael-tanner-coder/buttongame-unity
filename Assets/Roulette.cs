@@ -2,12 +2,12 @@ using UnityEngine;
 using ScriptableObjectArchitecture;
 public class Roulette : MonoBehaviour
 {
-
     [SerializeField] private FloatVariable _speed;
     [SerializeField] private IntVariable _money;
     [SerializeField] private IntVariable _cost;
     [SerializeField] private ItemList _selectedItems;
-    [SerializeField] private ItemList _inventory;
+    [SerializeField] private Inventory _inventory;
+    [SerializeField] private RuleSet _rules;
     public void ToggleRoulette()
     {
         if (_speed.Value == 0 && _money.Value >= _cost.Value)
@@ -17,7 +17,8 @@ public class Roulette : MonoBehaviour
             foreach(ItemSO item in _selectedItems.Value)
             {
                 Debug.Log("Discarding " + item.itemName);
-                _inventory.Value.Remove(item);
+                _inventory.Remove(item);
+                _rules.ChangeRulesViaItem(item);
             }
             // emit event that roulete finished?
         }

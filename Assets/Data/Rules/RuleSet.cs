@@ -46,6 +46,8 @@ public class RuleSet : ScriptableObject {
 
     public void ChangeRulesViaItem(ItemSO item) 
     {
+        Debug.Log("Changing rules!");
+        
         if (item.gravityModifier != 0f)
         {
             _gravityModifier.Value = item.gravityModifier;
