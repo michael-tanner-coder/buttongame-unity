@@ -12,12 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 497e9061d6ee8fd43a15dee9a97a8d5f, type: 3}
   m_Name: InventoryList
   m_EditorClassIdentifier: 
-  _value:
-  - {fileID: 11400000, guid: 0f9e8ef1b25a17a4aa40675052d0b0fa, type: 2}
-  - {fileID: 11400000, guid: 0f9e8ef1b25a17a4aa40675052d0b0fa, type: 2}
-  - {fileID: 11400000, guid: 504b638b561c085419dae23555499240, type: 2}
-  - {fileID: 11400000, guid: 88be7bc5567e4ee43a45ef3e378c867b, type: 2}
-  - {fileID: 11400000, guid: 88be7bc5567e4ee43a45ef3e378c867b, type: 2}
-  - {fileID: 11400000, guid: f322c9824a40a8a4791d11124741f1fa, type: 2}
-  - {fileID: 11400000, guid: 8ef7a16626a36344f8b0daa9850e8076, type: 2}
-  - {fileID: 11400000, guid: 8ef7a16626a36344f8b0daa9850e8076, type: 2}
+  _value: []
