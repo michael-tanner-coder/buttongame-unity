@@ -231,6 +231,7 @@ GameObject:
   - component: {fileID: 3410007030126118771}
   - component: {fileID: 3410007030126118766}
   - component: {fileID: 3410007030126118767}
+  - component: {fileID: -106067436666795873}
   m_Layer: 0
   m_Name: Roulette
   m_TagString: Untagged
@@ -348,11 +349,10 @@ MonoBehaviour:
   _response:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 11400000, guid: 3a7c8a123a0d789449eac0553017d7e8, type: 2}
-        m_TargetAssemblyTypeName: ScriptableObjectArchitecture.BaseVariable`1[[System.Single,
-          mscorlib
-        m_MethodName: set_Value
-        m_Mode: 4
+      - m_Target: {fileID: -106067436666795873}
+        m_TargetAssemblyTypeName: Roulette, Assembly-CSharp
+        m_MethodName: ToggleRoulette
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -389,6 +389,19 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &-106067436666795873
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3410007030126118773}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1a1608235f1a154a86f0eff9d40c1b3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _speed: {fileID: 11400000, guid: 3a7c8a123a0d789449eac0553017d7e8, type: 2}
 --- !u!1 &3410007030473135257
 GameObject:
   m_ObjectHideFlags: 0
