@@ -17,6 +17,9 @@ MonoBehaviour:
   sprite: {fileID: 21300000, guid: cc3d6e109e99e2642945e4fc9ac2632a, type: 3}
   rarity: 0
   quantity: 0
+  value: 10
+  wearable: 0
+  sticky: 0
   timeModifier: 0
   gravityModifier: 0
   massModifier: 0
