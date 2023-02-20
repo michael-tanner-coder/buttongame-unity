@@ -32,3 +32,4 @@ MonoBehaviour:
   swapCharacters: 0
   giveDoubleJump: 0
   effectDuration: 0
+  rouletteSpeedModifier: 1.5

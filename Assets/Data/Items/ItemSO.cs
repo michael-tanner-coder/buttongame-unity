@@ -29,5 +29,6 @@ public class ItemSO : ScriptableObject {
     public bool swapCharacters;
     public bool giveDoubleJump;
     public float effectDuration;
+    public float rouletteSpeedModifier;
 }
 
