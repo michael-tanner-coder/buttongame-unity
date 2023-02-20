@@ -48,3 +48,12 @@ MonoBehaviour:
     _constantValue: 1
     _variable: {fileID: 11400000, guid: 5696453dc4c132641bcf2aa4259c8fd2, type: 2}
   _currentBombSpeed: 1
+  _rouletteSpeed:
+    _useConstant: 0
+    _constantValue: 0
+    _variable: {fileID: 11400000, guid: 3a7c8a123a0d789449eac0553017d7e8, type: 2}
+  _defaultRouletteSpeed:
+    _useConstant: 1
+    _constantValue: 240
+    _variable: {fileID: 0}
+  _currentRouletteSpeed: 0
