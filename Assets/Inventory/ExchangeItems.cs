@@ -18,8 +18,8 @@ public class ExchangeItems : MonoBehaviour
         {
             _money.Value += item.value;
             _inventorySystem.Remove(item);
-            _selectedItems.Value.Clear();
         }
+            _selectedItems.Value.Clear();
     }
 
 }
