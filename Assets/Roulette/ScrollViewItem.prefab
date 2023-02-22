@@ -110,7 +110,7 @@ MonoBehaviour:
   _image: {fileID: 1301943768581208773}
   _collider: {fileID: -9005060173233164080}
   _otherCollider: {fileID: 0}
-  _inventoryList: {fileID: 11400000, guid: b261218ff78fd0947bc31bc41c391a26, type: 2}
+  _inventory: {fileID: 11400000, guid: d6678c25373717d4185a389dba8e8ef4, type: 2}
   _scrollViewItem: {fileID: -2480424305165777465}
 --- !u!61 &-9005060173233164080
 BoxCollider2D:

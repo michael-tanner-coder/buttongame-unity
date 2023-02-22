@@ -7,7 +7,7 @@ public class CheckOverlap : MonoBehaviour
     private bool highlighted = false;
     [SerializeField] private Collider2D _collider;
     [SerializeField] private Collider2D _otherCollider;
-    [SerializeField] private ItemList _inventoryList;
+    [SerializeField] private Inventory _inventory;
     [SerializeField] private ScrollViewItem _scrollViewItem;
 
     void Awake()
@@ -20,7 +20,7 @@ public class CheckOverlap : MonoBehaviour
     {
         if (highlighted)
         {
-            _inventoryList.Value.Add(_scrollViewItem.Data);
+            _inventory.Add(_scrollViewItem.Data);
         }
     }
 
