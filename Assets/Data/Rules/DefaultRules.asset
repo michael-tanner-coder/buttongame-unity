@@ -57,3 +57,4 @@ MonoBehaviour:
     _constantValue: 240
     _variable: {fileID: 0}
   _currentRouletteSpeed: 0
+  _reloadRouletteEvent: {fileID: 11400000, guid: 086546cbf0cf7e445b0764e585598c3d, type: 2}

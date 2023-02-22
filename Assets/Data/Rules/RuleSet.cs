@@ -31,7 +31,7 @@ public class RuleSet : ScriptableObject {
     [SerializeField] private FloatReference _rouletteSpeed;
     [SerializeField] private FloatReference _defaultRouletteSpeed;
     [SerializeField] private float _currentRouletteSpeed;
-
+    [SerializeField] private GameEvent _reloadRouletteEvent;
     void OnValidate() 
     {
         _tickRateModifier.Value = _currentTickRateModifier;
@@ -78,6 +78,11 @@ public class RuleSet : ScriptableObject {
         if (item.rouletteSpeedModifier != 0f) 
         {
             _rouletteSpeed.Value = _rouletteSpeed.Value * item.rouletteSpeedModifier;
+        }
+
+        if (item.reloadRoulette)
+        {
+            _reloadRouletteEvent?.Raise();
         }
     }
 }

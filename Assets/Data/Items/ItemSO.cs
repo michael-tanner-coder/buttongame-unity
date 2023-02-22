@@ -30,5 +30,6 @@ public class ItemSO : ScriptableObject {
     public bool giveDoubleJump;
     public float effectDuration;
     public float rouletteSpeedModifier;
+    public bool reloadRoulette;
 }
 

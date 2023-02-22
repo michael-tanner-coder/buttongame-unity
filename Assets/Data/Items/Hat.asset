@@ -33,3 +33,4 @@ MonoBehaviour:
   giveDoubleJump: 0
   effectDuration: 0
   rouletteSpeedModifier: 1.5
+  reloadRoulette: 1

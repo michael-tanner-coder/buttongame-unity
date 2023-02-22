@@ -19,6 +19,7 @@ public class Roulette : MonoBehaviour
 
     void Awake()
     {
+        _selectedItems.Value.Clear();
         LoadRoulette();
     }
 
@@ -34,6 +35,7 @@ public class Roulette : MonoBehaviour
                 _inventory.Remove(item);
                 _rules.ChangeRulesViaItem(item);
             }
+            _selectedItems.Value.Clear();
         }
         else 
         {
