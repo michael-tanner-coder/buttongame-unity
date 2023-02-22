@@ -34,7 +34,6 @@ public class Roulette : MonoBehaviour
                 _inventory.Remove(item);
                 _rules.ChangeRulesViaItem(item);
             }
-            // emit event that roulete finished?
         }
         else 
         {
@@ -47,10 +46,10 @@ public class Roulette : MonoBehaviour
         _rouletteItems.Value.Clear();
         for (int i = 0; i < _itemLimit; i++)
         {
-            // look at item rarity and roll a chance to add the item to the list?
-            // go with a naive random element first
             int index = Random.Range(0, _availableItems.Value.Count);
             ItemSO randomItem = _availableItems.Value[index];
+            Debug.Log("Adding:");
+            Debug.Log(randomItem.itemName);
             _rouletteItems.Value.Add(randomItem);
         }
     }

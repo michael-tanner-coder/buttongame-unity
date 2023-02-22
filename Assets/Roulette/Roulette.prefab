@@ -229,6 +229,7 @@ GameObject:
   - component: {fileID: 3410007030126118766}
   - component: {fileID: 3410007030126118767}
   - component: {fileID: -106067436666795873}
+  - component: {fileID: 8158496361768503245}
   m_Layer: 0
   m_Name: Roulette
   m_TagString: Untagged
@@ -407,6 +408,38 @@ MonoBehaviour:
   _rouletteItems: {fileID: 11400000, guid: dcca4c9de578e444a933f62a24b3a1c0, type: 2}
   _inventory: {fileID: 11400000, guid: d6678c25373717d4185a389dba8e8ef4, type: 2}
   _rules: {fileID: 11400000, guid: e29ba1e1169508943b33e94972bb39ec, type: 2}
+--- !u!114 &8158496361768503245
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3410007030126118773}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5758ca93461aeeb4589456a052b07d74, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _showDebugFields: 0
+  _enableGizmoDebugging: 1
+  _debugColor: {r: 0, g: 1, b: 1, a: 1}
+  _previouslyRegisteredEvent: {fileID: 0}
+  _event: {fileID: 11400000, guid: 086546cbf0cf7e445b0764e585598c3d, type: 2}
+  _response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: -106067436666795873}
+        m_TargetAssemblyTypeName: Roulette, Assembly-CSharp
+        m_MethodName: LoadRoulette
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &3410007030473135257
 GameObject:
   m_ObjectHideFlags: 0
