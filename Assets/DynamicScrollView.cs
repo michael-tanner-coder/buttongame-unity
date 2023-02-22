@@ -5,11 +5,11 @@ public class DynamicScrollView : MonoBehaviour
 {
     [SerializeField] private Transform scrollViewContent;
     [SerializeField] private GameObject prefab;
-    [SerializeField] private List<ItemSO> items;
+    [SerializeField] private ItemList _items;
 
     private void Start() 
     {
-        foreach(ItemSO itemData in items)
+        foreach(ItemSO itemData in _items.Value)
         {
             GameObject newItem = Instantiate(prefab, scrollViewContent);
             if(newItem.TryGetComponent<ScrollViewItem>(out ScrollViewItem item))

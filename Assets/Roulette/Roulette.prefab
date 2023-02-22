@@ -197,10 +197,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scrollViewContent: {fileID: 3410007029851984844}
   prefab: {fileID: 1301943768581208775, guid: 5e650628b81e0fe49bf6d7d5d1640487, type: 3}
-  items:
-  - {fileID: 11400000, guid: 861bcef72c0e23947b2f9a05b7407888, type: 2}
-  - {fileID: 11400000, guid: 0f9e8ef1b25a17a4aa40675052d0b0fa, type: 2}
-  - {fileID: 11400000, guid: 964abdc899d19ea4388ce94b16a4be37, type: 2}
+  _items: {fileID: 11400000, guid: dcca4c9de578e444a933f62a24b3a1c0, type: 2}
 --- !u!114 &3410007029851984840
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -402,6 +399,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _speed: {fileID: 11400000, guid: 3a7c8a123a0d789449eac0553017d7e8, type: 2}
+  _money: {fileID: 11400000, guid: 6cb20379dd9debb4491cf360ea15dc65, type: 2}
+  _cost: {fileID: 11400000, guid: 9590d0187fa20434882edb7dc01a9f3c, type: 2}
+  _itemLimit: 4
+  _selectedItems: {fileID: 11400000, guid: acb70b5332f870147a9595916ed77117, type: 2}
+  _availableItems: {fileID: 11400000, guid: 92502c37ad17a9d4ab8a496f349ea7b3, type: 2}
+  _rouletteItems: {fileID: 11400000, guid: dcca4c9de578e444a933f62a24b3a1c0, type: 2}
+  _inventory: {fileID: 11400000, guid: d6678c25373717d4185a389dba8e8ef4, type: 2}
+  _rules: {fileID: 11400000, guid: e29ba1e1169508943b33e94972bb39ec, type: 2}
 --- !u!1 &3410007030473135257
 GameObject:
   m_ObjectHideFlags: 0
