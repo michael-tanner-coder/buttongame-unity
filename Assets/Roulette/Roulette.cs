@@ -4,9 +4,14 @@ public class Roulette : MonoBehaviour
 {
     [Header("Roulette Properties")]
     [SerializeField] private FloatVariable _speed;
-    [SerializeField] private IntVariable _money;
-    [SerializeField] private IntVariable _cost;
     [SerializeField] private int _itemLimit;
+
+    [Header("Roulette Price")]
+    [SerializeField] private IntVariable _baseCost;
+    [SerializeField] private IntVariable _costModifier;
+    [SerializeField] private IntVariable _money;
+    [SerializeField] private IntVariable _goal;
+    private int _totalCost;
 
     [Header("Item Lists")]
     [SerializeField] private ItemList _selectedItems;
@@ -17,6 +22,10 @@ public class Roulette : MonoBehaviour
     [SerializeField] private Inventory _inventory;
     [SerializeField] private RuleSet _rules;
 
+    void CalculateCost()
+    {
+        _totalCost = _baseCost.Value + 1000 * (_money.Value/_goal.Value) * _costModifier.Value;
+    }
     void Awake()
     {
         _selectedItems.Value.Clear();
@@ -25,9 +34,9 @@ public class Roulette : MonoBehaviour
 
     public void ToggleRoulette()
     {
-        if (_speed.Value == 0 && _money.Value >= _cost.Value)
+        if (_speed.Value == 0 && _money.Value >= _baseCost.Value)
         {
-            _money.Value -= _cost.Value;
+            _money.Value -= _totalCost;
             _speed.Value = 240f;
             foreach(ItemSO item in _selectedItems.Value)
             {
