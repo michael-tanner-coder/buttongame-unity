@@ -15,7 +15,7 @@ MonoBehaviour:
   id: 
   itemName: Bomb
   sprite: {fileID: 21300000, guid: e73de1f6b9839604e9e10536182da6c4, type: 3}
-  rarity: 0
+  rarity: 1
   quantity: 0
   value: 0
   wearable: 0
@@ -33,3 +33,4 @@ MonoBehaviour:
   giveDoubleJump: 0
   effectDuration: 0
   rouletteSpeedModifier: 0
+  reloadRoulette: 0

@@ -24,6 +24,15 @@ public class Roulette : MonoBehaviour
     [SerializeField] private RuleSet _rules;
 
     private Dictionary<float, int> _costDictionary = new Dictionary<float, int>();
+    private struct ItemDrop {
+        public float probabilityWeight;
+        public float probabilityFrom;
+        public float probabilityTo;
+    }
+
+    private Dictionary<ItemSO, ItemDrop> _itemDropTable = new Dictionary<ItemSO, ItemDrop>();
+    private float _probabilityTotalWeight;
+
 
     void CalculateCost()
     {
@@ -55,6 +64,8 @@ public class Roulette : MonoBehaviour
     void Awake()
     {
         _selectedItems.Value.Clear();
+        InitCostDictionary();
+        InitItemDropTable();
         LoadRoulette();
         CalculateCost();
     }
@@ -84,13 +95,50 @@ public class Roulette : MonoBehaviour
     public void LoadRoulette()
     {
         _rouletteItems.Value.Clear();
+        Debug.Log("_probabilityTotalWeight");
+        Debug.Log(_probabilityTotalWeight);
         for (int i = 0; i < _itemLimit; i++)
         {
-            int index = Random.Range(0, _availableItems.Value.Count);
-            ItemSO randomItem = _availableItems.Value[index];
-            Debug.Log("Adding:");
-            Debug.Log(randomItem.itemName);
-            _rouletteItems.Value.Add(randomItem);
+            float pickedNumber = Random.Range(0, _probabilityTotalWeight);
+
+            // 
+            foreach(ItemSO item in _itemDropTable.Keys)
+            {
+                if (pickedNumber > _itemDropTable[item].probabilityFrom && pickedNumber < _itemDropTable[item].probabilityTo)
+                {
+                    Debug.Log("Picked " + item.itemName);
+                    _rouletteItems.Value.Add(item);
+                }
+            }
+
+            // if no item was picked, just add a default item
+            if (_rouletteItems.Value.Count < i + 1)
+            {
+                _rouletteItems.Value.Add(_availableItems.Value[0]);
+            }
         }
+    }
+
+    void InitItemDropTable()
+    {
+        float currentProbabilityWeightMaximum = 0f;
+        foreach(ItemSO item in _availableItems.Value)
+        {
+            ItemDrop itemDropEntry = new ItemDrop();
+            if (item.rarity < 0f)
+            {
+                Debug.Log("Can't have a negative probability weight");
+                itemDropEntry.probabilityWeight = 0f;
+            }
+            else 
+            {
+                itemDropEntry.probabilityWeight = item.rarity;
+                itemDropEntry.probabilityFrom = currentProbabilityWeightMaximum;
+                currentProbabilityWeightMaximum += itemDropEntry.probabilityWeight;	
+                itemDropEntry.probabilityTo = currentProbabilityWeightMaximum;
+            }
+            _itemDropTable.Add(item, itemDropEntry);
+        }
+        _probabilityTotalWeight = currentProbabilityWeightMaximum;
     }
 }
