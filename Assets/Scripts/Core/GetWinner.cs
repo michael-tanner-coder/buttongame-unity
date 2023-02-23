@@ -1,37 +1,19 @@
-using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using ScriptableObjectArchitecture;
 
 public class GetWinner : MonoBehaviour
 {
-    [SerializeField] private List<PlayerData> players;
-    [SerializeField] private PlayerDataVariable _winner;
 
-    public void CheckForWinner()
+    [SerializeField] private IntVariable _money;
+    [SerializeField] private IntVariable _goal;
+    
+    void Update()
     {
-        UpdateScores();
-        players.ForEach((player) =>
+        if (_money.Value >= _goal.Value)
         {
-            if (isMatchWinner(player))
-            {
-                _winner.Value = player;
-            }
-        });
-    }
-
-    void UpdateScores() 
-    {
-        players.ForEach((PlayerData player) =>
-        {
-            if (player.doorState == DoorState.CLOSED)
-            {
-                player.score.Value += 1;
-            }
-        });
-    }
-
-    bool isMatchWinner(PlayerData player) 
-    {
-        return player.score.Value >= player.maxScore.Value;
+            Debug.Log("You Win!");
+            SceneManager.LoadScene("WinScene");
+        }
     }
 }
