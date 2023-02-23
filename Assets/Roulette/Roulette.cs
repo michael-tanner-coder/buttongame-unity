@@ -1,4 +1,5 @@
 using UnityEngine;
+using System.Collections.Generic;
 using ScriptableObjectArchitecture;
 public class Roulette : MonoBehaviour
 {
@@ -22,16 +23,33 @@ public class Roulette : MonoBehaviour
     [SerializeField] private Inventory _inventory;
     [SerializeField] private RuleSet _rules;
 
+    private Dictionary<float, int> _costDictionary = new Dictionary<float, int>();
+
     void CalculateCost()
     {
-        Debug.Log("_baseCost.Value");
-        Debug.Log(_baseCost.Value);
-        Debug.Log("_money.Value/_goal.Value");
-        Debug.Log(_money.Value/_goal.Value);
-        Debug.Log("_baseCost.Value + 100 * (_money.Value/_goal.Value)");
-        Debug.Log((int) Mathf.Round((float) (_baseCost.Value + 100 * ((float)_money.Value/(float)_goal.Value))));
+        // use cost lookup table to determine by what factor the base cost is multiplied
+        InitCostDictionary();
+        int costIncreaseFactor = 1;
+        float percentageProgress = (float)_money.Value / (float)_goal.Value;
+        foreach(float f in _costDictionary.Keys)
+        {
+            if (percentageProgress >= f)
+            {
+                costIncreaseFactor = _costDictionary[f];
+            }
+        }
 
-        _totalCost.Value = (int) Mathf.Round((float) (_baseCost.Value + 100 * ((float)_money.Value/(float)_goal.Value)));
+        // cost formula
+        _totalCost.Value = _baseCost.Value * costIncreaseFactor;
+    }
+
+    void InitCostDictionary()
+    {
+        _costDictionary.Clear();
+        _costDictionary.Add(0f, 1);
+        _costDictionary.Add(0.25f, 2);
+        _costDictionary.Add(0.5f, 3);
+        _costDictionary.Add(0.75f, 4);
     }
 
     void Awake()
