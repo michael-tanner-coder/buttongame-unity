@@ -11,7 +11,7 @@ public class Roulette : MonoBehaviour
     [SerializeField] private IntVariable _costModifier;
     [SerializeField] private IntVariable _money;
     [SerializeField] private IntVariable _goal;
-    private int _totalCost;
+    [SerializeField] private IntVariable _totalCost;
 
     [Header("Item Lists")]
     [SerializeField] private ItemList _selectedItems;
@@ -24,19 +24,28 @@ public class Roulette : MonoBehaviour
 
     void CalculateCost()
     {
-        _totalCost = _baseCost.Value + 1000 * (_money.Value/_goal.Value) * _costModifier.Value;
+        Debug.Log("_baseCost.Value");
+        Debug.Log(_baseCost.Value);
+        Debug.Log("_money.Value/_goal.Value");
+        Debug.Log(_money.Value/_goal.Value);
+        Debug.Log("_baseCost.Value + 100 * (_money.Value/_goal.Value)");
+        Debug.Log((int) Mathf.Round((float) (_baseCost.Value + 100 * ((float)_money.Value/(float)_goal.Value))));
+
+        _totalCost.Value = (int) Mathf.Round((float) (_baseCost.Value + 100 * ((float)_money.Value/(float)_goal.Value)));
     }
+
     void Awake()
     {
         _selectedItems.Value.Clear();
         LoadRoulette();
+        CalculateCost();
     }
 
     public void ToggleRoulette()
     {
         if (_speed.Value == 0 && _money.Value >= _baseCost.Value)
         {
-            _money.Value -= _totalCost;
+            _money.Value -= _totalCost.Value;
             _speed.Value = 240f;
             foreach(ItemSO item in _selectedItems.Value)
             {
@@ -50,6 +59,8 @@ public class Roulette : MonoBehaviour
         {
             _speed.Value = 0f;
         }
+
+        CalculateCost();
     }
 
     public void LoadRoulette()
