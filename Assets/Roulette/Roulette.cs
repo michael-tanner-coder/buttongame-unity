@@ -119,6 +119,11 @@ public class Roulette : MonoBehaviour
         }
     }
 
+
+    // TODO: test distrubutions of probability table
+    // TODO: make sure it can't go over the item limit
+    // TODO: test backup default items
+    // TODO: abstract drop table outside of roulette
     void InitItemDropTable()
     {
         float currentProbabilityWeightMaximum = 0f;
