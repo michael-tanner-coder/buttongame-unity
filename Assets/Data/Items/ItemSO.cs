@@ -32,5 +32,6 @@ public class ItemSO : ScriptableObject {
     public float rouletteSpeedModifier;
     public bool reloadRoulette;
     public float rouletteHitboxWidthModifier;
+    public bool retrySpin;
 }
 
