@@ -24,15 +24,11 @@ public class Roulette : MonoBehaviour
     [SerializeField] private RuleSet _rules;
 
     private Dictionary<float, int> _costDictionary = new Dictionary<float, int>();
-    private struct ItemDrop {
-        public float probabilityWeight;
-        public float probabilityFrom;
-        public float probabilityTo;
-    }
-
+    
+    [Header("Item Drop Rates")]
     private Dictionary<ItemSO, ItemDrop> _itemDropTable = new Dictionary<ItemSO, ItemDrop>();
     private float _probabilityTotalWeight;
-
+    [SerializeField] private ItemDropTable _dropTable;
 
     void CalculateCost()
     {
@@ -65,7 +61,7 @@ public class Roulette : MonoBehaviour
     {
         _selectedItems.Value.Clear();
         InitCostDictionary();
-        InitItemDropTable();
+        // InitItemDropTable();
         LoadRoulette();
         CalculateCost();
     }
@@ -102,14 +98,24 @@ public class Roulette : MonoBehaviour
             float pickedNumber = Random.Range(0, _probabilityTotalWeight);
 
             // 
-            foreach(ItemSO item in _itemDropTable.Keys)
+            foreach(ItemSO item in _availableItems.Value)
             {
-                if (pickedNumber > _itemDropTable[item].probabilityFrom && pickedNumber < _itemDropTable[item].probabilityTo)
+                if (pickedNumber > _dropTable.Lookup[item].probabilityFrom && pickedNumber < _dropTable.Lookup[item].probabilityTo)
                 {
                     Debug.Log("Picked " + item.itemName);
                     _rouletteItems.Value.Add(item);
                 }
             }
+
+            // 
+            // foreach(ItemSO item in _itemDropTable.Keys)
+            // {
+            //     if (pickedNumber > _itemDropTable[item].probabilityFrom && pickedNumber < _itemDropTable[item].probabilityTo)
+            //     {
+            //         Debug.Log("Picked " + item.itemName);
+            //         _rouletteItems.Value.Add(item);
+            //     }
+            // }
 
             // if no item was picked, just add a default item
             if (_rouletteItems.Value.Count < i + 1)

@@ -803,6 +803,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dae9562bddabb794da574d3392673208, type: 3}
+--- !u!1 &1072506957 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 964011201162877703, guid: dae9562bddabb794da574d3392673208, type: 3}
+  m_PrefabInstance: {fileID: 974466655}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1102884170
 GameObject:
   m_ObjectHideFlags: 0
@@ -1845,6 +1850,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: 9590d0187fa20434882edb7dc01a9f3c, type: 2}
     - target: {fileID: -106067436666795873, guid: 9c72daedaa30367428e693804bfc4906, type: 3}
+      propertyPath: _dropTable
+      value: 
+      objectReference: {fileID: 11400000, guid: 40af9515a568737469189efee8ff2458, type: 2}
+    - target: {fileID: -106067436666795873, guid: 9c72daedaa30367428e693804bfc4906, type: 3}
       propertyPath: _inventory
       value: 
       objectReference: {fileID: 11400000, guid: d6678c25373717d4185a389dba8e8ef4, type: 2}
@@ -1856,6 +1865,82 @@ PrefabInstance:
       propertyPath: _selectedItems
       value: 
       objectReference: {fileID: 11400000, guid: acb70b5332f870147a9595916ed77117, type: 2}
+    - target: {fileID: -106067436666795873, guid: 9c72daedaa30367428e693804bfc4906, type: 3}
+      propertyPath: _dropTable.m_keys.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -106067436666795873, guid: 9c72daedaa30367428e693804bfc4906, type: 3}
+      propertyPath: _dictionary.m_keys.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -106067436666795873, guid: 9c72daedaa30367428e693804bfc4906, type: 3}
+      propertyPath: _dropTable.m_values.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -106067436666795873, guid: 9c72daedaa30367428e693804bfc4906, type: 3}
+      propertyPath: _dictionary.m_values.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -106067436666795873, guid: 9c72daedaa30367428e693804bfc4906, type: 3}
+      propertyPath: _dropTable.m_keys.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: 964abdc899d19ea4388ce94b16a4be37, type: 2}
+    - target: {fileID: -106067436666795873, guid: 9c72daedaa30367428e693804bfc4906, type: 3}
+      propertyPath: _dropTable.m_keys.Array.data[1]
+      value: 
+      objectReference: {fileID: 11400000, guid: 861bcef72c0e23947b2f9a05b7407888, type: 2}
+    - target: {fileID: -106067436666795873, guid: 9c72daedaa30367428e693804bfc4906, type: 3}
+      propertyPath: _dictionary.m_keys.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: 964abdc899d19ea4388ce94b16a4be37, type: 2}
+    - target: {fileID: -106067436666795873, guid: 9c72daedaa30367428e693804bfc4906, type: 3}
+      propertyPath: _dictionary.m_keys.Array.data[1]
+      value: 
+      objectReference: {fileID: 1072506957}
+    - target: {fileID: -106067436666795873, guid: 9c72daedaa30367428e693804bfc4906, type: 3}
+      propertyPath: _stringDictionary.m_keys.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -106067436666795873, guid: 9c72daedaa30367428e693804bfc4906, type: 3}
+      propertyPath: _dictionary.m_values.Array.data[0].b
+      value: 0.53459114
+      objectReference: {fileID: 0}
+    - target: {fileID: -106067436666795873, guid: 9c72daedaa30367428e693804bfc4906, type: 3}
+      propertyPath: _dictionary.m_values.Array.data[0].g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -106067436666795873, guid: 9c72daedaa30367428e693804bfc4906, type: 3}
+      propertyPath: _dictionary.m_values.Array.data[0].r
+      value: 0.5459879
+      objectReference: {fileID: 0}
+    - target: {fileID: -106067436666795873, guid: 9c72daedaa30367428e693804bfc4906, type: 3}
+      propertyPath: _dictionary.m_values.Array.data[1].b
+      value: 0.15450332
+      objectReference: {fileID: 0}
+    - target: {fileID: -106067436666795873, guid: 9c72daedaa30367428e693804bfc4906, type: 3}
+      propertyPath: _dictionary.m_values.Array.data[1].g
+      value: 0.6343954
+      objectReference: {fileID: 0}
+    - target: {fileID: -106067436666795873, guid: 9c72daedaa30367428e693804bfc4906, type: 3}
+      propertyPath: _dictionary.m_values.Array.data[1].r
+      value: 0.8773585
+      objectReference: {fileID: 0}
+    - target: {fileID: -106067436666795873, guid: 9c72daedaa30367428e693804bfc4906, type: 3}
+      propertyPath: _stringDictionary.m_values.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -106067436666795873, guid: 9c72daedaa30367428e693804bfc4906, type: 3}
+      propertyPath: m_stringStringDictionary.m_keys.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -106067436666795873, guid: 9c72daedaa30367428e693804bfc4906, type: 3}
+      propertyPath: m_stringStringDictionary.m_values.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -106067436666795873, guid: 9c72daedaa30367428e693804bfc4906, type: 3}
+      propertyPath: _dropTable.m_values.Array.data[0].probabilityWeight
+      value: 0.6
+      objectReference: {fileID: 0}
     - target: {fileID: 3410007029851984844, guid: 9c72daedaa30367428e693804bfc4906, type: 3}
       propertyPath: m_SizeDelta.x
       value: 0
