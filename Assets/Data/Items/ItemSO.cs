@@ -31,5 +31,6 @@ public class ItemSO : ScriptableObject {
     public float effectDuration;
     public float rouletteSpeedModifier;
     public bool reloadRoulette;
+    public float rouletteHitboxWidthModifier;
 }
 

@@ -58,3 +58,12 @@ MonoBehaviour:
     _variable: {fileID: 0}
   _currentRouletteSpeed: 0
   _reloadRouletteEvent: {fileID: 11400000, guid: 086546cbf0cf7e445b0764e585598c3d, type: 2}
+  _rouletteHitboxWidth:
+    _useConstant: 0
+    _constantValue: 0
+    _variable: {fileID: 11400000, guid: 161df9b387f3d194b9b52141b53722dd, type: 2}
+  _defaultRouletteHitboxWidth:
+    _useConstant: 1
+    _constantValue: 60
+    _variable: {fileID: 11400000, guid: 161df9b387f3d194b9b52141b53722dd, type: 2}
+  _currentRouletteHitboxWidth: 60

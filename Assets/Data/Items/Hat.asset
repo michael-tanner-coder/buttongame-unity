@@ -34,3 +34,4 @@ MonoBehaviour:
   effectDuration: 0
   rouletteSpeedModifier: 1.5
   reloadRoulette: 1
+  rouletteHitboxWidthModifier: 75

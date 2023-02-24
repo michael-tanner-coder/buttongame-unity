@@ -32,6 +32,9 @@ public class RuleSet : ScriptableObject {
     [SerializeField] private FloatReference _defaultRouletteSpeed;
     [SerializeField] private float _currentRouletteSpeed;
     [SerializeField] private GameEvent _reloadRouletteEvent;
+    [SerializeField] private FloatReference _rouletteHitboxWidth;
+    [SerializeField] private FloatReference _defaultRouletteHitboxWidth;
+    [SerializeField] private float _currentRouletteHitboxWidth;
     void OnValidate() 
     {
         _tickRateModifier.Value = _currentTickRateModifier;
@@ -39,6 +42,7 @@ public class RuleSet : ScriptableObject {
         _roundDuration.Value = _currentRoundDuration;
         _bombSpeed.Value = _currentBombSpeed;
         _rouletteSpeed.Value = _currentRouletteSpeed;
+        _rouletteHitboxWidth.Value = _currentRouletteHitboxWidth;
     }
 
     public void ResetToDefaults()
@@ -49,6 +53,7 @@ public class RuleSet : ScriptableObject {
         _roundDuration.Value = _defaultRoundDuration.Value;
         _bombSpeed.Value = _defaultBombSpeed.Value;
         _rouletteSpeed.Value = _defaultRouletteSpeed.Value;
+        _rouletteHitboxWidth.Value = _defaultRouletteHitboxWidth.Value;
     }
 
     public void ChangeRulesViaItem(ItemSO item) 
@@ -83,6 +88,11 @@ public class RuleSet : ScriptableObject {
         if (item.reloadRoulette)
         {
             _reloadRouletteEvent?.Raise();
+        }
+
+        if (item.rouletteHitboxWidthModifier != 0f)
+        {
+            _rouletteHitboxWidth.Value = item.rouletteHitboxWidthModifier;
         }
     }
 }
