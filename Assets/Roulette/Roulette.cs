@@ -66,11 +66,20 @@ public class Roulette : MonoBehaviour
         CalculateCost();
     }
 
+    void PayForSpin()
+    {
+        if (!_rules.RetrySpin.Value)
+        {
+            _money.Value -= _totalCost.Value;
+            _rules.RetrySpin.Value = false;
+        }
+    }
+
     public void ToggleRoulette()
     {
         if (_speed.Value == 0 && _money.Value >= _baseCost.Value)
         {
-            _money.Value -= _totalCost.Value;
+            PayForSpin();
             _speed.Value = 240f;
             foreach(ItemSO item in _selectedItems.Value)
             {
