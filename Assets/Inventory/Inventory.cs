@@ -12,7 +12,6 @@ public class Inventory : ScriptableObject {
     // init
     public void OnEnable()
     {
-        Debug.Log("awake");
         _itemDictionary = new Dictionary<ItemSO, InventoryItem>();
         inventory = new List<InventoryItem>();
 
