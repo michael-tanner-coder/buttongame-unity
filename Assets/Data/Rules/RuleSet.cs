@@ -35,7 +35,10 @@ public class RuleSet : ScriptableObject {
     [SerializeField] private FloatReference _rouletteHitboxWidth;
     [SerializeField] private FloatReference _defaultRouletteHitboxWidth;
     [SerializeField] private float _currentRouletteHitboxWidth;
-    [SerializeField] private BoolVariable _retrySpin;
+    [SerializeField] private BoolReference _retrySpin;
+    [SerializeField] private BoolReference _defaultRetrySpin;
+    [SerializeField] private bool _currentRetrySpin;
+    public BoolReference RetrySpin => _retrySpin;
     void OnValidate() 
     {
         _tickRateModifier.Value = _currentTickRateModifier;
@@ -44,6 +47,7 @@ public class RuleSet : ScriptableObject {
         _bombSpeed.Value = _currentBombSpeed;
         _rouletteSpeed.Value = _currentRouletteSpeed;
         _rouletteHitboxWidth.Value = _currentRouletteHitboxWidth;
+        _retrySpin.Value = _currentRetrySpin;
     }
 
     public void ResetToDefaults()

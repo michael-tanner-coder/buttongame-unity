@@ -67,3 +67,4 @@ MonoBehaviour:
     _constantValue: 60
     _variable: {fileID: 11400000, guid: 161df9b387f3d194b9b52141b53722dd, type: 2}
   _currentRouletteHitboxWidth: 60
+  _retrySpin: {fileID: 11400000, guid: 74f3d606bad5497469a9aff76a874e37, type: 2}
