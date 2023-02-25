@@ -57,7 +57,7 @@ public class RuleSet : ScriptableObject {
         _tickRateModifier.Value = _defaultTickRate.Value;
         _roundDuration.Value = _defaultRoundDuration.Value;
         _bombSpeed.Value = _defaultBombSpeed.Value;
-        _rouletteSpeed.Value = _defaultRouletteSpeed.Value;
+        _rouletteSpeed.Value = 0f;
         _rouletteHitboxWidth.Value = _defaultRouletteHitboxWidth.Value;
         _retrySpin.Value = false;
     }
