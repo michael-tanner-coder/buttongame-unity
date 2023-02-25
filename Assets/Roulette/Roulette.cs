@@ -13,6 +13,7 @@ public class Roulette : MonoBehaviour
     [SerializeField] private IntVariable _money;
     [SerializeField] private IntVariable _goal;
     [SerializeField] private IntVariable _totalCost;
+    private bool _freeSpin;
 
     [Header("Item Lists")]
     [SerializeField] private ItemList _selectedItems;
@@ -67,29 +68,28 @@ public class Roulette : MonoBehaviour
 
     void PayForSpin()
     {
-        if (!_rules.RetrySpin.Value)
+        if (!_freeSpin)
         {
             _money.Value -= _totalCost.Value;
-            _rules.RetrySpin.Value = false;
         }
     }
 
     public void ToggleRoulette()
     {
-        if (_speed.Value == 0 && _money.Value >= _baseCost.Value)
+        if (_speed.Value == 0 && _money.Value >= _baseCost.Value || _rules.RetrySpin.Value)
         {
             PayForSpin();
             _speed.Value = 240f;
-            foreach(ItemSO item in _selectedItems.Value)
-            {
-                _inventory.Remove(item);
-                _rules.ChangeRulesViaItem(item);
-            }
-            _selectedItems.Value.Clear();
+            _freeSpin = _rules.RetrySpin.Value;
+            _rules.RetrySpin.Value = false;
         }
         else 
         {
             _speed.Value = 0f;
+            if (!_freeSpin)
+            {
+                _rules.ResetToDefaults();
+            }
         }
 
         CalculateCost();
@@ -102,7 +102,6 @@ public class Roulette : MonoBehaviour
         {
             float pickedNumber = Random.Range(0, _probabilityTotalWeight);
 
-            // 
             foreach(ItemSO item in _availableItems.Value)
             {
                 if (pickedNumber > _dropTable.Lookup[item].probabilityFrom && pickedNumber < _dropTable.Lookup[item].probabilityTo)
