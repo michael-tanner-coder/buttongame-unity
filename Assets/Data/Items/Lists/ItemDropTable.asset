@@ -16,23 +16,31 @@ MonoBehaviour:
   Lookup:
     m_keys:
     - {fileID: 11400000, guid: 861bcef72c0e23947b2f9a05b7407888, type: 2}
-    - {fileID: 11400000, guid: ae6ef1d3669aec44c96ba668c2a734b7, type: 2}
-    - {fileID: 11400000, guid: 0f9e8ef1b25a17a4aa40675052d0b0fa, type: 2}
-    - {fileID: 11400000, guid: 9190138194b30fe4c873566622f863c2, type: 2}
-    - {fileID: 11400000, guid: 504b638b561c085419dae23555499240, type: 2}
+    - {fileID: 11400000, guid: 3748150761d15bb47815ab63888d7c7f, type: 2}
+    - {fileID: 11400000, guid: 692490c55fd893344808af61446a6330, type: 2}
+    - {fileID: 11400000, guid: b285d2d7cdf05fe40ba9ba09613a6432, type: 2}
+    - {fileID: 11400000, guid: 08d508270822df84d9ab0168af566146, type: 2}
+    - {fileID: 11400000, guid: 5e3f28235e2d6654e8273c71069ea39d, type: 2}
+    - {fileID: 11400000, guid: 901b4d6bf7038d142bca4d3af9e742b0, type: 2}
     m_values:
-    - probabilityWeight: 0
+    - probabilityWeight: 5
       probabilityFrom: 0
       probabilityTo: 0
-    - probabilityWeight: 4
-      probabilityFrom: 0
-      probabilityTo: 4
     - probabilityWeight: 2
       probabilityFrom: 4
       probabilityTo: 6
-    - probabilityWeight: 1
+    - probabilityWeight: 2
       probabilityFrom: 6
       probabilityTo: 7
+    - probabilityWeight: 4
+      probabilityFrom: 7
+      probabilityTo: 8
+    - probabilityWeight: 4
+      probabilityFrom: 7
+      probabilityTo: 8
+    - probabilityWeight: 2
+      probabilityFrom: 7
+      probabilityTo: 8
     - probabilityWeight: 1
       probabilityFrom: 7
       probabilityTo: 8

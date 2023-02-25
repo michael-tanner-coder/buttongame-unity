@@ -10,12 +10,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f18936892638a814c8a3806034991136, type: 3}
-  m_Name: ChangeGravity
+  m_Name: GoldCoin
   m_EditorClassIdentifier: 
-  itemName: Change Gravity
-  sprite: {fileID: 21300000, guid: 98455293ac4b1e242aa76b209c841b1f, type: 3}
+  id: goldCoin
+  itemName: Gold Coin
+  sprite: {fileID: 0}
+  rarity: 8
+  quantity: 0
+  value: 100
+  wearable: 0
+  sticky: 0
   timeModifier: 0
-  gravityModifier: 0.5
+  gravityModifier: 0
   massModifier: 0
   spriteModifier: 0
   durationModifier: 0
@@ -25,4 +31,8 @@ MonoBehaviour:
   buttonHeightModifier: 0
   swapCharacters: 0
   giveDoubleJump: 0
-  effectDuration: 4
+  effectDuration: 0
+  rouletteSpeedModifier: 0
+  reloadRoulette: 0
+  rouletteHitboxWidthModifier: 0
+  retrySpin: 0
