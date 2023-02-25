@@ -61,7 +61,6 @@ public class Roulette : MonoBehaviour
     {
         _selectedItems.Value.Clear();
         InitCostDictionary();
-        // InitItemDropTable();
         LoadRoulette();
         CalculateCost();
     }
@@ -83,7 +82,6 @@ public class Roulette : MonoBehaviour
             _speed.Value = 240f;
             foreach(ItemSO item in _selectedItems.Value)
             {
-                Debug.Log("Discarding " + item.itemName);
                 _inventory.Remove(item);
                 _rules.ChangeRulesViaItem(item);
             }
@@ -100,8 +98,6 @@ public class Roulette : MonoBehaviour
     public void LoadRoulette()
     {
         _rouletteItems.Value.Clear();
-        Debug.Log("_probabilityTotalWeight");
-        Debug.Log(_probabilityTotalWeight);
         for (int i = 0; i < _itemLimit; i++)
         {
             float pickedNumber = Random.Range(0, _probabilityTotalWeight);
@@ -111,20 +107,9 @@ public class Roulette : MonoBehaviour
             {
                 if (pickedNumber > _dropTable.Lookup[item].probabilityFrom && pickedNumber < _dropTable.Lookup[item].probabilityTo)
                 {
-                    Debug.Log("Picked " + item.itemName);
                     _rouletteItems.Value.Add(item);
                 }
             }
-
-            // 
-            // foreach(ItemSO item in _itemDropTable.Keys)
-            // {
-            //     if (pickedNumber > _itemDropTable[item].probabilityFrom && pickedNumber < _itemDropTable[item].probabilityTo)
-            //     {
-            //         Debug.Log("Picked " + item.itemName);
-            //         _rouletteItems.Value.Add(item);
-            //     }
-            // }
 
             // if no item was picked, just add a default item
             if (_rouletteItems.Value.Count < i + 1)
@@ -132,33 +117,5 @@ public class Roulette : MonoBehaviour
                 _rouletteItems.Value.Add(_availableItems.Value[0]);
             }
         }
-    }
-
-
-    // TODO: test distrubutions of probability table
-    // TODO: make sure it can't go over the item limit
-    // TODO: test backup default items
-    // TODO: abstract drop table outside of roulette
-    void InitItemDropTable()
-    {
-        float currentProbabilityWeightMaximum = 0f;
-        foreach(ItemSO item in _availableItems.Value)
-        {
-            ItemDrop itemDropEntry = new ItemDrop();
-            if (item.rarity < 0f)
-            {
-                Debug.Log("Can't have a negative probability weight");
-                itemDropEntry.probabilityWeight = 0f;
-            }
-            else 
-            {
-                itemDropEntry.probabilityWeight = item.rarity;
-                itemDropEntry.probabilityFrom = currentProbabilityWeightMaximum;
-                currentProbabilityWeightMaximum += itemDropEntry.probabilityWeight;	
-                itemDropEntry.probabilityTo = currentProbabilityWeightMaximum;
-            }
-            _itemDropTable.Add(item, itemDropEntry);
-        }
-        _probabilityTotalWeight = currentProbabilityWeightMaximum;
     }
 }
