@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 3410007029625009284}
   - component: {fileID: 3410007029625009287}
   - component: {fileID: 3410007029625009285}
+  - component: {fileID: 3410007030347832386}
   m_Layer: 0
   m_Name: Hitbox
   m_TagString: Untagged
@@ -103,6 +104,21 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 63.29093, y: 75.00429}
   m_EdgeRadius: 0
+--- !u!114 &3410007030347832386
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3410007029625009289}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ada35e584008deb438fc4c493c8a0f27, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _boxCollider: {fileID: 3410007029625009285}
+  _rectTransform: {fileID: 3410007029625009286}
+  _width: {fileID: 11400000, guid: 161df9b387f3d194b9b52141b53722dd, type: 2}
 --- !u!1 &3410007029851984847
 GameObject:
   m_ObjectHideFlags: 0
@@ -116,6 +132,7 @@ GameObject:
   - component: {fileID: 3410007029851984842}
   - component: {fileID: 3410007029851984843}
   - component: {fileID: 3410007029851984840}
+  - component: {fileID: 1618628754}
   m_Layer: 0
   m_Name: Content
   m_TagString: Untagged
@@ -214,6 +231,38 @@ MonoBehaviour:
   _loop: 1
   _viewPortRect: {fileID: 3410007030473135254}
   _contentRect: {fileID: 3410007029851984844}
+--- !u!114 &1618628754
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3410007029851984847}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5758ca93461aeeb4589456a052b07d74, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _showDebugFields: 0
+  _enableGizmoDebugging: 1
+  _debugColor: {r: 0, g: 1, b: 1, a: 1}
+  _previouslyRegisteredEvent: {fileID: 11400000, guid: 086546cbf0cf7e445b0764e585598c3d, type: 2}
+  _event: {fileID: 11400000, guid: 086546cbf0cf7e445b0764e585598c3d, type: 2}
+  _response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 3410007029851984843}
+        m_TargetAssemblyTypeName: DynamicScrollView, Assembly-CSharp
+        m_MethodName: BuildContent
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &3410007030126118773
 GameObject:
   m_ObjectHideFlags: 0
@@ -383,7 +432,7 @@ MonoBehaviour:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
-          m_FloatArgument: 240
+          m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
@@ -400,14 +449,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _speed: {fileID: 11400000, guid: 3a7c8a123a0d789449eac0553017d7e8, type: 2}
-  _money: {fileID: 11400000, guid: 6cb20379dd9debb4491cf360ea15dc65, type: 2}
-  _cost: {fileID: 11400000, guid: 9590d0187fa20434882edb7dc01a9f3c, type: 2}
   _itemLimit: 4
+  _baseCost: {fileID: 11400000, guid: 9590d0187fa20434882edb7dc01a9f3c, type: 2}
+  _costModifier: {fileID: 0}
+  _money: {fileID: 11400000, guid: 6cb20379dd9debb4491cf360ea15dc65, type: 2}
+  _goal: {fileID: 11400000, guid: a50e9689d8d68994987d4b997e153cb1, type: 2}
+  _totalCost: {fileID: 11400000, guid: 1fcf9edf24a4b1b4fbe866e1fce5789c, type: 2}
+  _costDictionary: {fileID: 11400000, guid: 49821b11287fd824b80b856912cf8bfd, type: 2}
   _selectedItems: {fileID: 11400000, guid: acb70b5332f870147a9595916ed77117, type: 2}
   _availableItems: {fileID: 11400000, guid: 92502c37ad17a9d4ab8a496f349ea7b3, type: 2}
   _rouletteItems: {fileID: 11400000, guid: dcca4c9de578e444a933f62a24b3a1c0, type: 2}
   _inventory: {fileID: 11400000, guid: d6678c25373717d4185a389dba8e8ef4, type: 2}
   _rules: {fileID: 11400000, guid: e29ba1e1169508943b33e94972bb39ec, type: 2}
+  _dropTable: {fileID: 11400000, guid: 40af9515a568737469189efee8ff2458, type: 2}
 --- !u!114 &8158496361768503245
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -423,7 +477,7 @@ MonoBehaviour:
   _showDebugFields: 0
   _enableGizmoDebugging: 1
   _debugColor: {r: 0, g: 1, b: 1, a: 1}
-  _previouslyRegisteredEvent: {fileID: 0}
+  _previouslyRegisteredEvent: {fileID: 11400000, guid: 086546cbf0cf7e445b0764e585598c3d, type: 2}
   _event: {fileID: 11400000, guid: 086546cbf0cf7e445b0764e585598c3d, type: 2}
   _response:
     m_PersistentCalls:

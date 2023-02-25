@@ -13,6 +13,7 @@ public class Roulette : MonoBehaviour
     [SerializeField] private IntVariable _money;
     [SerializeField] private IntVariable _goal;
     [SerializeField] private IntVariable _totalCost;
+    [SerializeField] private FloatIntDictionarySO _costDictionary;
     private bool _freeSpin;
 
     [Header("Item Lists")]
@@ -23,47 +24,34 @@ public class Roulette : MonoBehaviour
     [Header("Dependencies")]
     [SerializeField] private Inventory _inventory;
     [SerializeField] private RuleSet _rules;
-
-    private Dictionary<float, int> _costDictionary = new Dictionary<float, int>();
     
     [Header("Item Drop Rates")]
     private Dictionary<ItemSO, ItemDrop> _itemDropTable = new Dictionary<ItemSO, ItemDrop>();
     private float _probabilityTotalWeight;
     [SerializeField] private ItemDropTable _dropTable;
 
+    void Awake()
+    {
+        _selectedItems.Value.Clear();
+        LoadRoulette();
+        CalculateCost();
+    }
+
     void CalculateCost()
     {
         // use cost lookup table to determine by what factor the base cost is multiplied
-        InitCostDictionary();
         int costIncreaseFactor = 1;
         float percentageProgress = (float)_money.Value / (float)_goal.Value;
-        foreach(float f in _costDictionary.Keys)
+        foreach(float f in _costDictionary.Value.Keys)
         {
             if (percentageProgress >= f)
             {
-                costIncreaseFactor = _costDictionary[f];
+                costIncreaseFactor = _costDictionary.Value[f];
             }
         }
 
         // cost formula
         _totalCost.Value = _baseCost.Value * costIncreaseFactor;
-    }
-
-    void InitCostDictionary()
-    {
-        _costDictionary.Clear();
-        _costDictionary.Add(0f, 1);
-        _costDictionary.Add(0.25f, 2);
-        _costDictionary.Add(0.5f, 3);
-        _costDictionary.Add(0.75f, 4);
-    }
-
-    void Awake()
-    {
-        _selectedItems.Value.Clear();
-        InitCostDictionary();
-        LoadRoulette();
-        CalculateCost();
     }
 
     void PayForSpin()
