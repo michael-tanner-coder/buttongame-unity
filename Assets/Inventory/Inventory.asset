@@ -13,5 +13,6 @@ MonoBehaviour:
   m_Name: Inventory
   m_EditorClassIdentifier: 
   _itemDataList:
-  - {fileID: 11400000, guid: ae6ef1d3669aec44c96ba668c2a734b7, type: 2}
+  - {fileID: 11400000, guid: 861bcef72c0e23947b2f9a05b7407888, type: 2}
+  - {fileID: 11400000, guid: 861bcef72c0e23947b2f9a05b7407888, type: 2}
   _inventoryLimit: {fileID: 11400000, guid: 90940e400fd640a4c81e88b911dad3c8, type: 2}
