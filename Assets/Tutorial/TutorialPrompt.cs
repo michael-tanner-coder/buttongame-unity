@@ -6,6 +6,11 @@ using UnityEngine.UI;
 public class TutorialPrompt : ScriptableObject 
 {
     [SerializeField] private string _header;
+    public string Header => _header;
+
     [SerializeField] private List<string> _content = new List<string>();
+    public List<string> Content => _content;
+
     [SerializeField] private Image _image;
+    public Image Image => _image;
 }
