@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 504010e13a5d90f489ccc8f079b5cef0, type: 3}
+  m_Name: UseItems
+  m_EditorClassIdentifier: 
+  _header: USING ITEMS
+  _content:
+  - Any item in you have can be used up to alter the properties of the roulette (speed,
+    hitbox size, available items, etc)
+  - To use an item, click it and press the Use Items button
+  - You can use up to 3 items per spin
+  _image: {fileID: 0}
