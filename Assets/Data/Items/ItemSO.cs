@@ -1,7 +1,6 @@
 using UnityEngine;
 [CreateAssetMenu(fileName = "ItemSO", menuName = "Scriptable Objects/Item Data", order = 0)]
 public class ItemSO : ScriptableObject {
-
     public string id;
 
     // Display
@@ -11,6 +10,11 @@ public class ItemSO : ScriptableObject {
     // Stats
     public float rarity;
     public int quantity;
+    public int value;
+
+    // decoration/customization
+    public bool wearable;
+    public bool sticky;
 
     // Modifiers
     public float timeModifier;
@@ -25,5 +29,9 @@ public class ItemSO : ScriptableObject {
     public bool swapCharacters;
     public bool giveDoubleJump;
     public float effectDuration;
+    public float rouletteSpeedModifier;
+    public bool reloadRoulette;
+    public float rouletteHitboxWidthModifier;
+    public bool retrySpin;
 }
 

@@ -7,10 +7,16 @@ public class VisibilityController : MonoBehaviour
 
     public void ToggleVisibility()
     {
-        _spriteRenderer.enabled = _spriteRenderer.enabled ? false : true;
+        if (_spriteRenderer != null)
+        {
+            _spriteRenderer.enabled = _spriteRenderer.enabled ? false : true;
+        }
     }
     public void SetVisibility(bool isVisible)
     {
-        _spriteRenderer.enabled = isVisible;
+        if (_spriteRenderer != null)
+        {
+            _spriteRenderer.enabled = isVisible;
+        }
     }
 }

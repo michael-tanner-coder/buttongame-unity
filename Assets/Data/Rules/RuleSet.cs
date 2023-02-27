@@ -27,12 +27,27 @@ public class RuleSet : ScriptableObject {
     [SerializeField] private float _currentBombSpeed;
     public FloatReference BomeSpeed => _bombSpeed;
 
+    [Header("Roulette")]
+    [SerializeField] private FloatReference _rouletteSpeed;
+    [SerializeField] private FloatReference _defaultRouletteSpeed;
+    [SerializeField] private float _currentRouletteSpeed;
+    [SerializeField] private GameEvent _reloadRouletteEvent;
+    [SerializeField] private FloatReference _rouletteHitboxWidth;
+    [SerializeField] private FloatReference _defaultRouletteHitboxWidth;
+    [SerializeField] private float _currentRouletteHitboxWidth;
+    [SerializeField] private BoolReference _retrySpin;
+    [SerializeField] private BoolReference _defaultRetrySpin;
+    [SerializeField] private bool _currentRetrySpin;
+    public BoolReference RetrySpin => _retrySpin;
     void OnValidate() 
     {
         _tickRateModifier.Value = _currentTickRateModifier;
         _gravityModifier.Value = _currentGravityModifier;
         _roundDuration.Value = _currentRoundDuration;
         _bombSpeed.Value = _currentBombSpeed;
+        _rouletteSpeed.Value = _currentRouletteSpeed;
+        _rouletteHitboxWidth.Value = _currentRouletteHitboxWidth;
+        _retrySpin.Value = _currentRetrySpin;
     }
 
     public void ResetToDefaults()
@@ -42,10 +57,15 @@ public class RuleSet : ScriptableObject {
         _tickRateModifier.Value = _defaultTickRate.Value;
         _roundDuration.Value = _defaultRoundDuration.Value;
         _bombSpeed.Value = _defaultBombSpeed.Value;
+        _rouletteSpeed.Value = 0f;
+        _rouletteHitboxWidth.Value = _defaultRouletteHitboxWidth.Value;
+        _retrySpin.Value = false;
     }
 
     public void ChangeRulesViaItem(ItemSO item) 
     {
+        Debug.Log("Changing rules!");
+
         if (item.gravityModifier != 0f)
         {
             _gravityModifier.Value = item.gravityModifier;
@@ -64,6 +84,26 @@ public class RuleSet : ScriptableObject {
         if (item.bombSpeedModifier != 0f) 
         {
             _bombSpeed.Value = item.bombSpeedModifier;
+        }
+
+        if (item.rouletteSpeedModifier != 0f) 
+        {
+            _rouletteSpeed.Value = _rouletteSpeed.Value * item.rouletteSpeedModifier;
+        }
+
+        if (item.reloadRoulette)
+        {
+            _reloadRouletteEvent?.Raise();
+        }
+
+        if (item.rouletteHitboxWidthModifier != 0f)
+        {
+            _rouletteHitboxWidth.Value = item.rouletteHitboxWidthModifier;
+        }
+
+        if (item.retrySpin)
+        {
+            _retrySpin.Value = item.retrySpin;
         }
     }
 }

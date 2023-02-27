@@ -13,6 +13,8 @@ GameObject:
   - component: {fileID: 2246685421025219157}
   - component: {fileID: 2246685421025219158}
   - component: {fileID: 2246685421025219159}
+  - component: {fileID: 1233803980}
+  - component: {fileID: 1233803981}
   m_Layer: 5
   m_Name: timer
   m_TagString: Untagged
@@ -90,10 +92,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 58c7d975c66b996479867cff69da7dda, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _duration: 20
+  _duration:
+    _useConstant: 0
+    _constantValue: 10
+    _variable: {fileID: 11400000, guid: f06929baf2e31154fa41be9b38c7c694, type: 2}
+  _maxDuration:
+    _useConstant: 0
+    _constantValue: 0
+    _variable: {fileID: 11400000, guid: 8ce32b26e41b4fd4b9f1dea2782ff28a, type: 2}
+  _tickRateModifier:
+    _useConstant: 0
+    _constantValue: 0
+    _variable: {fileID: 11400000, guid: d7fce2334b6544b4ea6dee445a41ec2c, type: 2}
   _paused: 1
-  timerBar: {fileID: 2246685421025219159}
-  gameEvents: {fileID: 11400000, guid: 0f86ff09a287f9c4db03a2100ecdf502, type: 2}
+  onRoundEnd: {fileID: 11400000, guid: 0d6508e10728633448f5aa71c04a0e51, type: 2}
 --- !u!114 &2246685421025219159
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -125,3 +137,67 @@ MonoBehaviour:
     _useConstant: 0
     _constantValue: 0
     _variable: {fileID: 0}
+--- !u!114 &1233803980
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2246685421025219153}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5758ca93461aeeb4589456a052b07d74, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _showDebugFields: 0
+  _enableGizmoDebugging: 1
+  _debugColor: {r: 0, g: 1, b: 1, a: 1}
+  _previouslyRegisteredEvent: {fileID: 11400000, guid: 6b618d57693946c4b9f06a6404be4f48, type: 2}
+  _event: {fileID: 11400000, guid: 6b618d57693946c4b9f06a6404be4f48, type: 2}
+  _response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2246685421025219158}
+        m_TargetAssemblyTypeName: Timer, Assembly-CSharp
+        m_MethodName: StartTimer
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &1233803981
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2246685421025219153}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5758ca93461aeeb4589456a052b07d74, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _showDebugFields: 0
+  _enableGizmoDebugging: 1
+  _debugColor: {r: 0, g: 1, b: 1, a: 1}
+  _previouslyRegisteredEvent: {fileID: 11400000, guid: 0d6508e10728633448f5aa71c04a0e51, type: 2}
+  _event: {fileID: 11400000, guid: 0d6508e10728633448f5aa71c04a0e51, type: 2}
+  _response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2246685421025219158}
+        m_TargetAssemblyTypeName: Timer, Assembly-CSharp
+        m_MethodName: StopTimer
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2

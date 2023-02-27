@@ -2,22 +2,28 @@ using UnityEngine;
 
 public class Todo : MonoBehaviour
 {
-    // BUGS
-    // TODO: sometimes players don't spawn on game start
-    
-    // LOGIC
-    // TODO: end round on collision with small bomb
-    // TODO: respawn missing players on round start
+    // TODO: write game instructions
+    // TODO: write item descriptions
+    // TODO: make item icons
+    // TODO: test item drop rates
+    // TODO: test each item effect
+    // TODO: make inventory UI refresh
+    // TODO: fix player movement
+    // TODO: polish UI placement/size
 
-    // ANIMATION
-    // TODO: create door animation
-    // TODO: create small bomb roll animation
-    // TODO: create player lose animation
+    // GOAL: 
+    // keep winning at a roulette game to reach a certain amount of casino chips
 
-    // SOUND
-    // TODO: use SOs to act as a sound manager
-    // TODO: load sound assets into SO
-    // TODO: play music on start
-    // TODO: switch music tempo based on player scores
-    // TODO: pair sounds with actions (jumping, landing, button press, tick, explode, etc)
+    // CONTROLS:
+    // press UP or W to jump
+    // click items and buttons with left mouse button
+
+    // HOW TO PLAY:
+    // jump to hit the button to start up a roulette spin (this will cost some chips)
+    // while the roulette is spinning, you can hit the button again to stop it
+    // if an item lands inside the roulette hitbox, it will be added to your inventory
+    // any item in you have can be used up to alter the properties of the roulette (speed, hitbox size, available items, etc)
+    // to use an item, click it and press the Use Items button. You can use up to 3 items per spin.
+    // OR: you can sell items to get more chips. Rare items will have more powerful effects and are worth more chips
+    // as you gain more chips, the roulette spins get faster and will cost more chips
 }
