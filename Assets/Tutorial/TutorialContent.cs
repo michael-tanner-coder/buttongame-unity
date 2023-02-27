@@ -13,6 +13,6 @@ public class TutorialContent : MonoBehaviour
     {
         _header.text = _prompt.Header;
         _image = _prompt.Image;
-        _contentBox.GetComponent<ContentList>().list = _prompt.Content;
+        _contentBox.GetComponent<ContentList>().InitList(_prompt.Content);
     }
 }
