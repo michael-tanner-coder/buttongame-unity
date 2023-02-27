@@ -10,7 +10,7 @@ public class ExchangeItems : MonoBehaviour
     
     public void Awake()
     {
-            _selectedItems.Value.Clear();
+        _selectedItems.Value.Clear();
     }
     public void Exchange()
     {
