@@ -9,6 +9,13 @@ public class ContentList : MonoBehaviour
 
     public void InitList(List<string> newList)
     {
+        // clear out any existing content
+        foreach(Transform child in transform)
+        {
+            Destroy(child.gameObject);
+        }
+        
+        // spawn a new list of content items
         list = newList;
         foreach(string item in list)
         {
