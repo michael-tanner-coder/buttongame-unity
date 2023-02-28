@@ -2,7 +2,6 @@ using UnityEngine;
 
 public class Todo : MonoBehaviour
 {
-    // TODO: write game instructions
     // TODO: write item descriptions
     // TODO: make item icons
     // TODO: test item drop rates
