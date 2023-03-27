@@ -1,0 +1,5 @@
+test builds:
+butler push "C:\Users\Michael\Documents\GitHub\buttongame-unity\builds\test" michaelmonty/button-game:win-test
+
+stable builds:
+butler push "C:\Users\Michael\Documents\GitHub\buttongame-unity\builds\test" michaelmonty/button-game:win-stable
