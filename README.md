@@ -11,4 +11,4 @@ The last person to press their button will win, so press it wisely!
 # CONTROLS
 - Jump for player 1: W Key
 - Jump for player 2: Up Key
-- Move through tutorial prompts: Ente
+- Move through tutorial prompts: Enter
